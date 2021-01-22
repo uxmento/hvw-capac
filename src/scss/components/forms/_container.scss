@@ -1,3 +1,14 @@
 /*
  * FORM CONTAINER
  */
+
+ .#{$ns}container {
+     $root: &;
+
+     background-color: transparent;
+
+     &.accent {
+        background: $color_white;
+        border-radius: $border-radius;         
+     }
+}
