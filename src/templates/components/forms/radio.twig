@@ -1,0 +1,9 @@
+{% macro render(name, label, value) %}
+    {% import "components/icons/icon.twig" as icon %}
+
+    <label class="hc-radio">
+        <input type="radio" name="{{name}}" value="{{value}}" class="hc-radio__input" />
+        {{icon.render('circle', 'hc-radio__icon')}}
+        <span class="hc-radio__label">{{label}}</span>
+    </label>
+{% endmacro %}

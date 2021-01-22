@@ -1,0 +1,73 @@
+/*
+ * INPUT
+ * Input styling
+ */
+
+.#{$ns}input__label {
+  display: block;
+  font-weight: bold;
+}
+
+.#{$ns}input {
+  position: relative;
+  display: block;
+
+  &__input {
+    display: block;
+    width: 100%;
+    height: 2.5rem;
+    padding: 0.5rem 1rem;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    background-color: #fff;
+
+    &::placeholder {
+      color: #999;
+    }
+
+    &:focus {
+      outline: 0;
+      box-shadow: $focus;
+    }
+
+    [class*="input__icon"] + & {
+      padding-right: 2.5rem;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: #999;
+    padding: 0.75rem;
+    pointer-events: none;
+  }
+}
+
+.#{$ns}input__list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+
+    &--horizontal {
+        flex-direction: row;
+        margin: 0 -.5em;
+
+        li {
+            padding: 0 .5em;
+        }
+    }
+
+    &--vertical {
+        flex-direction: column;
+
+        li:nth-child(n+2) {
+            margin-top: .5em;
+        }
+    }
+}

@@ -1,0 +1,58 @@
+/*
+ * RADIO
+ * Radio styling
+ */
+
+.#{$ns}radio {
+    display: inline-block;
+    vertical-align: baseline;
+    cursor: pointer;
+
+    &__input {
+        position: absolute;
+        clip: rect(1px, 1px, 1px, 1px);
+        clip-path: inset(50%);
+        height: 1px;
+        width: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    &__icon {
+        position: relative;
+        top: .125rem;
+        left: 0;
+        display: inline-flex;
+        vertical-align: baseline;
+        width: 1rem;
+        height: 1rem;
+        padding: 2px;
+        margin: 0;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        fill: transparent;
+        background-color: #fff;
+
+        :focus + & {
+            outline: 0;
+            box-shadow: $focus;
+        }
+
+        :checked + & {
+            fill: #333;
+            border-color: $color_default-text;
+        }
+
+        :hover + &,
+        :active + & {
+            border-color: $color_default-text;
+        }
+    }
+
+    &__label {
+        display: inline-block;
+        vertical-align: baseline;
+        padding: 0 .25rem;
+    }
+}

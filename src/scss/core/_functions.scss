@@ -1,0 +1,12 @@
+/*
+ * FUNCTIONS
+ * Site wide functions
+ */
+
+// -------------
+// Pixels to rem
+// -------------
+
+@function rem($size) {
+  @return $size / $font-size * 1rem;
+}

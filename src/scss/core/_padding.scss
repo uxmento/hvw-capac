@@ -1,0 +1,140 @@
+/*
+ * PADDING
+ * Padding utility classes
+ */
+
+.p {
+  @each $name, $spacing in $spacings {
+    &-#{$name} {
+      padding-top: if($spacing == auto, $spacing, rem($spacing)) !important;
+      padding-bottom: if($spacing == auto, $spacing, rem($spacing)) !important;
+      padding-left: if($spacing == auto, $spacing, rem($spacing)) !important;
+      padding-right: if($spacing == auto, $spacing, rem($spacing)) !important;
+    }
+  }
+
+  @each $breakpoint in map-keys($breakpoints) {
+    @include mq($breakpoint) {
+      @each $name, $spacing in $spacings {
+        &-#{$name}--#{$breakpoint} {
+          padding-top: if($spacing == auto, $spacing, rem($spacing)) !important;
+          padding-bottom: if($spacing == auto, $spacing, rem($spacing)) !important;
+          padding-left: if($spacing == auto, $spacing, rem($spacing)) !important;
+          padding-right: if($spacing == auto, $spacing, rem($spacing)) !important;
+        }
+      }
+    }
+  }
+}
+
+.px {
+  @each $name, $spacing in $spacings {
+    &-#{$name} {
+      padding-left: if($spacing == auto, $spacing, rem($spacing)) !important;
+      padding-right: if($spacing == auto, $spacing, rem($spacing)) !important;
+    }
+  }
+
+  @each $breakpoint in map-keys($breakpoints) {
+    @include mq($breakpoint) {
+      @each $name, $spacing in $spacings {
+        &-#{$name}--#{$breakpoint} {
+          padding-left: if($spacing == auto, $spacing, rem($spacing)) !important;
+          padding-right: if($spacing == auto, $spacing, rem($spacing)) !important;
+        }
+      }
+    }
+  }
+}
+
+.py {
+  @each $name, $spacing in $spacings {
+    &-#{$name} {
+      padding-top: if($spacing == auto, $spacing, rem($spacing)) !important;
+      padding-bottom: if($spacing == auto, $spacing, rem($spacing)) !important;
+    }
+  }
+
+  @each $breakpoint in map-keys($breakpoints) {
+    @include mq($breakpoint) {
+      @each $name, $spacing in $spacings {
+        &-#{$name}--#{$breakpoint} {
+          padding-top: if($spacing == auto, $spacing, rem($spacing)) !important;
+          padding-bottom: if($spacing == auto, $spacing, rem($spacing)) !important;
+        }
+      }
+    }
+  }
+}
+
+.pt {
+  @each $name, $spacing in $spacings {
+    &-#{$name} {
+      padding-top: if($spacing == auto, $spacing, rem($spacing)) !important;
+    }
+  }
+
+  @each $breakpoint in map-keys($breakpoints) {
+    @include mq($breakpoint) {
+      @each $name, $spacing in $spacings {
+        &-#{$name}--#{$breakpoint} {
+          padding-top: if($spacing == auto, $spacing, rem($spacing)) !important;
+        }
+      }
+    }
+  }
+}
+
+.pb {
+  @each $name, $spacing in $spacings {
+    &-#{$name} {
+      padding-bottom: if($spacing == auto, $spacing, rem($spacing)) !important;
+    }
+  }
+
+  @each $breakpoint in map-keys($breakpoints) {
+    @include mq($breakpoint) {
+      @each $name, $spacing in $spacings {
+        &-#{$name}--#{$breakpoint} {
+          padding-bottom: if($spacing == auto, $spacing, rem($spacing)) !important;
+        }
+      }
+    }
+  }
+}
+
+.pl {
+  @each $name, $spacing in $spacings {
+    &-#{$name} {
+      padding-left: if($spacing == auto, $spacing, rem($spacing)) !important;
+    }
+  }
+
+  @each $breakpoint in map-keys($breakpoints) {
+    @include mq($breakpoint) {
+      @each $name, $spacing in $spacings {
+        &-#{$name}--#{$breakpoint} {
+          padding-left: if($spacing == auto, $spacing, rem($spacing)) !important;
+        }
+      }
+    }
+  }
+}
+
+.pr {
+  @each $name, $spacing in $spacings {
+    &-#{$name} {
+      padding-right: if($spacing == auto, $spacing, rem($spacing)) !important;
+    }
+  }
+
+  @each $breakpoint in map-keys($breakpoints) {
+    @include mq($breakpoint) {
+      @each $name, $spacing in $spacings {
+        &-#{$name}--#{$breakpoint} {
+          padding-right: if($spacing == auto, $spacing, rem($spacing)) !important;
+        }
+      }
+    }
+  }
+}

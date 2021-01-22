@@ -1,0 +1,13 @@
+{% macro render(name, options) %}
+    {% import "components/icons/icon.twig" as icon %}
+    
+    <div class="hc-select">
+        {{icon.render('caret-down', 'hc-select__icon')}}
+        <select name="{{name}}" class="hc-select__input">
+            <option selected disabled>Pick an option</option>
+            {% for option in options %}
+            <option value="{{option.value}}">{{option.label}}</option>
+            {% endfor %}
+        </select>
+    </div>
+{% endmacro %}
