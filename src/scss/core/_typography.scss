@@ -4,7 +4,7 @@
 
 $font-size_tiny: 14px;
 $font-size_heading1: rem(48px);
-$font-size_heading2: rem(34px);
+$font-size_heading2: rem(44px);
 $font-size_heading3: rem(24px);
 $font-size_heading4: rem(22px);
 //$font-size_heading5: rem(48px);
@@ -16,5 +16,40 @@ $font-size_heading4: rem(22px);
 // --------------
 
 $line-height_tiny: 18px;
+$line-height_heading1: rem(56px);
+$line-height_heading2: rem(46px);
+$line-height_heading3: rem(32px);
+$line-height_heading4: rem(30px);
 
+// ------------------------
+// binding heading elements
+// ------------------------
+// @for $i from 1 through 4 {
+//    .#{$ns}h#{$i} {
+//        font-size: #{$font-size_heading + '' + $i};
+//        line-height: #{$line-height_heading + '' + $i};
+//    }
+//} 
 
+.#{$ns}h1 {
+    font-size: $font-size_heading1;
+    line-height: $line-height_heading1;
+    color: $color-tertiary;
+}
+
+.#{$ns}h2 {
+    font-size: $font-size_heading2;
+    line-height: $line-height_heading2;
+    color: $color-primary;
+}
+
+.#{$ns}h3 {
+    font-size: $font-size_heading3;
+    line-height: $line-height_heading3;
+    font-weight: 700;
+}
+
+.#{$ns}h4 {
+    font-size: $font-size_heading4;
+    line-height: $line-height_heading4;
+}

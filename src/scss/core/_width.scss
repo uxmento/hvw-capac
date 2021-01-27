@@ -1,0 +1,8 @@
+.w {
+    @each $name, $width in $widths {
+      &-#{$name} {
+        width: $width !important;
+        min-width: fit-content;
+      }
+    }
+}

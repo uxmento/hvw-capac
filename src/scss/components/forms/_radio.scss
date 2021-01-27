@@ -17,6 +17,7 @@
         margin: -1px;
         padding: 0;
         overflow: hidden;
+        transition: $transition;
     }
 
     &__icon {

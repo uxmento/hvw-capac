@@ -20,3 +20,14 @@
     }
   }
 }
+
+// --------------
+// focus 
+// --------------
+@mixin focus($color: $color_primary, $no_space: 'true') {
+  @if $no_space == 'none'{
+    box-shadow: $color 0px 0px 0px 2px !important;
+  } @else {
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, $color 0px 0px 0px 4px !important;
+  }
+}

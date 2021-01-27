@@ -1,0 +1,15 @@
+.#{$ns}error {
+    color: $color_error;
+}
+
+.#{$ns}valid {
+    color: $color_valid;
+}
+
+.#{$ns}warning {
+    color: $color_warning;
+}
+
+.#{$ns}disabled {
+    color: $color_error;
+}

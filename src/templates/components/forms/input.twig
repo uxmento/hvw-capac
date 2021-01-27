@@ -1,11 +1,11 @@
-{% macro render(type, name, placeholder, symbol, id) %}
+{% macro render(type, options = {}) %}
     {% import "components/icons/icon.twig" as icon %}
 
-    <div class="hc-input">
-        {% if symbol %}
-        {{icon.render(symbol, 'hc-input__icon')}}
+    <div class="hc-input {{options.class}}">
+        {% if options.icon %}
+        {{icon.render(options.icon, 'hc-input__icon')}}
         {% endif %}
-        <input type="{{type}}" id="{{id}}" name="{{name}}" placeholder="{{placeholder}}" class="hc-input__input" />
+        <input type="{{type}}" id="{{options.id}}" name="{{options.name}}" placeholder="{{options.placeholder}}" class="hc-input__input" autocomplete="on"/>
     </div>
     
 {% endmacro %}

@@ -2,5 +2,7 @@
 
     font-size: $font-size_tiny;
     line-height: $line-height_tiny;
-    color: $color_tiny-text
-}
+    color: $color_tiny-text;
+    letter-spacing: 1px;
+    margin-top: rem(8px)
+;}

@@ -1,3 +1,15 @@
-.#{$ns}label {
+.#{$ns}input__label {
+    display: block;
+    font-weight: 600;
     margin-bottom: .5rem;
+
+    &-optional {
+        font-weight: 300;
+        letter-spacing: 1px;
+        font-style: italic;
+    }
+
+    &-mandatory {
+        color: $color_error;
+    }
 }

@@ -1,0 +1,196 @@
+.#{$ns}button {
+    $root: &;
+
+    padding: rem(20px) rem(22px);
+    border-radius: 4px;
+    color: inherit;
+    border: 0;
+    cursor: pointer;
+    outline: 0;
+    user-select: none;
+    -moz-appearance: none;
+    text-decoration: none;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    font-family: $font-family;
+    display: inline-flex;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+    transition: $transition; 
+    
+
+    // FORMAT
+    &, &--lg {
+        padding: rem(20px) rem(22px);
+    }
+
+    &--md {
+        padding: rem(16px) rem(22px);
+    }
+
+    &--sm {
+        padding: rem(12px) rem(22px);
+    }
+
+    // LABEL
+    &__label {
+        font-weight: 600;
+        font-size: 1rem;
+        width: 100%;
+        display: inherit;
+        align-items: inherit;
+        justify-content: inherit;
+    }
+
+    // ICONS
+    &__icon {
+        display: inherit;
+        align-self: center;
+        pointer-events: none;
+        flex-shrink: 0;
+    }
+
+    &__icon--start {
+        margin-right: rem(16px);
+    }
+
+    &__icon--end {
+        margin-left: rem(16px);
+    }
+
+    // STYLES
+    &__primary, 
+    &__secondary,
+    &__tertiary {
+        background-color: $color_primary;
+        color: $color_white;
+
+        &:hover {
+            background-color: darken($color_primary, 5%);   
+        }
+
+        &:focus {
+            @include focus($color_primary);
+        }
+
+        &:active { 
+            background-color: darken($color_primary, 10%);   
+        }
+
+        .#{$ns}icon{
+            fill: $color_white;
+        }
+    }
+
+    &__primary {
+        color: $color_black;
+
+        .#{$ns}icon{
+            fill: $color_black;
+        }
+    }
+
+    &__secondary {
+        background-color: $color_secondary;
+
+        &:hover {
+            background-color: darken($color_secondary, 5%);   
+        }
+
+        &:focus {
+            @include focus($color_default-text);
+        }
+
+        &:active {
+            background-color: darken($color_secondary, 10%);   
+        }
+    }
+
+    &__tertiary {
+        background-color: $color_tertiary;
+
+        &:hover {
+            background-color: darken($color_tertiary, 5%);   
+        }
+
+        &:focus {
+            @include focus($color_default-text);
+        }
+
+        &:active {
+            background-color: darken($color_tertiary, 10%);   
+        }
+    }
+
+    &__disabled {
+        background-color: $color_background-disabled;
+        color: $color_disabled;
+        pointer-events: none;
+    }
+
+    &__outlined-primary, 
+    &__outlined-secondary,
+    &__outlined-tertiary {
+        border-color: 2px solid $color_primary;
+        color: $color_primary;
+
+        &:hover {
+            background-color: #FFF1E9;
+        }
+
+        &:focus {
+            @include focus($color_primary);
+        }
+
+        &:active { 
+            background-color: #FAEEE8;
+            border-color: #BA480B   
+        }
+
+        .#{$ns}icon{
+            fill: $color_primary;
+        }
+    }
+
+    &__outlined-secondary {
+        background-color: $color_secondary;
+
+        &:hover {
+            background-color: darken($color_secondary, 5%);   
+        }
+
+        &:focus {
+            @include focus($color_default-text);
+        }
+
+        &:active {
+            background-color: darken($color_secondary, 10%);   
+        }
+    }
+
+    &__outlined-tertiary {
+        background-color: $color_tertiary;
+
+        &:hover {
+            background-color: darken($color_tertiary, 5%);   
+        }
+
+        &:focus {
+            @include focus($color_default-text);
+        }
+
+        &:active {
+            background-color: darken($color_tertiary, 10%);   
+        }
+    }
+
+    &__outlined-disabled {
+        background-color: $color_background-disabled;
+        color: $color_disabled;
+        pointer-events: none;
+    }
+
+
+}
+

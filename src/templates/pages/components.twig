@@ -1,0 +1,237 @@
+{% extends "layouts/default.twig" %}
+
+{% import "components/icons/icon.twig" as icon %}
+{% import "components/forms/input.twig" as input %}
+{% import "components/forms/select.twig" as select %}
+{% import "components/forms/checkbox.twig" as checkbox %}
+{% import "components/forms/radio.twig" as radio %}
+{% import "components/forms/helper.twig" as helper %}
+{% import "components/forms/label.twig" as label %}
+
+{% block body %}
+	<!-- html goes here -->
+	<header>
+		<div class="hc-container">
+			<h1 class="hc-h1">Components</h1>
+		</div>
+	</header>
+
+	<section role="main">
+
+		<div class="hc-container accent py-4">
+            <h2 class="hc-h3">Labels</h2>
+			<div class="row">
+                <div class="col-3--xxl col-4--lg col-6--xs col-12 pb-1">
+                    {{label.render('Label', {for: 'test-name'})}}
+                </div>
+			
+                <div class="col-3--xxl col-4--lg col-6--xs col-12 pb-1">
+                    {{label.render('Label', {class:'hc-error', for: 'Voornaam'})}}
+                </div>
+			
+                <div class="col-3--xxl col-4--lg col-6--xs col-12 pb-1">
+                    {{label.render('Label', {for: 'Familienaam', optional: 'Optioneel'})}}
+                </div>
+			
+                <div class="col-3--xxl col-4--lg col-6--xs col-12 pb-1">
+                    {{label.render('Label', {for: 'Anderenaam', mandatory: 'true'})}}
+                </div>
+			</div>
+        </div>
+
+		<div class="hc-container accent py-4">
+            <h2 class="hc-h3">Buttons</h2>
+            <div class="row align-center">
+                <div class="col-12 pb-1">
+                    <button type="button" class="hc-button hc-button__primary hc-button--lg w-100" tabindex="0" >
+                        <span class="hc-button__label">
+                            <span class="hc-button__icon hc-button__icon--start">{{icon.render('envelope', 'hc-icon')}}</span>Primary button
+                        </span>
+                    </button>
+                    <button type="button" class="hc-button hc-button__primary hc-button--md" tabindex="0" >
+                        <span class="hc-button__label">Primary button<span class="hc-button__icon hc-button__icon--end">{{icon.render('envelope', 'hc-icon')}}</span></span>
+                    </button>
+                    <button type="button" class="hc-button hc-button__primary hc-button--sm" tabindex="0" >
+                        <span class="hc-button__label">Primary button</span>
+                    </button>
+                    <button type="button" class="hc-button hc-button__primary hc-button--sm hc-button__disabled" aria-disabled="true" tabindex="-1"  disabled>
+                        <span class="hc-button__label">Primary button</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="row align-center">
+                <div class="col-3--xxl col-4--lg col-6--xs col-12 pb-1">
+                    <button type="button" class="hc-button hc-button__secondary w-100 mb-2 hc-button--lg" tabindex="0" >
+                        <span class="hc-button__label">
+                            <span class="hc-button__icon hc-button__icon--start">{{icon.render('envelope', 'hc-icon')}}</span>Secondary button
+                        </span>
+                    </button>
+                </div>
+                <div class="col-3--xxl col-4--lg col-6--xs col-12 pb-1">
+                    <button type="button" class="hc-button hc-button__secondary w-100 mb-2 hc-button--md" tabindex="0" >
+                        <span class="hc-button__label">Secondary button<span class="hc-button__icon hc-button__icon--end">{{icon.render('envelope', 'hc-icon')}}</span></span>
+                    </button>
+                </div>
+                <div class="col-3--xxl col-4--lg col-6--xs col-12 pb-1">
+                    <button type="button" class="hc-button hc-button__secondary w-100 mb-2 hc-button--sm" tabindex="0" >
+                        <span class="hc-button__label">Secondary button</span>
+                    </button>
+                </div>
+                <div class="col-3--xxl col-4--lg col-6--xs col-12 pb-1">
+                    <button type="button" class="hc-button hc-button__secondary w-100 mb-2 hc-button--sm hc-button__disabled" aria-disabled="true" tabindex="-1"  disabled>
+                        <span class="hc-button__label">Secondary button</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="row align-center">
+                <div class="col-3--xxl col-4--lg col-6--xs col-12 pb-1">
+                    <button type="button" class="hc-button hc-button__tertiary hc-button--lg" tabindex="0" >
+                        <span class="hc-button__label">
+                            <span class="hc-button__icon hc-button__icon--start">{{icon.render('envelope', 'hc-icon')}}</span>Tertiary button
+                        </span>
+                    </button>
+                </div>
+                <div class="col-3--xxl col-4--lg col-6--xs col-12 pb-1">
+                    <button type="button" class="hc-button hc-button__tertiary hc-button--md" tabindex="0" >
+                        <span class="hc-button__label">Tertiary button<span class="hc-button__icon hc-button__icon--end">{{icon.render('envelope', 'hc-icon')}}</span></span>
+                    </button>
+                </div>
+                <div class="col-3--xxl col-4--lg col-6--xs col-12 pb-1">
+                    <button type="button" class="hc-button hc-button__tertiary hc-button--sm" tabindex="0" >
+                        <span class="hc-button__label">Tertiary button</span>
+                    </button>
+                </div>
+                <div class="col-3--xxl col-4--lg col-6--xs col-12 pb-1">
+                    <button type="button" class="hc-button hc-button__tertiary hc-button--sm hc-button__disabled" aria-disabled="true" tabindex="-1"  disabled>
+                        <span class="hc-button__label">Tertiary button</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+		<div class="hc-container accent py-4">
+            <h2 class="hc-h3">Inputfield</h2>
+			<div class="row">
+                <div class="col-3--xl col-4--lg col-6--md col-12--xxs">
+                    <div class="form__row mb-3">
+                        {{label.render('Name', {for: 'name', mandatory:'true'})}}
+                        {{input.render('text', {name:'name', placeholder:'Enter your full name', icon:'user-alt', id:'name'})}}
+                        {{helper.render('Vergeet je naam niet in te vullen')}}
+                    </div>
+                </div>
+			
+                <div class="col-3--xl col-4--lg col-6--md col-12--xxs">
+                    <div class="form__row mb-3">
+                        {{label.render('Firstname', {for: 'firstname', class: 'hc-valid hc-state'})}}
+                        {{input.render('text', {name:'firstname', placeholder:'Naam', icon:'user-alt', id:'firstname', class:'hc-valid  hc-state'})}}
+                        {{helper.render('Vergeet je naam niet in te vullen', {class:'hc-valid hc-state'})}}
+                    </div>
+                </div>
+			
+                <div class="col-3--xl col-4--lg col-6--md col-12--xxs">
+                    <div class="form__row mb-3">
+                        {{label.render('Second name', {for: 'secondname', class:'hc-warning hc-state'})}}
+                        {{input.render('text', {name:'secondname', placeholder:'Second Name', icon:'user-alt', id:'secondname', class:'hc-warning hc-state'})}}
+                        {{helper.render('Vergeet je naam niet in te vullen', {class:'hc-warning hc-state'})}}
+                    </div>
+                </div>
+			
+                <div class="col-3--xl col-4--lg col-6--md col-12--xxs">
+                    <div class="form__row mb-3">
+                        {{label.render('Address', {for: 'address', class:'hc-error hc-state'})}}
+                        {{input.render('text', {name:'address', placeholder:'Address', icon:'user-alt', id:'address', class:'hc-error  hc-state'})}}
+                        {{helper.render('Vergeet je naam niet in te vullen', {class:'hc-error hc-state'})}}
+                    </div>
+                </div>
+			</div>
+        </div>
+
+        <div class="hc-container accent py-4">
+            <h2 class="hc-h3">Inputfield</h2>
+			<div class="row">
+                <div class="col-4--md col-6--sm col-12--xxs">
+                    <div class="form__row mb-3">
+                        {{label.render('Name', {for: 'name', mandatory:'true'})}}
+                        {{input.render('text', {name:'name', placeholder:'Enter your full name', icon:'user-alt', id:'name'})}}
+                        {{helper.render('Vergeet je naam niet in te vullen')}}
+                    </div>
+                </div>
+			
+                <div class="col-8--md col-6--sm col-12--xxs">
+                    <div class="form__row mb-3">
+                        {{label.render('Firstname', {for: 'firstname', class: 'hc-valid hc-state'})}}
+                        {{input.render('text', {name:'firstname', placeholder:'Naam', icon:'user-alt', id:'firstname', class:'hc-valid  hc-state'})}}
+                        {{helper.render('Vergeet je naam niet in te vullen', {class:'hc-valid hc-state'})}}
+                    </div>
+                </div>
+			
+                <div class="col-4--md col-6--sm col-12--xxs">
+                    <div class="form__row mb-3">
+                        {{label.render('Second name', {for: 'secondname', class:'hc-warning hc-state'})}}
+                        {{input.render('text', {name:'secondname', placeholder:'Second Name', icon:'user-alt', id:'secondname', class:'hc-warning hc-state'})}}
+                        {{helper.render('Vergeet je naam niet in te vullen', {class:'hc-warning hc-state'})}}
+                    </div>
+                </div>
+			
+                <div class="col-8--md col-6--sm col-12--xxs">
+                    <div class="form__row mb-3">
+                        {{label.render('Address', {for: 'address', class:'hc-error hc-state'})}}
+                        {{input.render('text', {name:'address', placeholder:'Address', icon:'user-alt', id:'address', class:'hc-error  hc-state'})}}
+                        {{helper.render('Vergeet je naam niet in te vullen', {class:'hc-error hc-state'})}}
+                    </div>
+                </div>
+			</div>
+        </div>
+
+        <div class="hc-container accent py-4">
+            {{label.render('dropdown', {mandatory: 'true'})}}
+            {{select.render('company', [
+                {
+                    label: "UXMen",
+                    value: "uxmen"
+                },
+                {
+                    label: "Calibrate",
+                    value: "calibrate"
+                }
+            ])}}
+        </div>
+
+        <div class="hc-container accent">
+            <div class="row">
+                <table class="table">
+                    <thead>
+                        <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+	</section>
+
+{% endblock %}

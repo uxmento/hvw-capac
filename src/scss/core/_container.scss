@@ -3,9 +3,19 @@
  * Default container
  */
 
-.container {
+.#{$ns}container {
   width: 100% !important;
   max-width: rem($container-max-width) !important;
   margin: 0 auto !important;
   padding: 0 rem($container-gutter) !important;
+  background-color: transparent;
+
+  &-fluid {
+    max-width: none;
+  }
+}
+
+.accent {
+  background: $color_white;
+  border-radius: $border-radius;         
 }
