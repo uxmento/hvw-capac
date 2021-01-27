@@ -32,24 +32,36 @@ $line-height_heading4: rem(30px);
 //} 
 
 .#{$ns}h1 {
-    font-size: $font-size_heading1;
-    line-height: $line-height_heading1;
-    color: $color-tertiary;
+  font-size: $font-size_heading1;
+  line-height: $line-height_heading1;
+  color: $color-tertiary;
 }
 
 .#{$ns}h2 {
-    font-size: $font-size_heading2;
-    line-height: $line-height_heading2;
-    color: $color-primary;
+  font-size: $font-size_heading2;
+  line-height: $line-height_heading2;
+  color: $color-primary;
 }
 
 .#{$ns}h3 {
-    font-size: $font-size_heading3;
-    line-height: $line-height_heading3;
-    font-weight: 700;
+  font-size: $font-size_heading3;
+  line-height: $line-height_heading3;
+  font-weight: 700;
 }
 
 .#{$ns}h4 {
-    font-size: $font-size_heading4;
-    line-height: $line-height_heading4;
+  font-size: $font-size_heading4;
+  line-height: $line-height_heading4;
+}
+
+a[href] {
+  color: $color_link;
+  text-decoration: underline;
+
+  &:hover {
+    color: $color_link-hover;
+  }
+
+  @include focus($color_link-hover);
+
 }

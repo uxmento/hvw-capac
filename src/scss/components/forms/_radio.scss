@@ -35,7 +35,7 @@
         fill: transparent;
         background-color: #fff;
 
-        :focus + & {
+        :focus-visible + & {
             outline: 0;
             box-shadow: $focus;
         }

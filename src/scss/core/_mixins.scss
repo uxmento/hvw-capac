@@ -25,9 +25,30 @@
 // focus 
 // --------------
 @mixin focus($color: $color_primary, $no_space: 'true') {
-  @if $no_space == 'none'{
-    box-shadow: $color 0px 0px 0px 2px !important;
-  } @else {
-    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, $color 0px 0px 0px 4px !important;
+
+  &:focus,
+  .has-focus { 
+    outline: 0;
+    /* Some exciting button focus styles */ 
+    @if $no_space == 'none'{
+      box-shadow: $color 0px 0px 0px 2px;
+    } @else {
+      box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, $color 0px 0px 0px 4px;
+    }
+  }
+  &:focus:not(:focus-visible) {
+    /* Undo all the above focused button styles
+      if the button has focus but the browser wouldn't normally
+      show default focus styles */
+      box-shadow: none;
+  }
+  &:focus-visible { 
+    /* Some even *more* exciting button focus styles */ 
+    outline: 0;
+    @if $no_space == 'none'{
+      box-shadow: $color 0px 0px 0px 2px !important;
+    } @else {
+      box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, $color 0px 0px 0px 4px !important;
+    }
   }
 }

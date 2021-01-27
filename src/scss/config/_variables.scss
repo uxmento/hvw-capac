@@ -78,11 +78,15 @@ $widths: (
   100: 100%
 );
 
+// --------
+// Border
+// --------
+$border-width: 2px;
 
 // -----
 // Forms
 // -----
-$focus: rgb(255, 255, 255) 0px 0px 0px 2px, $color_tertiary 0px 0px 0px 4px !important;
+$focus: rgb(255, 255, 255) 0px 0px 0px $border-width, $color_tertiary 0px 0px 0px 4px !important;
 $border-radius: 4px;
 
 
@@ -90,3 +94,8 @@ $border-radius: 4px;
 // Animation
 // ---------
 $transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+// ----------
+// Opacity
+// ----------
+$opacity: .85;

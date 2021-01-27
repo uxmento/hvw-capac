@@ -29,24 +29,27 @@
         height: 1rem;
         padding: 1px;
         margin: 0;
-        border: 1px solid #ccc;
-        border-radius: .25rem;
+        border: 1px solid $color_border;
+        border-radius: rem(2px);
         fill: transparent;
         background-color: #fff;
+        transition: $transition;
 
-        :focus + & {
+        :focus-visible + & {
             outline: 0;
             box-shadow: $focus;
         }
 
         :checked + & {
-            fill: #333;
+            fill: $color_white;
             border-color: $color_default-text;
+            background-color: $color_default-text;
         }
 
         :hover + &,
         :active + & {
             border-color: $color_default-text;
+            background-color: $color_default-text;
         }
     }
 

@@ -25,13 +25,22 @@
       color: rgba($color_default-text, .4);
     }
 
-    &:hover {
+    &:hover{    
       border-color: $color_default-text;
     }
 
     &:focus {
-      outline:0;
-      border: 2px solid $color_tertiary;
+      border: $border-width solid $color_tertiary;
+    }
+    &:focus:not(:focus-visible) {
+      border: none;
+    }
+    &:focus-visible,
+    &:active,
+    &:not(:placeholder-shown),
+    &.#{$ns}has-value {
+      outline: 0;
+      border: $border-width solid $color_tertiary;
     }
 
     [class*="input__icon"] + & {
@@ -53,11 +62,8 @@
 
   &.#{$ns}state {
     #{$root}__input {
-      border: 2px solid $color_tertiary;
-
-      &:focus {
-        @include focus($color_tertiary);
-      }
+      border: $border-width solid $color_tertiary;
+      @include focus($color_tertiary);
     }
   }
   &.#{$ns}valid {

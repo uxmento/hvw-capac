@@ -1,0 +1,40 @@
+.#{$ns}link {
+    display: inline-flex;
+    color: $color_link;
+    text-decoration: underline;
+    vertical-align: middle;
+    transition: $transition;
+    border-radius: $border-radius;
+
+    .#{$ns}icon {
+        fill: $color_link;
+
+    }
+
+    // ICONS
+    &__icon {
+        display: inherit;
+        align-self: center;
+        pointer-events: none;
+        flex-shrink: 0;
+    }
+
+    &__icon--start {
+        margin-right: rem(8px);
+    }
+
+    &__icon--end {
+        margin-left: rem(8px);
+    }
+
+    &:hover {
+        color: $color_link-hover;
+
+        .#{$ns}icon {
+            fill: $color_link-hover;
+        }
+    }
+
+    @include focus($color_link-hover);
+
+}

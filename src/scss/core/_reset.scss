@@ -65,3 +65,25 @@ svg {
   max-width: 100%;
   height: auto;
 }
+
+table {
+  caption-side: bottom;
+  border-collapse: collapse
+}
+
+caption {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: #757575;
+  text-align: left
+}
+
+th {
+  text-align: inherit;
+  text-align: -webkit-match-parent
+}
+
+tbody,td,tfoot,th,thead,tr {
+  border: 0 solid;
+  border-color: inherit
+}

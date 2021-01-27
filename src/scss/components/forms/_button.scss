@@ -18,9 +18,26 @@
     align-items: center;
     justify-content: center;
     transition: $transition; 
-    
 
-    // FORMAT
+    background-color: $color_background-default; 
+    color: $color_default-text;
+
+    &:hover {
+        background-color: darken($color_background-default, 5%);   
+    }
+
+    @include focus($color_default-text);
+
+    &:active { 
+        background-color: darken($color_background-default, 10%);   
+    }
+
+    .#{$ns}icon{
+        fill: $color_default-text;
+    }
+
+
+    // FORMATS
     &, &--lg {
         padding: rem(20px) rem(22px);
     }
@@ -60,6 +77,7 @@
     }
 
     // STYLES
+    // FULL - BUTTONS
     &__primary, 
     &__secondary,
     &__tertiary {
@@ -70,9 +88,7 @@
             background-color: darken($color_primary, 5%);   
         }
 
-        &:focus {
-            @include focus($color_primary);
-        }
+        @include focus($color_default-text);
 
         &:active { 
             background-color: darken($color_primary, 10%);   
@@ -98,9 +114,7 @@
             background-color: darken($color_secondary, 5%);   
         }
 
-        &:focus {
-            @include focus($color_default-text);
-        }
+        @include focus($color_link-hover);
 
         &:active {
             background-color: darken($color_secondary, 10%);   
@@ -114,9 +128,8 @@
             background-color: darken($color_tertiary, 5%);   
         }
 
-        &:focus {
-            @include focus($color_default-text);
-        }
+
+        @include focus($color_link-hover); 
 
         &:active {
             background-color: darken($color_tertiary, 10%);   
@@ -127,70 +140,147 @@
         background-color: $color_background-disabled;
         color: $color_disabled;
         pointer-events: none;
+        opacity: $opacity
     }
 
-    &__outlined-primary, 
-    &__outlined-secondary,
-    &__outlined-tertiary {
-        border-color: 2px solid $color_primary;
+
+    // STYLES
+    // OUTLINE - BUTTONS
+    &__outline-primary, 
+    &__outline-secondary,
+    &__outline-tertiary,
+    &__outline-disabled,
+    &__ghost-primary, 
+    &__ghost-secondary,
+    &__ghost-tertiary,
+    &__ghost-disabled {
+        border: 2px solid $color_primary;
+        background: transparent;
         color: $color_primary;
-
-        &:hover {
-            background-color: #FFF1E9;
-        }
-
-        &:focus {
-            @include focus($color_primary);
-        }
-
-        &:active { 
-            background-color: #FAEEE8;
-            border-color: #BA480B   
-        }
 
         .#{$ns}icon{
             fill: $color_primary;
         }
-    }
 
-    &__outlined-secondary {
-        background-color: $color_secondary;
+        // FORMATS
+        &, &--lg {
+            padding: rem(16px) rem(20px);
+        }
+
+        &--md {
+            padding: rem(12px) rem(20px);
+        }
+
+        &--sm {
+            padding: rem(8px) rem(20px);
+        }
 
         &:hover {
-            background-color: darken($color_secondary, 5%);   
+            background-color: rgba($color_primary, .1);
+            color: darken($color_primary, 5%);
+
+            .#{$ns}icon{
+                fill: darken($color_primary, 5%);
+            }
         }
 
-        &:focus {
-            @include focus($color_default-text);
+        &:active { 
+            border-color:darken($color_primary, 5%); 
+            background-color: rgba($color_primary, .2);
+            color: darken($color_primary, 10%);
+
+            .#{$ns}icon{
+                fill: darken($color_primary, 10%);
+            }
         }
 
-        &:active {
-            background-color: darken($color_secondary, 10%);   
-        }
     }
 
-    &__outlined-tertiary {
-        background-color: $color_tertiary;
+    &__outline-secondary, 
+    &__ghost-secondary {
+        border-color: $color_secondary;
+        color: $color_secondary;
+
+        .#{$ns}icon{
+            fill: $color_secondary;
+        }
 
         &:hover {
-            background-color: darken($color_tertiary, 5%);   
+            background-color: rgba($color_secondary, .1);
+            color: darken($color_secondary, 5%);
+
+            .#{$ns}icon{
+                fill: darken($color_secondary, 5%);
+            }
         }
 
-        &:focus {
-            @include focus($color_default-text);
-        }
-
+       
+        @include focus($color_link-hover);
+       
         &:active {
-            background-color: darken($color_tertiary, 10%);   
+            border-color:darken($color_secondary, 5%); 
+            background-color: rgba($color_secondary, .2);
+            color: darken($color_secondary, 10%);
+
+            .#{$ns}icon{
+                fill: darken($color_secondary, 10%);
+            }
         }
+
+        
     }
 
-    &__outlined-disabled {
-        background-color: $color_background-disabled;
+    &__outline-tertiary, 
+    &__ghost-tertiary {
+        border-color: $color_tertiary;
+        color: $color_tertiary;
+
+        .#{$ns}icon{
+            fill: $color_tertiary;
+        }
+
+        &:hover { 
+            background-color: rgba($color_tertiary, .1);
+            color: darken($color_tertiary, 5%);
+
+            .#{$ns}icon{
+                fill: darken($color_tertiary, 5%);
+            }
+        }
+
+        @include focus($color_link-hover);
+
+        &:active {
+            border-color:darken($color_tertiary, 5%); 
+            background-color: rgba($color_tertiary, .2);
+            color: darken($color_tertiary, 10%);
+
+            .#{$ns}icon{
+                fill: darken($color_tertiary, 10%);
+            }
+        }
+
+        
+    }
+
+    &__outline-disabled,
+    &__ghost-disabled {
+        border-color: $color_background-disabled;
         color: $color_disabled;
         pointer-events: none;
+
+        .#{$ns}icon{
+            fill: $color_disabled;
+        }
     }
 
-
+    // STYLES
+    // GHOST - BUTTONS
+    &__ghost-primary, 
+    &__ghost-secondary,
+    &__ghost-tertiary,
+    &__ghost-disabled {
+        border: none;
+    }
 }
 

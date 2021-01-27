@@ -1,8 +1,9 @@
-.#{$ns}error {
+.#{$ns}error,
+:invalid{
     color: $color_error;
 }
 
-.#{$ns}valid {
+.#{$ns}valid{
     color: $color_valid;
 }
 

@@ -32,12 +32,17 @@
             cursor: pointer;
         }
 
-        &:focus {
+        &:focus-visible {
             outline: 0;
             box-shadow: $focus;
         }
 
-        [class*="input__icon"] + & {
+        &.#{$ns}has-value {
+            outline:0;
+            border: 2px solid $color_tertiary;
+        }
+
+        [class*="#{$ns}input__icon"] + & {
             padding-right: 2.5rem;
         }
     }

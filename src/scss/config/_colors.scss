@@ -4,6 +4,8 @@ $color_black: #000;
 $color_primary: #ec5c0e;
 $color_secondary: #87715E;
 $color_tertiary: #2650C1;
+$color_link: $color_tertiary;
+$color_link-hover: darken($color_link, 20%);
 
 $color_default-text: #161532;
 $color_icons: #666666;
@@ -11,9 +13,13 @@ $color_tiny-text: #666666;
 $color_valid: #008A00;
 $color_warning: #937100;
 $color_error: #DA1E27;
-$color_disabled: #989898;
+$color_disabled: #646464;
 
-$color_border: #FCBC00;
+$color_border-highlight: #FCBC00;
+$color_border-table: #DEDEDE;
+$color_border: rgba($color_default-text, .4);
 
 $color_background-page: #F4F4F4;
-$color_background-disabled: rgba($color_disabled, .12);
+$color_background-disabled: rgba($color_disabled, .2);
+$color_background-default: #d5dcee;
+$color_background-table-header: rgba(#A18B79, .1);
