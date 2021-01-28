@@ -3,7 +3,7 @@
  * Radio styling
  */
 
-.#{$ns}radio {
+ .#{$ns}radio {
     display: inline-block;
     vertical-align: baseline;
     cursor: pointer;
@@ -17,7 +17,6 @@
         margin: -1px;
         padding: 0;
         overflow: hidden;
-        transition: $transition;
     }
 
     &__icon {
@@ -28,12 +27,13 @@
         vertical-align: baseline;
         width: 1rem;
         height: 1rem;
-        padding: 2px;
+        padding: 4px;
         margin: 0;
         border: 1px solid #ccc;
         border-radius: 50%;
         fill: transparent;
-        background-color: #fff;
+        background-color: $color_white;
+        transition: $transition;
 
         :focus-visible + & {
             outline: 0;

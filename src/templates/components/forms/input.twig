@@ -5,7 +5,7 @@
         {% if options.icon %}
         {{icon.render(options.icon, 'hc-input__icon')}}
         {% endif %}
-        <input type="{{type}}" id="{{options.id}}" name="{{options.name}}" placeholder="{{options.placeholder}}" class="hc-input__input" autocomplete="on"/>
+        <input type="{{type}}" id="{{options.id}}" name="{{options.name}}" placeholder="{{options.placeholder}}" class="hc-input__input" {% if options.disabled %}aria-disabled="true" disabled{% endif %} autocomplete="{{options.autocomplete|default('on')}}" />
     </div>
     
 {% endmacro %}

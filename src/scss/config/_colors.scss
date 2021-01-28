@@ -13,13 +13,22 @@ $color_tiny-text: #666666;
 $color_valid: #008A00;
 $color_warning: #937100;
 $color_error: #DA1E27;
+$color_info: $color_tertiary;
 $color_disabled: #646464;
+
+$color_grey-dark: #333333;
+$color_grey-medium: #989898;
 
 $color_border-highlight: #FCBC00;
 $color_border-table: #DEDEDE;
 $color_border: rgba($color_default-text, .4);
 
 $color_background-page: #F4F4F4;
-$color_background-disabled: rgba($color_disabled, .2);
+$color_background-disabled: rgba($color_grey-medium, .2);
 $color_background-default: #d5dcee;
 $color_background-table-header: rgba(#A18B79, .1);
+
+$color_background-message--valid: #F0F8F0;
+$color_background-message--warning:#FDF0E2;
+$color_background-message--info: #EDF0F7;
+$color_background-message--error: #FFF7F7;

@@ -25,14 +25,13 @@
         left: 0;
         display: inline-flex;
         vertical-align: baseline;
-        width: 1rem;
-        height: 1rem;
-        padding: 1px;
+        width: rem(15px);
+        height: rem(15px);
         margin: 0;
         border: 1px solid $color_border;
         border-radius: rem(2px);
         fill: transparent;
-        background-color: #fff;
+        background-color: $color_white;
         transition: $transition;
 
         :focus-visible + & {
@@ -49,7 +48,6 @@
         :hover + &,
         :active + & {
             border-color: $color_default-text;
-            background-color: $color_default-text;
         }
     }
 

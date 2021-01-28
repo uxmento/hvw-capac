@@ -2,7 +2,7 @@
 // font-sizes
 // --------------
 
-$font-size_tiny: 14px;
+$font-size_tiny: rem(14px);
 $font-size_heading1: rem(48px);
 $font-size_heading2: rem(44px);
 $font-size_heading3: rem(24px);
@@ -15,7 +15,7 @@ $font-size_heading4: rem(22px);
 // line-heights
 // --------------
 
-$line-height_tiny: 18px;
+$line-height_tiny: rem(18px);
 $line-height_heading1: rem(56px);
 $line-height_heading2: rem(46px);
 $line-height_heading3: rem(32px);
@@ -64,4 +64,11 @@ a[href] {
 
   @include focus($color_link-hover);
 
+}
+
+.ta-l{
+  text-align: left;
+}
+.ta-r {
+  text-align: right;
 }

@@ -1,0 +1,41 @@
+.#{$ns}message {
+
+    $root: &;
+
+    background: $color_background-default;
+    border: $border-width solid $color_border;
+    color: $color_grey-dark;
+    padding: rem(30px) rem(24px);
+    border-radius: $border-radius;
+    position: relative;
+
+    display:flex;
+    justify-content: flex-start;
+
+    &.#{$ns}error{
+        background-color: $color_background-message--error;
+        border-color: $color_error;
+    }
+    
+    &.#{$ns}valid{
+        background-color: $color_background-message--valid;
+        border-color: $color_valid;
+    }
+    
+    &.#{$ns}warning {
+        background-color: $color_background-message--warning;
+        border-color: $color_primary;
+    }
+    
+    &.#{$ns}info {
+        background-color: $color_background-message--info;
+        border-color: $color_tertiary;
+    }
+
+    &__icon{
+        flex-shrink: 0;
+        width: rem(24px);
+        height: rem(24px);
+        margin-right: rem(24px);
+    }
+}

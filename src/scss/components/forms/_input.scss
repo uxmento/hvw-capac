@@ -13,13 +13,15 @@
     display: block;
     width: 100%;
     height: 3rem;
+    min-height: 3rem;
     padding: rem(14px) rem(16px);
     margin: 0;
     border: 1px solid #ccc;
-    border-radius: 0.25rem;
-    font-size: 0.875rem;
+    border-radius: $border-radius;
+    font-size: $font-size;
     background-color: #fff;
     transition: $transition;
+    font-family: $font-family;
 
     &::placeholder {
       color: rgba($color_default-text, .4);
@@ -31,10 +33,12 @@
 
     &:focus {
       border: $border-width solid $color_tertiary;
+      outline: 0;
     }
     &:focus:not(:focus-visible) {
       border: none;
     }
+
     &:focus-visible,
     &:active,
     &:not(:placeholder-shown),
@@ -47,8 +51,11 @@
       padding-right: 2.5rem;
     }
 
-  }
+    // textarea options
+    resize: vertical;
 
+  }
+ 
   &__icon {
     position: absolute;
     top: 0;
@@ -58,7 +65,15 @@
     fill: #999;
     padding: 0.75rem;
     pointer-events: none;
+
+    // case multiline
+    #{$root}__multiline &{
+      height: calc(3rem - 2px);
+    }
   }
+
+
+  // states
 
   &.#{$ns}state {
     #{$root}__input {
@@ -66,6 +81,7 @@
       @include focus($color_tertiary);
     }
   }
+
   &.#{$ns}valid {
     #{$root}__input {
       border-color: $color_valid;
@@ -96,6 +112,21 @@
 
     #{$root}__icon {
       fill: $color_error;
+    }
+  }
+
+   
+  &.#{$ns}disabled {
+
+    #{$root}__input{
+      border-color: $color-disabled;
+      background-color: $color_background-disabled;
+      pointer-events: none;
+      opacity: $opacity;
+
+      &,&::placeholder {
+        color: $color_disabled;
+      }
     }
   }
 

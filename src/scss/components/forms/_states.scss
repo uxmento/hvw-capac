@@ -1,16 +1,44 @@
-.#{$ns}error,
-:invalid{
-    color: $color_error;
-}
+.#{$ns}valid {
 
-.#{$ns}valid{
     color: $color_valid;
+
+    .#{$ns}icon {
+        fill: $color_valid;
+    }
 }
 
 .#{$ns}warning {
+
     color: $color_warning;
+
+    .#{$ns}icon {
+        fill: $color_primary;
+    }
+}
+
+.#{$ns}error {
+
+    color: $color_error;
+
+    .#{$ns}icon {
+        fill: $color_error;
+    }
+}
+
+.#{$ns}info {
+
+    color: $color_tertiary;
+
+    .#{$ns}icon {
+        fill: $color_info;
+    }
 }
 
 .#{$ns}disabled {
-    color: $color_error;
+
+    color: $color_disabled;
+
+    .#{$ns}icon {
+        fill: $color_disabled;
+    }
 }

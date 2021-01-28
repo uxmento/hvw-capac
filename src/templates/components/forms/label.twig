@@ -3,11 +3,11 @@
     {{label}}
 
     {% if options.optional %}
-        <span class="hc-input__label-optional">({{options.optional}})</span> 
+        <span class="hc-input__label-optional  {{options.class}}">({{options.optional}})</span> 
     {% endif %}
 
     {% if options.mandatory %}
-        <span class="hc-input__label-mandatory" aria-hidden="true">*</span> 
+        <span class="hc-input__label-mandatory  {{options.class}}" aria-hidden="true">*</span> 
     {% endif %}
 
 </label>
