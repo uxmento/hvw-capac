@@ -67,15 +67,17 @@
     pointer-events: none;
 
     // case multiline
-    #{$root}__multiline &{
+    #{$root}--multiline &{
       height: calc(3rem - 2px);
     }
   }
 
-
   // states
 
-  &.#{$ns}state {
+  &.#{$ns}valid,
+  &.#{$ns}warning,
+  &.#{$ns}info,
+  &.#{$ns}error {
     #{$root}__input {
       border: $border-width solid $color_tertiary;
       @include focus($color_tertiary);
@@ -104,6 +106,17 @@
     }
   }
 
+  &.#{$ns}info {
+    #{$root}__input {
+      border-color: $color_info;
+      color: $color_info;
+    }
+
+    #{$root}__icon {
+      fill: $color_info;
+    }
+  }
+
   &.#{$ns}error {
     #{$root}__input {
       border-color: $color_error;
@@ -119,7 +132,7 @@
   &.#{$ns}disabled {
 
     #{$root}__input{
-      border-color: $color-disabled;
+      border-color: rgba($color-disabled, .25);
       background-color: $color_background-disabled;
       pointer-events: none;
       opacity: $opacity;

@@ -1,0 +1,30 @@
+.#{$ns}switcher {
+    display: flex;
+
+    &__button {
+        background-color: rgba($color_secondary, .1);
+        min-width: rem(100px);
+        padding: rem(16px) 0;
+        text-align: center;
+
+        &:first-child {
+            border-radius: $border-radius 0 0 $border-radius;
+        }
+
+        &:last-child {
+            border-radius: 0 $border-radius $border-radius 0;
+        }
+
+        &:not(:last-child):after {
+            content: "";
+            display: block;
+            width: 1px;
+            height: 50%;
+            background: $color_secondary;
+            position: absolute; 
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}

@@ -59,9 +59,6 @@
                     <a type="button" class="hc-button hc-button__primary" tabindex="0" >
                         <span class="hc-button__label">Primary link </span>
                     </a>
-                    <a type="button" class="hc-button" tabindex="0" >
-                        <span class="hc-button__label">General link </span>
-                    </a>
                 </div>
 
                 <div class="col-12 pb-2">
@@ -115,12 +112,12 @@
                         <span class="hc-button__label">Secondary button<span class="hc-button__icon hc-button__icon--end">{{icon.render('envelope', 'hc-icon')}}</span></span>
                     </button>
                 </div>
-                <div class="col-3--xxl col-4--lg col-6--xs col-12 pb-1">
-                    <button type="button" class="hc-button hc-button__secondary w-100 mb-2 hc-button--sm" tabindex="0" >
+                <div class="col-3--xxl col-4--lg col-12--xs col-12 pb-1">
+                    <button type="button" class="hc-button hc-button__secondary mb-2 hc-button--sm" tabindex="0" >
                         <span class="hc-button__label">Secondary button</span>
                     </button>
                 </div>
-                <div class="col-3--xxl col-4--lg col-6--xs col-12 pb-1">
+                <div class="col-3--xxl col-4--lg col-12--xs col-12 pb-1">
                     <button type="button" class="hc-button w-100 mb-2 hc-button--sm hc-button__disabled" aria-disabled="true" tabindex="-1"  disabled>
                         <span class="hc-button__label">Secondary button</span>
                     </button>
@@ -271,25 +268,25 @@
 			
                 <div class="col-3--xl col-4--lg col-6--md col-12--xxs">
                     <div class="mb-3">
-                        {{label.render('Firstname', {for: 'firstname', class: 'hc-valid hc-state'})}}
-                        {{input.render('text', {name:'firstname', placeholder:'Naam', icon:'user-alt', id:'firstname', class:'hc-valid  hc-state'})}}
-                        {{helper.render('Vergeet je naam niet in te vullen', {class:'hc-valid hc-state'})}}
+                        {{label.render('Firstname', {for: 'firstname', class: 'hc-valid '})}}
+                        {{input.render('text', {name:'firstname', placeholder:'Naam', icon:'user-alt', id:'firstname', class:'hc-valid  '})}}
+                        {{helper.render('Vergeet je naam niet in te vullen', {class:'hc-valid '})}}
                     </div>
                 </div>
 			
                 <div class="col-3--xl col-4--lg col-6--md col-12--xxs">
                     <div class="mb-3">
-                        {{label.render('Second name', {for: 'secondname', class:'hc-warning hc-state'})}}
-                        {{input.render('text', {name:'secondname', placeholder:'Second Name', icon:'user-alt', id:'secondname', class:'hc-warning hc-state'})}}
-                        {{helper.render('Vergeet je naam niet in te vullen', {class:'hc-warning hc-state'})}}
+                        {{label.render('Second name', {for: 'secondname', class:'hc-warning '})}}
+                        {{input.render('text', {name:'secondname', placeholder:'Second Name', icon:'user-alt', id:'secondname', class:'hc-warning '})}}
+                        {{helper.render('Vergeet je naam niet in te vullen', {class:'hc-warning '})}}
                     </div>
                 </div>
 			
                 <div class="col-3--xl col-4--lg col-6--md col-12--xxs">
                     <div class="mb-3">
-                        {{label.render('Address', {for: 'address', class:'hc-error hc-state'})}}
-                        {{input.render('text', {name:'address', placeholder:'Address', icon:'user-alt', id:'address', class:'hc-error hc-state'})}}
-                        {{helper.render('Vergeet je naam niet in te vullen', {class:'hc-error hc-state'})}}
+                        {{label.render('Address', {for: 'address', class:'hc-error '})}}
+                        {{input.render('text', {name:'address', placeholder:'Address', icon:'user-alt', id:'address', class:'hc-error '})}}
+                        {{helper.render('Vergeet je naam niet in te vullen', {class:'hc-error '})}}
                     </div>
                 </div>
 			</div>
@@ -305,25 +302,25 @@
 			
                 <div class="col-8--md col-6--sm col-12--xxs">
                     <div class="mb-3">
-                        {{label.render('Firstname', {for: 'firstname', class: 'hc-valid hc-state'})}}
-                        {{input.render('text', {name:'firstname', placeholder:'Naam', icon:'user-alt', id:'firstname', class:'hc-valid  hc-state'})}}
-                        {{helper.render('Vergeet je naam niet in te vullen', {class:'hc-valid hc-state'})}}
+                        {{label.render('Firstname', {for: 'firstname', class: 'hc-valid '})}}
+                        {{input.render('text', {name:'firstname', placeholder:'Naam', icon:'user-alt', id:'firstname', class:'hc-valid  '})}}
+                        {{helper.render('Vergeet je naam niet in te vullen', {class:'hc-valid '})}}
                     </div>
                 </div>
 			
                 <div class="col-4--md col-6--sm col-12--xxs">
                     <div class="mb-3">
-                        {{label.render('Second name', {for: 'secondname', class:'hc-warning hc-state'})}}
-                        {{input.render('text', {name:'secondname', placeholder:'Second Name', icon:'user-alt', id:'secondname', class:'hc-warning hc-state'})}}
-                        {{helper.render('Vergeet je naam niet in te vullen', {class:'hc-warning hc-state'})}}
+                        {{label.render('Second name', {for: 'secondname', class:'hc-warning '})}}
+                        {{input.render('text', {name:'secondname', placeholder:'Second Name', icon:'user-alt', id:'secondname', class:'hc-warning '})}}
+                        {{helper.render('Vergeet je naam niet in te vullen', {class:'hc-warning '})}}
                     </div>
                 </div>
 			
                 <div class="col-8--md col-6--sm col-12--xxs">
                     <div class="mb-3">
-                        {{label.render('Address', {for: 'address', class:'hc-error hc-state'})}}
-                        {{input.render('text', {name:'address', placeholder:'Address', icon:'user-alt', id:'address', class:'hc-error hc-state'})}}
-                        {{helper.render('Vergeet je naam niet in te vullen', {class:'hc-error hc-state'})}}
+                        {{label.render('Address', {for: 'address', class:'hc-error '})}}
+                        {{input.render('text', {name:'address', placeholder:'Address', icon:'user-alt', id:'address', class:'hc-error '})}}
+                        {{helper.render('Vergeet je naam niet in te vullen', {class:'hc-error '})}}
                     </div>
                 </div>
                 <div class="col-8">
@@ -338,25 +335,25 @@
                     
                         <div class="col-8--md col-6--sm col-12--xxs">
                             <div class="mb-3">
-                                {{label.render('Firstname', {for: 'firstname', class: 'hc-valid hc-state'})}}
-                                {{input.render('text', {name:'firstname', placeholder:'Naam', icon:'user-alt', id:'firstname', class:'hc-valid  hc-state'})}}
-                                {{helper.render('Vergeet je naam niet in te vullen', {class:'hc-valid hc-state'})}}
+                                {{label.render('Firstname', {for: 'firstname', class: 'hc-valid '})}}
+                                {{input.render('text', {name:'firstname', placeholder:'Naam', icon:'user-alt', id:'firstname', class:'hc-valid  '})}}
+                                {{helper.render('Vergeet je naam niet in te vullen', {class:'hc-valid '})}}
                             </div>
                         </div>
                     
                         <div class="col-4--md col-6--sm col-12--xxs">
                             <div class="mb-3">
-                                {{label.render('Second name', {for: 'secondname', class:'hc-warning hc-state'})}}
-                                {{input.render('text', {name:'secondname', placeholder:'Second Name', icon:'user-alt', id:'secondname', class:'hc-warning hc-state'})}}
-                                {{helper.render('Vergeet je naam niet in te vullen', {class:'hc-warning hc-state'})}}
+                                {{label.render('Second name', {for: 'secondname', class:'hc-warning '})}}
+                                {{input.render('text', {name:'secondname', placeholder:'Second Name', icon:'user-alt', id:'secondname', class:'hc-warning '})}}
+                                {{helper.render('Vergeet je naam niet in te vullen', {class:'hc-warning '})}}
                             </div>
                         </div>
                     
                         <div class="col-8--md col-6--sm col-12--xxs">
                             <div class="mb-3">
-                                {{label.render('Address', {for: 'address', class:'hc-error hc-state'})}}
-                                {{input.render('text', {name:'address', placeholder:'Address', icon:'user-alt', id:'address', class:'hc-error hc-state'})}}
-                                {{helper.render('Vergeet je naam niet in te vullen', {class:'hc-error hc-state'})}}
+                                {{label.render('Address', {for: 'address', class:'hc-error '})}}
+                                {{input.render('text', {name:'address', placeholder:'Address', icon:'user-alt', id:'address', class:'hc-error '})}}
+                                {{helper.render('Vergeet je naam niet in te vullen', {class:'hc-error '})}}
                             </div>
                         </div>
                         
@@ -364,7 +361,7 @@
                             <div class="mb-3">
                                 {{label.render('Birth', {for: 'birth', class:'hc-disabled'})}}
                                 {{input.render('text', {name:'birth', placeholder:'Birth', icon:'user-alt', id:'birth', class:'hc-disabled', disabled: true, autocomplete: 'off'})}}
-                                {{helper.render('Vergeet je naam niet in te vullen', {class:'hc-disabled hc-state'})}}
+                                {{helper.render('Vergeet je naam niet in te vullen', {class:'hc-disabled '})}}
                             </div>
                         </div>
                     </div>
@@ -373,15 +370,27 @@
         </div>
 
         <div class="hc-container accent py-4">
-            <h2 class="hc-h3">Inputfield</h2>
+            <h2 class="hc-h3">Inputfield - multiline</h2>
 			<div class="row">
                 <div class="col-8--md col-6--sm col-12--xxs">
                     {{label.render('Birth', {for: 'birth', class:'hc-disabled'})}}
-                    <div class="hc-input hc-input__multiline">
+                    <div class="hc-input hc-input--multiline">
                         {{icon.render('envelope', 'hc-input__icon')}}
                         <textarea class="hc-input__input" placeholder='Textarea placeholer' aria-describedby="chars1"></textarea>
                     </div>
                     {{helper.render('Nog 150 karakters over', {id: 'chars1', class: 'ta-r'})}}
+                </div>
+            </div>
+        </div>
+
+        <div class="hc-container accent py-4">
+            <h2 class="hc-h3">Inputfield - file</h2>
+			<div class="row">
+                <div class="col-8--md col-6--sm col-12--xxs">
+                    {{label.render('Upload CV', {for: 'cv'})}}
+                    <div class="hc-input hc-input--file">
+                        <input class="hc-input__input" id="cv" type="file" placeholder='Choose file'>
+                    </div>
                 </div>
             </div>
         </div>
@@ -400,6 +409,24 @@
                 }
             ])}}
         </div>
+
+        <div class="hc-container accent py-4">
+            <h2 class="hc-h3">Yes/No Switcher</h2>
+            <div class="row">
+                <div class="col-6--sm col-12--xxs mb-3">
+                    <div class="hc-switcher">
+                        <div class="hc-switcher__radio">
+                           <input type="radio" name="yes-no" id="yes">
+                           <label class="hc-switcher__radio-label" for="yes">Yes</label>
+                        </div>
+                        <div class="hc-switcher__radio">
+                           <input type="radio" name="yes-no" id="no">
+                           <label class="hc-switcher__radio-label" for="no">No</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div>
 
         <div class="hc-container accent py-4">
             <h2 class="hc-h3">Checkbox / Radiobuttons</h2>
@@ -429,7 +456,7 @@
 
         <div class="hc-container accent py-4">
             <h2 class="hc-h3">Table</h2>
-            <table class="hc-table">
+            <table class="hc-table hide">
                 <thead>
                     <tr>
                         <th scope="col">N°</th>
