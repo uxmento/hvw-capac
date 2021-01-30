@@ -1,30 +1,50 @@
 .#{$ns}switcher {
     display: flex;
+    background-color: rgba($color_secondary, .1);
+    border-radius: $border-radius;
+    border: 1px solid $color_secondary;
+    justify-content: stretch;
 
-    &__button {
-        background-color: rgba($color_secondary, .1);
+
+    &-item {
         min-width: rem(100px);
-        padding: rem(16px) 0;
-        text-align: center;
-
-        &:first-child {
-            border-radius: $border-radius 0 0 $border-radius;
-        }
-
-        &:last-child {
-            border-radius: 0 $border-radius $border-radius 0;
-        }
+        display: flex;
+        overflow: hidden;
+        position:relative;
+        flex: 1;
 
         &:not(:last-child):after {
             content: "";
             display: block;
             width: 1px;
-            height: 50%;
+            height: rem(16px);
             background: $color_secondary;
             position: absolute; 
             right: 0;
             top: 50%;
             transform: translateY(-50%);
+        }
+
+        &__input {
+            position: absolute;
+            clip: rect(1px, 1px, 1px, 1px);
+            clip-path: inset(50%);
+            height: 1px;
+            width: 1px;
+            margin: -1px;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        &__label {
+            cursor: pointer;
+            padding: rem(16px) 0;
+            flex-grow: 1;
+            text-align: center;
+
+            &:hover {
+                background-color: rgba($color_secondary, .1);
+            }
         }
     }
 }
