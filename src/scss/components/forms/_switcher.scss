@@ -1,15 +1,16 @@
 .#{$ns}switcher {
+
+    $root: &;
+
     display: flex;
     background-color: rgba($color_secondary, .1);
     border-radius: $border-radius;
     border: 1px solid $color_secondary;
     justify-content: stretch;
 
-
     &-item {
         min-width: rem(100px);
         display: flex;
-        overflow: hidden;
         position:relative;
         flex: 1;
 
@@ -23,6 +24,7 @@
             right: 0;
             top: 50%;
             transform: translateY(-50%);
+            z-index: 0;
         }
 
         &__input {
@@ -41,10 +43,71 @@
             padding: rem(16px) 0;
             flex-grow: 1;
             text-align: center;
+            position: relative;
+            z-index: 3;
 
             &:hover {
                 background-color: rgba($color_secondary, .1);
             }
+        }
+
+
+        // Focus state
+        &__input:focus-visible + &__label::after {
+            content: "";
+            position: absolute;
+            top: -6px;
+            right: 0;
+            bottom: -6px;
+            left: 0;
+            border: 2px solid $color_default-text;
+            z-index:2;
+        }
+
+        &:first-child &__input:focus-visible + &__label::after {
+            left: -6px;
+            border-radius: $border-radius*2 0 0 $border-radius*2;
+        }
+
+        &:last-child &__input:focus-visible + &__label::after {
+            right: -6px;
+            border-radius: 0 $border-radius*2 $border-radius*2 0;
+        }
+
+        // Selected state
+        &__input:checked + &__label {
+            color: $color_white;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: -4px;
+                right: 0px;
+                bottom: -4px;
+                left: 0px;
+                background: $color_secondary;
+                border-radius: $border-radius*2;
+                z-index: -1;
+            }
+        }
+
+        &:first-child &__input:checked + &__label::before {
+            left: -6px;
+        }
+
+        &:last-child &__input:checked + &__label::before {
+            right: -6px;    
+        }
+    }
+
+    &.#{$ns}disabled {
+        background-color: $color_background-disabled;
+        border-color: rgba($color-disabled, .25);
+
+        #{$root}-item__label {
+            color: $color_disabled;
+            cursor:initial;
+            pointer-events: none;
         }
     }
 }

@@ -18,8 +18,40 @@
 
 	<section role="main">
 
+        <div class="hc-container accent py-4">
+            <h2 class="hc-h3">Yes/No Switcher</h2>
+            <div class="row">
+                <div class="col-6--sm col-12--xxs mb-3">
+                    <div class="hc-switcher">
+                        <div class="hc-switcher-item">
+                            <input class="hc-switcher-item__input" type="radio" name="yes-no" id="yes" />
+                            <label class="hc-switcher-item__label" for="yes">Yes</label>
+                        </div>
+                        <div class="hc-switcher-item">
+                            <input class="hc-switcher-item__input" type="radio" name="yes-no" id="no" />
+                            <label class="hc-switcher-item__label" for="no">No</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6--sm col-12--xxs mb-3">
+                    <div class="hc-switcher hc-disabled">
+                        <div class="hc-switcher-item">
+                            <input class="hc-switcher-item__input" type="radio" name="yes-no" id="yes" aria-disabled="true" disabled/>
+                            <label class="hc-switcher-item__label" for="yes">Yes</label>
+                        </div>
+                        <div class="hc-switcher-item">
+                            <input class="hc-switcher-item__input" type="radio" name="yes-no" id="no" aria-disabled="true" disabled/>
+                            <label class="hc-switcher-item__label" for="no">No</label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
 		<div class="hc-container accent py-4">
-            <h2 class="hc-h3">Labels</h2>
+            <h2 class="hc-h3">Labels</h2>   
 			<div class="row">
                 <div class="col-3--xxl col-4--lg col-6--xs col-12 pb-1">
                     {{label.render('Label', {for: 'test-name'})}}
@@ -409,24 +441,6 @@
                 }
             ])}}
         </div>
-
-        <div class="hc-container accent py-4">
-            <h2 class="hc-h3">Yes/No Switcher</h2>
-            <div class="row">
-                <div class="col-6--sm col-12--xxs mb-3">
-                    <div class="hc-switcher">
-                        <div class="hc-switcher-item">
-                           <input class="hc-switcher-item__input" type="radio" name="yes-no" id="yes">
-                           <label class="hc-switcher-item__label" for="yes">Yes</label>
-                        </div>
-                        <div class="hc-switcher-item">
-                           <input class="hc-switcher-item__input" type="radio" name="yes-no" id="no">
-                           <label class="hc-switcher-item__label" for="no">No</label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        <div>
 
         <div class="hc-container accent py-4">
             <h2 class="hc-h3">Checkbox / Radiobuttons</h2>

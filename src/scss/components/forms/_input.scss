@@ -87,7 +87,7 @@
   &.#{$ns}valid {
     #{$root}__input {
       border-color: $color_valid;
-      color: $color_valid;
+      //color: $color_valid;
     }
 
     #{$root}__icon {
@@ -98,7 +98,7 @@
   &.#{$ns}warning {
     #{$root}__input {
       border-color: $color_warning;
-      color: $color_warning;
+      //color: $color_warning;
     }
 
     #{$root}__icon {
@@ -109,7 +109,7 @@
   &.#{$ns}info {
     #{$root}__input {
       border-color: $color_info;
-      color: $color_info;
+      //color: $color_info;
     }
 
     #{$root}__icon {
@@ -120,7 +120,7 @@
   &.#{$ns}error {
     #{$root}__input {
       border-color: $color_error;
-      color: $color_error;
+      //color: $color_error;
     }
 
     #{$root}__icon {
