@@ -11,15 +11,27 @@
 {% block body %}
 	<!-- html goes here -->
 	<header>
-		<div class="hc-container">
-			<h1 class="hc-h1">Aanvraag voor volledige werkloosheidsuitkeringen (C1)</h1>
+		<div class="hc-container hc-container-condensed">
+			<h1>Aanvraag voor volledige werkloosheidsuitkeringen (C1)</h1>
 		</div>
 	</header>
 
 	<section role="main">
 
-        <div class="hc-container accent py-4">
-            this is is
+        <div class="hc-container hc-container-condensed accent py-4">
+            <h2>Welkom</h2>
+			<h3>Vestibulum id ligula porta felis euismod semper.</h3>
+			<p>Om het formulier in te vullen heeft u nodig:</p>
+			<ul>
+				<li>Een foto of een scan van uw identiteitskaart;</li>
+				<li>Alle C4- of vakantiecertificaten van uw vorige werkgevers (als die er zijn);</li>
+				<li>De rechterlijke beslissing of de notariële akte in geval van “Ik ben de facto gescheiden en mijn echtgenoot ontvangt een deel van mijn inkomen ter uitvoering van een rechterlijke beslissing” (te herformuleren)</li>
+			</ul>
+			<p>Wanneer u het formulier heeft ingevuld, ontvangt u een bevestigingsmail met daarin een pdf-document dat u moet ondertekenen en vervolgens aan ons moet overhandigen. Volledige instructies zullen worden verstrekt in de bevestigingsmail.</p>
+
+			<button type="button" class="hc-button hc-button__primary hc-button--lg" tabindex="0" onclick="window.location.href='step1.html'">
+				<span class="hc-button__label">Volgende<span class="hc-button__icon hc-button__icon--end">{{icon.render('next-arrow', 'hc-icon')}}</span></span>
+			</button>
         </div>
            
 	</section>

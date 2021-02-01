@@ -4,7 +4,7 @@
 
 $font-size_tiny: rem(14px);
 $font-size_heading1: rem(48px);
-$font-size_heading2: rem(44px);
+$font-size_heading2: rem(34px);
 $font-size_heading3: rem(24px);
 $font-size_heading4: rem(22px);
 //$font-size_heading5: rem(48px);
@@ -20,6 +20,8 @@ $line-height_heading1: rem(56px);
 $line-height_heading2: rem(46px);
 $line-height_heading3: rem(32px);
 $line-height_heading4: rem(30px);
+//$line-height_heading5: rem(32px);
+//$line-height_heading6: rem(30px);
 
 // ------------------------
 // binding heading elements
@@ -58,6 +60,31 @@ h4,
   line-height: $line-height_heading4;
 }
 
+/*h5,
+.#{$ns}h5 {
+  font-size: $font-size_heading3;
+  line-height: $line-height_heading3;
+  font-weight: 700;
+}
+
+h6,
+.#{$ns}h6 {
+  font-size: $font-size_heading4;
+  line-height: $line-height_heading4;
+}*/
+
+
+ul, ol {
+  padding-left: 1rem;
+}
+
+// List styling 
+li {
+  margin-bottom: rem(16px);
+}
+
+
+// Styling link
 a[href] {
   color: $color_link;
   text-decoration: underline;
@@ -76,3 +103,4 @@ a[href] {
 .ta-r {
   text-align: right;
 }
+

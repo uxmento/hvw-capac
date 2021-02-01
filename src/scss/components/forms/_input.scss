@@ -12,7 +12,7 @@
   &__input {
     display: block;
     width: 100%;
-    height: 3rem;
+    height: $input-height;
     min-height: 3rem;
     padding: rem(14px) rem(16px);
     margin: 0;
@@ -48,7 +48,7 @@
     }
 
     [class*="input__icon"] + & {
-      padding-right: 2.5rem;
+      padding-right: $input-height;
     }
 
     // textarea options
@@ -60,7 +60,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 2.5rem;
+    width: $input-height;
     height: 100%;
     fill: #999;
     padding: 0.75rem;

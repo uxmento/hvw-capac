@@ -10,7 +10,7 @@
     &__input {
         display: block;
         width: 100%;
-        height: 2.5rem;
+        height: $input-height;
         padding: .5rem 1rem;
         margin: 0;
         border: 1px solid #ccc;
@@ -43,7 +43,7 @@
         }
 
         [class*="#{$ns}input__icon"] + & {
-            padding-right: 2.5rem;
+            padding-right: $input-height;
         }
     }
 
@@ -52,8 +52,8 @@
         top: 0;
         right: 0;
         width: 2.5rem;
-        height: 2.5rem;
-        fill: #999;
+        height: $input-height;
+        fill: $color_default-text;
         padding: .75rem;
         pointer-events: none;
     }

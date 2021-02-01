@@ -2,10 +2,10 @@
     {% import "components/icons/icon.twig" as icon %}
     
     <div class="hc-select">
-        {{icon.render('caret-down', 'hc-select__icon')}}
-        <select name="{{name}}" class="hc-select__input">
-            <option selected disabled>Pick an option</option>
-            {% for option in options %}
+        {{icon.render('chevron-down-thin', 'hc-select__icon')}}
+        <select name="{{name}}" class="hc-select__input" {% if options.id %}id="{{options.id}}"{% endif %}>
+            <option selected disabled>{{options.placeholder|default('Maak een keuze')}}</option>
+            {% for option in options.options %}
             <option value="{{option.value}}">{{option.label}}</option>
             {% endfor %}
         </select>

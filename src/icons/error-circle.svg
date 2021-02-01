@@ -2,11 +2,6 @@
 <!-- Generator: Adobe Illustrator 25.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill-rule:evenodd;clip-rule:evenodd;}
-</style>
-<path class="st0" d="M256,0C115.3,1.8,1.8,115.3,0,256c1.8,140.7,115.3,254.2,256,256c141.2-0.5,255.5-114.8,256-256
-	C512.8,115.5,399.6,0.8,259.2,0H256z M237.7,109.7h36.6v182.9h-36.6L237.7,109.7L237.7,109.7z M256,409.6
-	c-15.7-1.1-28.1-13.6-29.3-29.3c-0.2-15.9,12.5-29.1,28.4-29.3h0.8c15.7,1.1,28.1,13.6,29.3,29.3C284.2,396,271.7,408.5,256,409.6z"
-	/>
+<path id="Path_9999" style="fill-rule:evenodd;clip-rule:evenodd;" d="M256,387.7l-231-231l32.4-32.4L256,323l198.7-198.7l32.4,32.4
+	L256,387.7z"/>
 </svg>

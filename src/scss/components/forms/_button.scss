@@ -162,16 +162,17 @@
         }
 
         // FORMATS
-        &, &--lg {
-            padding: rem(16px) rem(20px);
+        &#{$root}, 
+        &#{$root}--lg {
+            padding: rem(18px) rem(20px) !important;
         }
 
-        &--md {
-            padding: rem(12px) rem(20px);
+        &#{$root}--md {
+            padding: rem(14px) rem(20px) !important;
         }
 
-        &--sm {
-            padding: rem(8px) rem(20px);
+        &#{$root}--sm {
+            padding: rem(10px) rem(20px) !important;
         }
 
         &:hover {

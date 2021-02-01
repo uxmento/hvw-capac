@@ -4,15 +4,23 @@
  */
 
 .#{$ns}container {
+
+  $root: &;
+
   width: 100% !important;
   max-width: rem($container-max-width) !important;
   margin: 0 auto !important;
   padding: 0 rem($container-gutter) !important;
   background-color: transparent;
 
-  &-fluid {
+  &#{$root}-fluid {
     max-width: none;
   }
+
+  &#{$root}-condensed {
+    max-width: rem($container-condensed-max-width) !important;
+  }
+
 }
 
 .accent {

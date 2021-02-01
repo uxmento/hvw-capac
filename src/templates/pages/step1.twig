@@ -1,0 +1,114 @@
+{% extends "layouts/default.twig" %}
+
+{% import "components/icons/icon.twig" as icon %}
+{% import "components/forms/input.twig" as input %}
+{% import "components/forms/select.twig" as select %}
+{% import "components/forms/checkbox.twig" as checkbox %}
+{% import "components/forms/radio.twig" as radio %}
+{% import "components/forms/helper.twig" as helper %}
+{% import "components/forms/label.twig" as label %}
+
+{% block body %}
+	<!-- html goes here -->
+	<header>
+		<div class="hc-container hc-container-condensed">
+			<h1>Aanvraag voor volledige werkloosheidsuitkeringen (C1)</h1>
+		</div>
+	</header>
+
+	<section role="main">
+
+        <div class="hc-container hc-container-condensed accent py-4">
+            <h2>Mijn persoonsgegevens</h2>
+			<div class="row">
+                <div class="col-5--sm col-12--xxs">
+					<div class="mb-3">
+                        {{label.render('Rijksregisternummer', {for: 'rijksregisternummer', mandatory:'true', class: "hc-valid"})}}
+                        {{input.render('text', {name:'rijksregisternummer', placeholder:'xx.xx.xx - xxx.xx', id:'rijksregisternummer', class: 'hc-valid'})}}
+                        {{helper.render('De recto zijde is de voorkant van jouw eID', {class: 'hc-valid'})}}
+                    </div>
+				</div>
+				<div class="col-7--sm col-12--xxs">
+					<div class="mb-3">
+                        {{label.render('Nationaliteit', { for:"nat", mandatory: true })}}
+						{{select.render('company', {id:'nat', options:[
+							{
+								label: "Australië",
+								value: "AU"
+							},
+							{
+								label: "België",
+								value: "BE"
+							},
+							{
+								label: "Canada",
+								value: "CA"
+							},
+							{
+								label: "Denemarken",
+								value: "DK"
+							},
+							{
+								label: "Estland",
+								value: "EST"
+							},
+							{
+								label: "Frankrijk",
+								value: "FR"
+							}
+						]})}}
+                    </div>
+				</div>
+				<div class="col-6--sm col-12--xxs">
+					<div class="mb-3">
+                        {{label.render('Naam', {for: 'naam', mandatory:'true'})}}
+                        {{input.render('text', {name:'Naam', placeholder:'Naam', id:'naam'})}}
+                    </div>
+				</div>
+				<div class="col-6--sm col-12--xxs">
+					<div class="mb-3">
+                        {{label.render('Voornaam', {for: 'voornaam', mandatory:'true'})}}
+                        {{input.render('text', {name:'voornaam', placeholder:'Voornaam', id:'voornaam'})}}
+                    </div>
+				</div>
+				<div class="col-4--sm col-12--xxs">
+					<div class="mb-3">
+                        {{label.render('Geboortedatum', { for:'bd', mandatory: true })}}
+						{{select.render('bd', {id:'bd', placeholder: 'Kies je geboortedatum', options: [
+							{
+								label: "UXMen",
+								value: "uxmen"
+							},
+							{
+								label: "Calibrate",
+								value: "calibrate"
+							}
+						]})}}
+                    </div>
+				</div>
+
+				<div class="col-12">
+					<h4 class="hc-input__label mb-1">Gelieve een kopie van de identiteitskaart op te laden</h4>
+                    <ul class="hc-input__list hc-input__list--horizontal">
+                        <li>{{radio.render('gender', 'Man', 'man')}}</li>
+                        <li>{{radio.render('gender', 'Woman', 'woman')}}</li>
+                    </ul>
+				</div>
+
+			</div>	
+
+			<div class="row">
+				<div class="col-12 mt-2">
+					<button type="button" class="hc-button hc-button__outline-primary mr-2" tabindex="0"  onclick="window.location.href='start.html'">
+						<span class="hc-button__label"><span class="hc-button__icon hc-button__icon--start">{{icon.render('prev-arrow', 'hc-icon')}}</span>Vorige</span>
+					</button>
+					<button type="button" class="hc-button hc-button__primary" tabindex="0"  onclick="window.location.href='step2.html'">
+						<span class="hc-button__label">Volgende<span class="hc-button__icon hc-button__icon--end">{{icon.render('next-arrow', 'hc-icon')}}</span></span>
+					</button>
+				</div>
+			</div>
+        </div>
+           
+	</section>
+
+{% endblock %}
