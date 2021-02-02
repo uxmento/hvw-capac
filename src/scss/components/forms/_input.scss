@@ -58,13 +58,11 @@
  
   &__icon {
     position: absolute;
-    top: 0;
-    right: 0;
-    width: $input-height;
-    height: 100%;
-    fill: #999;
-    padding: 0.75rem;
+    top: 50%;
+    right: 1rem;;
+    fill: $color_icons;
     pointer-events: none;
+    transform: translateY(-50%);
 
     // case multiline
     #{$root}--multiline &{
@@ -149,6 +147,7 @@
     display: flex;
     flex-wrap: wrap;
     list-style: none;
+    padding: 0;
 
     &--horizontal {
         flex-direction: row;

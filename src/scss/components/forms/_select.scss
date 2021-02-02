@@ -49,12 +49,10 @@
 
     &__icon {
         position: absolute;
-        top: 0;
-        right: 0;
-        width: 2.5rem;
-        height: $input-height;
-        fill: $color_default-text;
-        padding: .75rem;
+        top: 50%;
+        right: 1rem;;
+        fill: $color_icons;
         pointer-events: none;
+        transform: translateY(-50%);
     }
 }

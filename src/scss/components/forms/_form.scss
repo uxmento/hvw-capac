@@ -4,5 +4,16 @@ form {
         background: #FFF;
         border-radius: 4px;
     }
+}
 
+
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+
+    legend {
+        font-size: 1rem;
+        font-weight: 600;
+    }
 }

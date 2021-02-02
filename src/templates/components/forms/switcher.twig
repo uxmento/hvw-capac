@@ -1,0 +1,14 @@
+{% macro render(name) %}
+
+<div class="hc-switcher" role="radiogroup" aria-labelledby="{{name}}">
+    <div class="hc-switcher-item">
+        <input class="hc-switcher-item__input" type="radio" name="{{name|default('yes-no')}}" value="{{name}}--yes" aria-labelledby="{{name}} {{name}}--yes" />
+        <label class="hc-switcher-item__label" id="{{name}}--yes">Ja</label>
+    </div>
+    <div class="hc-switcher-item">
+        <input class="hc-switcher-item__input" type="radio" name="{{name|default('yes-no')}}" value="{{name}}--no" aria-labelledby="{{name}} {{name}}--no" />
+        <label class="hc-switcher-item__label" id="{{name}}--no">Neen</label>
+    </div>
+</div>
+
+{% endmacro %}

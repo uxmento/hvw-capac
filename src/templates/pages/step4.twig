@@ -1,0 +1,52 @@
+{% extends "layouts/default.twig" %}
+
+{% import "components/icons/icon.twig" as icon %}
+{% import "components/forms/input.twig" as input %}
+{% import "components/forms/select.twig" as select %}
+{% import "components/forms/checkbox.twig" as checkbox %}
+{% import "components/forms/radio.twig" as radio %}
+{% import "components/forms/helper.twig" as helper %}
+{% import "components/forms/label.twig" as label %}
+{% import "components/forms/switcher.twig" as switcher %}
+
+{% block body %}
+	<!-- html goes here -->
+	<header>
+		<div class="hc-container hc-container-condensed">
+			<h1>Aanvraag voor volledige werkloosheidsuitkeringen (C1)</h1>
+		</div>
+	</header>
+
+	<section role="main">
+
+      <div class="hc-container hc-container-condensed accent py-4">
+            
+			<h2>Mijn gezinssituatie</h2>
+
+			<fieldset class="row mt-2">
+				<legend>Met hoeveel mensen woont U op dit moment samen?</legend>	
+				<div class="col-12">	
+                    <ul class="hc-input__list hc-input__list--vertical mt-2">
+                        <li>{{radio.render('type', 'Ik woon alleen', 'alon')}}</li>
+                        <li>{{radio.render('type', 'Ik woon met iemand samen', 'together')}}</li>
+                    </ul>
+				</div>
+			</fieldset>	
+
+
+			<div class="row mt-2">
+				<div class="col-12">
+					<button type="button" class="hc-button hc-button__outline-primary mr-2" tabindex="0"  onclick="window.location.href='step2.html'">
+						<span class="hc-button__label"><span class="hc-button__icon hc-button__icon--start">{{icon.render('prev-arrow', 'hc-icon')}}</span>Vorige</span>
+					</button>
+					<button type="button" class="hc-button hc-button__primary" tabindex="0"  onclick="window.location.href='step4.html'">
+						<span class="hc-button__label">Volgende<span class="hc-button__icon hc-button__icon--end">{{icon.render('next-arrow', 'hc-icon')}}</span></span>
+					</button>
+				</div>
+			</div>
+
+        </div>
+           
+	</section>
+
+{% endblock %}

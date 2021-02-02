@@ -3,9 +3,9 @@
 
     <div class="hc-input {{options.class}}">
         {% if options.icon %}
-        {{icon.render(options.icon, 'hc-input__icon')}}
+            {{icon.render(options.icon, 'hc-input__icon')}}
         {% endif %}
-        <input type="{{type}}" id="{{options.id}}" name="{{options.name}}" placeholder="{{options.placeholder}}" class="hc-input__input" {% if options.disabled %}aria-disabled="true" disabled{% endif %} autocomplete="{{options.autocomplete|default('on')}}" />
+        <input type="{{type}}" aria-labelledby="{{options.id}}" name="{{options.name}}" placeholder="{{options.placeholder}}" class="hc-input__input" {% if options.helper %} aria-describedby="{{options.helper}}" {% endif %}{% if options.required %}aria-required="true"{% endif %} {% if options.disabled %} aria-disabled="true" disabled{% endif %} autocomplete="{{options.autocomplete|default('on')}}" />
     </div>
     
 {% endmacro %}

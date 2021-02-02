@@ -3,10 +3,10 @@
     
     <div class="hc-select">
         {{icon.render('chevron-down-thin', 'hc-select__icon')}}
-        <select name="{{name}}" class="hc-select__input" {% if options.id %}id="{{options.id}}"{% endif %}>
+        <select name="{{name}}" class="hc-select__input" {% if options.id %}aria-labelledby="{{options.id}}"{% endif %}>
             <option selected disabled>{{options.placeholder|default('Maak een keuze')}}</option>
             {% for option in options.options %}
-            <option value="{{option.value}}">{{option.label}}</option>
+                <option value="{{option.value}}">{{option.label}}</option>
             {% endfor %}
         </select>
     </div>

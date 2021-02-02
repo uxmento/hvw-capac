@@ -20,18 +20,18 @@
 
         <div class="hc-container hc-container-condensed accent py-4">
             <h2>Mijn persoonsgegevens</h2>
-			<div class="row">
+			<fieldset class="row">
                 <div class="col-5--sm col-12--xxs">
 					<div class="mb-3">
-                        {{label.render('Rijksregisternummer', {for: 'rijksregisternummer', mandatory:'true', class: "hc-valid"})}}
-                        {{input.render('text', {name:'rijksregisternummer', placeholder:'xx.xx.xx - xxx.xx', id:'rijksregisternummer', class: 'hc-valid'})}}
-                        {{helper.render('De recto zijde is de voorkant van jouw eID', {class: 'hc-valid'})}}
+                        {{label.render('Rijksregisternummer', {id: 'rijksregisternummer', mandatory:'true', class: "hc-valid"})}}
+                        {{input.render('text', {name:'rijksregisternummer', placeholder:'xx.xx.xx - xxx.xx', id:'rijksregisternummer', class: 'hc-valid', helper: 'rrnh'})}}
+                        {{helper.render('De recto zijde is de voorkant van jouw eID', {id:'rrnh', class: 'hc-valid'})}}
                     </div>
 				</div>
 				<div class="col-7--sm col-12--xxs">
 					<div class="mb-3">
-                        {{label.render('Nationaliteit', { for:"nat", mandatory: true })}}
-						{{select.render('company', {id:'nat', options:[
+                        {{label.render('Nationaliteit', { id:"nat", mandatory: true })}}
+						{{select.render('Country', {id:'nat', options:[
 							{
 								label: "Australië",
 								value: "AU"
@@ -61,19 +61,19 @@
 				</div>
 				<div class="col-6--sm col-12--xxs">
 					<div class="mb-3">
-                        {{label.render('Naam', {for: 'naam', mandatory:'true'})}}
+                        {{label.render('Naam', {id: 'naam', mandatory:'true'})}}
                         {{input.render('text', {name:'Naam', placeholder:'Naam', id:'naam'})}}
                     </div>
 				</div>
 				<div class="col-6--sm col-12--xxs">
 					<div class="mb-3">
-                        {{label.render('Voornaam', {for: 'voornaam', mandatory:'true'})}}
+                        {{label.render('Voornaam', {id: 'voornaam', mandatory:'true'})}}
                         {{input.render('text', {name:'voornaam', placeholder:'Voornaam', id:'voornaam'})}}
                     </div>
 				</div>
 				<div class="col-4--sm col-12--xxs">
 					<div class="mb-3">
-                        {{label.render('Geboortedatum', { for:'bd', mandatory: true })}}
+                        {{label.render('Geboortedatum', { id:'bd', mandatory: true })}}
 						{{select.render('bd', {id:'bd', placeholder: 'Kies je geboortedatum', options: [
 							{
 								label: "UXMen",
@@ -86,16 +86,17 @@
 						]})}}
                     </div>
 				</div>
+			</fieldset>
 
-				<div class="col-12">
-					<h4 class="hc-input__label mb-1">Gelieve een kopie van de identiteitskaart op te laden</h4>
-                    <ul class="hc-input__list hc-input__list--horizontal">
-                        <li>{{radio.render('gender', 'Man', 'man')}}</li>
-                        <li>{{radio.render('gender', 'Woman', 'woman')}}</li>
+			<fieldset class="row mt-2">
+				<legend>Gelieve een kopie van de identiteitskaart op te laden</legend>	
+				<div class="col-12">	
+                    <ul class="hc-input__list hc-input__list--vertical mt-2">
+                        <li>{{radio.render('type', 'Arbeider', 'worker')}}</li>
+                        <li>{{radio.render('type', 'Bediende', 'employee')}}</li>
                     </ul>
 				</div>
-
-			</div>	
+			</fieldset>	
 
 			<div class="row">
 				<div class="col-12 mt-2">
