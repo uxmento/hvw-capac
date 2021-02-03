@@ -4,7 +4,7 @@
  */
 
 .#{$ns}checkbox {
-    display: inline-block;
+    display: flex;
     vertical-align: baseline;
     cursor: pointer;
 
@@ -27,16 +27,31 @@
         vertical-align: baseline;
         width: rem(15px);
         height: rem(15px);
+        flex-basis: rem(15px);
+        flex-shrink: 0;
         margin: 0;
         border: 1px solid $color_border;
         border-radius: rem(2px);
         fill: transparent;
         background-color: $color_white;
         transition: $transition;
+        margin-right: .5rem;
 
-        :focus-visible + & {
+        :focus + &,
+        .has-focus + &{ 
             outline: 0;
-            box-shadow: $focus;
+            box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, $color_tertiary 0px 0px 0px 4px;
+        }
+        :focus:not(:focus-visible) + &{
+            /* Undo all the above focused button styles
+            if the button has focus but the browser wouldn't normally
+            show default focus styles */
+            box-shadow: none;
+        }
+        :focus-visible + &{ 
+            /* Some even *more* exciting button focus styles */ 
+            outline: 0;
+            box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, $color_tertiary 0px 0px 0px 4px !important;
         }
 
         :checked + & {

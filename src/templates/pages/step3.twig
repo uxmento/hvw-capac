@@ -26,12 +26,12 @@
 
 				<div class="row">
 					<div class="col-12">
-						{{label.render('E-mailadres', {id: 'email', mandatory:'true'})}}
+						{{label.render('E-mailadres', {mandatory:'true', for:'email', id: 'label-email'})}}
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-8--md col-12 mb-3">
-						{{input.render('email', {name:'email', placeholder:'E-mailadres', id:'email'})}}
+						{{input.render({type: 'email', name:'email', placeholder:'E-mailadres', id:'email', label:'label-email'})}}
 					</div>
 					<div class="col-4--md col-12 mb-3">
             {{label.render('E-mail gdpr', {id: 'gdpr-email', mandatory:'true', class: "sr-only"})}}
@@ -41,13 +41,13 @@
 
 				<div class="row">
 					<div class="col-12">
-						{{label.render('Bevestig e-mailadres', {id: 'confirm-email', mandatory:'true'})}}
+						{{label.render('Bevestig e-mailadres', {mandatory:'true', for: 'confirm-email', id: 'label-confirm-email'})}}
 					</div>
 				</div>
 
 				<div class="row">
 					<div class="col-8--md col-12 mb-3">
-						{{input.render('email', {name:'confirm-email', placeholder:'Bevestig e-mailadres', id:'confirm-email'})}}
+						{{input.render({type: 'email', name:'confirm-email', placeholder:'Bevestig e-mailadres', id:'confirm-email', label: 'label-confirm-email'})}}
 					</div>
 					<div class="col-4--md col-12 mb-3">
             {{label.render('Confirm e-mail gdpr', {id: 'gdpr-confirm-email', mandatory:'true', class: "sr-only"})}}
@@ -57,13 +57,13 @@
         
 				<div class="row">
 					<div class="col-12">
-						{{label.render('Fixed line phone', {id: 'telefoon', optional: 'Optional'})}}
+						{{label.render('Fixed line phone', {optional: 'Optional', for: 'telefoon', id: 'label-telefoon' })}}
 					</div>
 				</div>
 
 				<div class="row">
 					<div class="col-8--md col-12 mb-3">
-						{{input.render('tel', {name:'telefoon', placeholder:'+32 (0)x xxx xx xx', id:'telefoon', helper: 'phone-helper'})}}
+						{{input.render({type: 'tel', name:'telefoon', placeholder:'+32 (0)x xxx xx xx', id:'telefoon', label: 'label-telefoon', helper: 'phone-helper'})}}
             {{helper.render('Alleen belgische nummers zijn toegestaan', {id: 'phone-helper'})}}
 					</div>
 					<div class="col-4--md col-12 mb-3">
@@ -74,13 +74,13 @@
         
 				<div class="row">
 					<div class="col-12">
-						{{label.render('GSM', {id: 'mobile', optional: 'Optioneel'})}}
+						{{label.render('GSM', {optional: 'Optioneel', for: 'mobile', id: 'label-mobile'})}}
 					</div>
 				</div>
 
 				<div class="row">
 					<div class="col-8--md col-12 mb-3">
-						{{input.render('tel', {name:'mobile', placeholder:'+32 04xx xx xx xx', id:'mobile'})}}
+						{{input.render({type:'tel', name:'mobile', placeholder:'+32 04xx xx xx xx', id:'mobile', label: 'label-mobile'})}}
 					</div>
 					<div class="col-4--md col-12 mb-3">
             {{label.render('GSM gdpr', {id: 'gdpr-mobile', mandatory:'true', class: "sr-only"})}}
@@ -90,40 +90,34 @@
         
 				<div class="row">
 					<div class="col-12">
-						{{label.render('Whatsapp', {id: 'whatsapp', optional: 'Optioneel'})}}
+						{{label.render('Whatsapp', {optional: 'Dit veld is optioneel', mandatory: true, for: 'whatsapp', id: 'label-whatsapp', })}}
 					</div>
 				</div>
 
 				<div class="row">
 					<div class="col-8--md col-12 mb-3">
-						{{input.render('text', {name:'whatsapp', placeholder:'', id:'whatsapp'})}}
+						{{input.render({name:'whatsapp', placeholder:'Whatsapp', helper: 'whatsapp-helper', id:'whatsapp', label: 'label-whatsapp'})}}
+            {{helper.render('Alleen belgische nummers zijn toegestaan', {id:'whatsapp-helper' })}}
 					</div>
 					<div class="col-4--md col-12 mb-3">
-            {{label.render('GSM whatsapp', {id: 'gdpr-whatsapp', mandatory:'true', class: "sr-only"})}}
+            {{label.render('GSM whatsapp', {id: 'gdpr-whatsapp', mandatory:'true', optional: 'dit veld is optioneel', class: "sr-only"})}}
 						{{switcher.render('gdpr-whatsapp')}}
 					</div>
 				</div>
-        
-				<div class="row">
-					<div class="col-12">
-						{{helper.render('Alleen belgische nummers zijn toegestaan')}}
-					</div>
-				</div>
-			</div>
 
-			<div class="row mt-2">
-				<div class="col-12">
-					<button type="button" class="hc-button hc-button__outline-primary mr-2" tabindex="0"  onclick="window.location.href='step2.html'">
-						<span class="hc-button__label"><span class="hc-button__icon hc-button__icon--start">{{icon.render('prev-arrow', 'hc-icon')}}</span>Vorige</span>
-					</button>
-					<button type="button" class="hc-button hc-button__primary" tabindex="0"  onclick="window.location.href='step4.html'">
-						<span class="hc-button__label">Volgende<span class="hc-button__icon hc-button__icon--end">{{icon.render('next-arrow', 'hc-icon')}}</span></span>
-					</button>
-				</div>
-			</div>
-
+        <div class="row mt-2">
+          <div class="col-12">
+            <button type="button" class="hc-button hc-button__outline-primary mr-2" tabindex="0"  onclick="window.location.href='step2.html'">
+              <span class="hc-button__label"><span class="hc-button__icon hc-button__icon--start">{{icon.render('prev-arrow', 'hc-icon')}}</span>Vorige</span>
+            </button>
+            <button type="button" class="hc-button hc-button__primary" tabindex="0"  onclick="window.location.href='step4.html'">
+              <span class="hc-button__label">Volgende<span class="hc-button__icon hc-button__icon--end">{{icon.render('next-arrow', 'hc-icon')}}</span></span>
+            </button>
+          </div>
         </div>
-           
+
+      </div>
+
 	</section>
 
 {% endblock %}

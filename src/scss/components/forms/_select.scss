@@ -32,10 +32,12 @@
             cursor: pointer;
         }
 
-        &:focus-visible {
+        /*&:focus-visible {
             outline: 0;
             box-shadow: $focus;
-        }
+        }*/
+
+        @include focus($color_tertiary);
 
         &.#{$ns}has-value {
             outline:0;

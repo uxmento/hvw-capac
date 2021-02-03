@@ -73,6 +73,12 @@ h6,
   line-height: $line-height_heading4;
 }*/
 
+.#{$ns}tiny {
+  font-size: $font-size_tiny;
+  line-height: $line-height_tiny;
+  color: $color_tiny-text;
+  letter-spacing: 1px;
+}
 
 ul, ol {
   padding-left: 1rem;

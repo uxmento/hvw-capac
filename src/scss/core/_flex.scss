@@ -184,48 +184,48 @@
 }
 
 .direction-row {
-  direction: row !important;
+  flex-direction: row !important;
 
   @each $breakpoint in map-keys($breakpoints) {
     @include mq($breakpoint) {
       &--#{$breakpoint} {
-        direction: row !important;
+        flex-direction: row !important;
       }
     }
   }
 }
 
 .direction-row-reverse {
-  direction: row-reverse !important;
+  flex-direction: row-reverse !important;
 
   @each $breakpoint in map-keys($breakpoints) {
     @include mq($breakpoint) {
       &--#{$breakpoint} {
-        direction: row-reverse !important;
+        flex-direction: row-reverse !important;
       }
     }
   }
 }
 
 .direction-column {
-  direction: column !important;
+  flex-direction: column !important;
 
   @each $breakpoint in map-keys($breakpoints) {
     @include mq($breakpoint) {
       &--#{$breakpoint} {
-        direction: column !important;
+        flex-direction: column !important;
       }
     }
   }
 }
 
 .direction-column-reverse {
-  direction: column-reverse !important;
+  flex-direction: column-reverse !important;
 
   @each $breakpoint in map-keys($breakpoints) {
     @include mq($breakpoint) {
       &--#{$breakpoint} {
-        direction: column-reverse !important;
+        flex-direction: column-reverse !important;
       }
     }
   }

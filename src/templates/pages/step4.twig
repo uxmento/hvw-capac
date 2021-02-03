@@ -23,24 +23,78 @@
             
 			<h2>Mijn gezinssituatie</h2>
 
-			<fieldset class="row mt-2">
+			<fieldset class="mt-2">
 				<legend>Met hoeveel mensen woont U op dit moment samen?</legend>	
-				<div class="col-12">	
-                    <ul class="hc-input__list hc-input__list--vertical mt-2">
-                        <li>{{radio.render('type', 'Ik woon alleen', 'alon')}}</li>
-                        <li>{{radio.render('type', 'Ik woon met iemand samen', 'together')}}</li>
-                    </ul>
+				<div class="row">
+					<div class="col-12">	
+						<ul class="hc-input__list hc-input__list--vertical mt-2">
+							<li>{{radio.render('type', 'Ik woon alleen', 'alone')}}</li>
+							<li>{{radio.render('type', 'Ik woon met iemand samen', 'together')}}</li>
+						</ul>
+					</div>
+
+					<div class="col-12 ml-3">
+						<table class="hc-table hc-table-sm hc-table--hover">
+							<thead>
+								<tr>
+									<th scope="col" class="hc-table__icon-cell"><span class="sr-only">Verwijderen</span></li>
+									<th scope="col" class="hc-table__icon-cell"><span class="sr-only">Aanpassen</span></li>
+									<th scope="col">Naam</th>
+									<th scope="col">Voornaam</th>
+									<th scope="col">Relatie</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><a href="#verwijderen" class="hc-link" aria-label="Verwijderen"><span class="hc-link__icon hc-link__icon--start">{{icon.render('close', 'hc-icon')}}</span></a></td>
+									<td><a href="#verwijderen" class="hc-link" aria-label="Aanpassen"><span class="hc-link__icon hc-link__icon--start">{{icon.render('edit', 'hc-icon')}}</span></a></td>
+									<td>Doe</td>
+									<td>John</td>
+									<td>Zoon</td>
+								</tr>
+								<tr>
+									<td><a href="#verwijderen" class="hc-link" aria-label="Verwijderen"><span class="hc-link__icon hc-link__icon--start">{{icon.render('close', 'hc-icon')}}</span></a></td>
+									<td><a href="#verwijderen" class="hc-link" aria-label="Aanpassen"><span class="hc-link__icon hc-link__icon--start">{{icon.render('edit', 'hc-icon')}}</span></a></td>
+									<td>Fonda</td>
+									<td>Jane</td>
+									<td>Kleindochter</td>
+								</tr>
+							</tbody>
+						</table>
+						<button type="button" class="hc-button hc-button__secondary hc-button--sm" tabindex="0" >
+							<span class="hc-button__label">
+								<span class="hc-button__icon hc-button__icon--start">{{icon.render('add', 'hc-icon')}}</span>Voeg een gezinslid toe
+							</span>
+						</button>
+					</div>
 				</div>
 			</fieldset>	
 
+			<div class="row">
+				<div class="col-12 mt-4">
+                    {{label.render('Opmerkingen', { id: 'remarks', optional:'Optioneel' })}}
+                    <div class="hc-input hc-input--multiline">
+                        <textarea class="hc-input__input" placeholder='Opmerkingen' aria-describedby="info chars" aria-labelledby="remarks" rows="8"></textarea>
+                    </div>
+                </div>
+			</div>
+
+			<div class="row mb-5">
+				<div class="col-8--md col-12">
+					{{helper.render('Geef hier eventuele nuttige opmerkingen aan om uw gezinssituatie te omschrijven. HVW zal contact met u opnemen om uw situatie te verduidelijken.', {id: 'info'})}}
+				</div>
+				<div class="col-4--md col-12 ta-r">
+					{{helper.render('Nog 150 karakters over', {id: 'chars'})}}
+				</div>
+			</div>
 
 			<div class="row mt-2">
-				<div class="col-12">
-					<button type="button" class="hc-button hc-button__outline-primary mr-2" tabindex="0"  onclick="window.location.href='step2.html'">
-						<span class="hc-button__label"><span class="hc-button__icon hc-button__icon--start">{{icon.render('prev-arrow', 'hc-icon')}}</span>Vorige</span>
-					</button>
-					<button type="button" class="hc-button hc-button__primary" tabindex="0"  onclick="window.location.href='step4.html'">
+				<div class="col-12 flex--md direction-row-reverse--md justify-end--md">
+					<button type="button" class="hc-button hc-button__primary " tabindex="0"  onclick="window.location.href='step5.html'">
 						<span class="hc-button__label">Volgende<span class="hc-button__icon hc-button__icon--end">{{icon.render('next-arrow', 'hc-icon')}}</span></span>
+					</button>
+					<button type="button" class="hc-button hc-button__outline-primary mr-2" tabindex="0"  onclick="window.location.href='step3.html'">
+						<span class="hc-button__label"><span class="hc-button__icon hc-button__icon--start">{{icon.render('prev-arrow', 'hc-icon')}}</span>Vorige</span>
 					</button>
 				</div>
 			</div>

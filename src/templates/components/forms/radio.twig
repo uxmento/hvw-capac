@@ -4,6 +4,6 @@
     <label class="hc-radio">
         <input type="radio" name="{{name}}" value="{{value}}" class="hc-radio__input" />
         {{icon.render('circle', 'hc-radio__icon')}}
-        <span class="hc-radio__label">{{label}}</span>
+        <span class="hc-radio__label">{{label|raw}}</span>
     </label>
 {% endmacro %}

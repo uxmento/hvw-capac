@@ -23,15 +23,15 @@
 			<fieldset class="row">
                 <div class="col-5--sm col-12--xxs">
 					<div class="mb-3">
-                        {{label.render('Rijksregisternummer', {id: 'rijksregisternummer', mandatory:'true', class: "hc-valid"})}}
-                        {{input.render('text', {name:'rijksregisternummer', placeholder:'xx.xx.xx - xxx.xx', id:'rijksregisternummer', class: 'hc-valid', helper: 'rrnh'})}}
-                        {{helper.render('De recto zijde is de voorkant van jouw eID', {id:'rrnh', class: 'hc-valid'})}}
+                        {{label.render('Rijksregisternummer', { mandatory:true , for: 'rrn', id: 'label-rrn', class: "hc-valid"})}}
+                        {{input.render({name:'rijksregisternummer', placeholder:'xx.xx.xx - xxx.xx', id:'rrn', label: 'label-rrn', class: 'hc-valid', helper: 'help-rrn'})}}
+                        {{helper.render('De recto zijde is de voorkant van jouw eID', {id:'help-rrn', class: 'hc-valid'})}}
                     </div>
 				</div>
 				<div class="col-7--sm col-12--xxs">
 					<div class="mb-3">
-                        {{label.render('Nationaliteit', { id:"nat", mandatory: true })}}
-						{{select.render('Country', {id:'nat', options:[
+                        {{label.render('Nationaliteit', {for: 'nat', id:'label-nat', mandatory: true })}}
+						{{select.render('Country', {id:'nat', label: 'label-nat', options:[
 							{
 								label: "Australië",
 								value: "AU"
@@ -62,13 +62,13 @@
 				<div class="col-6--sm col-12--xxs">
 					<div class="mb-3">
                         {{label.render('Naam', {id: 'naam', mandatory:'true'})}}
-                        {{input.render('text', {name:'Naam', placeholder:'Naam', id:'naam'})}}
+                        {{input.render({name:'Naam', placeholder:'Naam', id:'naam'})}}
                     </div>
 				</div>
 				<div class="col-6--sm col-12--xxs">
 					<div class="mb-3">
                         {{label.render('Voornaam', {id: 'voornaam', mandatory:'true'})}}
-                        {{input.render('text', {name:'voornaam', placeholder:'Voornaam', id:'voornaam'})}}
+                        {{input.render({name:'voornaam', placeholder:'Voornaam', id:'voornaam'})}}
                     </div>
 				</div>
 				<div class="col-4--sm col-12--xxs">

@@ -52,6 +52,7 @@
             &:hover {
                 background-color: rgba($color_secondary, .1);
             }
+
         }
 
 
@@ -80,6 +81,7 @@
         // Selected state
         &__input:checked + &__label {
             color: $color_white;
+            background: $color_secondary;
 
             &::before {
                 content: "";
@@ -91,6 +93,16 @@
                 background: $color_secondary;
                 border-radius: $border-radius*2;
                 z-index: -1;
+            }
+
+            &:hover,
+            &:hover::before {
+                background: darken($color_secondary, 5%);
+            }
+            
+            &:active, 
+            &:active::before {
+                background: darken($color_secondary, 10%);
             }
         }
 

@@ -7,6 +7,8 @@
     display: inline-block;
     vertical-align: baseline;
     cursor: pointer;
+    -moz-appearance: none;
+    -webkit-appearance: none;
 
     &__input {
         position: absolute;
@@ -35,9 +37,21 @@
         background-color: $color_white;
         transition: $transition;
 
-        :focus-visible + & {
+        :focus + &,
+        .has-focus + &{ 
             outline: 0;
-            box-shadow: $focus;
+            box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, $color_tertiary 0px 0px 0px 4px;
+        }
+        :focus:not(:focus-visible) + &{
+            /* Undo all the above focused button styles
+            if the button has focus but the browser wouldn't normally
+            show default focus styles */
+            box-shadow: none;
+        }
+        :focus-visible + &{ 
+            /* Some even *more* exciting button focus styles */ 
+            outline: 0;
+            box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, $color_tertiary 0px 0px 0px 4px !important;
         }
 
         :checked + & {

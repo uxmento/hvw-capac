@@ -1,0 +1,51 @@
+{% extends "layouts/default.twig" %}
+
+{% import "components/icons/icon.twig" as icon %}
+{% import "components/forms/input.twig" as input %}
+{% import "components/forms/select.twig" as select %}
+{% import "components/forms/checkbox.twig" as checkbox %}
+{% import "components/forms/radio.twig" as radio %}
+{% import "components/forms/helper.twig" as helper %}
+{% import "components/forms/label.twig" as label %}
+{% import "components/forms/switcher.twig" as switcher %}
+
+{% block body %}
+	<!-- html goes here -->
+	<header>
+		<div class="hc-container hc-container-condensed">
+			<h1>Aanvraag voor volledige werkloosheidsuitkeringen (C1)</h1>
+		</div>
+	</header>
+
+	<section role="main">
+
+      <div class="hc-container hc-container-condensed accent py-4">
+            
+			<h2>Bevestiging</h2>
+
+			<div class="row">
+				<div class="col-12 mt-3 mb-3">
+                    <ul class="hc-input__list hc-input__list--vertical">
+                        <li>{{checkbox.render('confirmation', 'Door dit verzoek te verzenden, geef ik HVW uitdrukkelijk de opdracht om mijn dossier te beheren, ik accepteer de <a href="#link-to-page" target="_blank">HVW-privacyverklaring</a> en verklaar dat ik niet hetzelfde verzoek heb ingediend bij.', 'consent')}}</li>
+                        <li>{{checkbox.render('confirmation', 'Ik geef HVW toestemming om langs elektronische weg bij de <strong>Kruispuntbank voor Sociale Zekerheid de informatie</strong> te verzamelen die nodig is voor mijn toekomstige inschrijving.', 'access')}}</li>
+                        <li>{{checkbox.render('confirmation', 'Ik heb het <a href="#link-to-page" target="_blank">informatieblad over de aangifte van de persoonlijke en gezinssituatie van een socialezekerheidsmedewerker</a> die een werkloosheidsuitkering aanvraagt, gelezen en begrepen.', 'confirm')}}</li>
+                    </ul>
+                </div>
+			</div>
+
+			<div class="row mt-2">
+				<div class="col-12 flex--md direction-row-reverse--md justify-end--md">
+					<button type="button" class="hc-button hc-button__primary " tabindex="0"  onclick="window.location.href='step6.html'">
+						<span class="hc-button__label">Aanvraag indienen<span class="hc-button__icon hc-button__icon--end">{{icon.render('check', 'hc-icon')}}</span></span>
+					</button>
+					<button type="button" class="hc-button hc-button__outline-primary mr-2" tabindex="0"  onclick="window.location.href='step4.html'">
+						<span class="hc-button__label"><span class="hc-button__icon hc-button__icon--start">{{icon.render('prev-arrow', 'hc-icon')}}</span>Vorige</span>
+					</button>
+				</div>
+			</div>
+
+        </div>
+           
+	</section>
+
+{% endblock %}

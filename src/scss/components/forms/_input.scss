@@ -10,6 +10,8 @@
   display: block;
 
   &__input {
+
+    $input: &;
     display: block;
     width: 100%;
     height: $input-height;
@@ -52,7 +54,10 @@
     }
 
     // textarea options
-    resize: vertical;
+    #{$root}--multiline &{
+      resize: vertical;
+      height: auto;
+    }
 
   }
  
