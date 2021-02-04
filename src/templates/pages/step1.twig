@@ -21,7 +21,7 @@
 				<div class="row mt-2">
 					<div class="col-5--sm col-12--xxs">
 						<div class="mb-3">
-							{{label.render('Rijksregisternummer', { mandatory:true , for: 'rrn', id: 'label-rrn', class: "hc-valid"})}}
+							{{label.render('Rijksregisternummer', { mandatory:true , for: 'rrn', id: 'label-rrn', class: 'hc-valid'})}}
 							{{input.render({name:'rijksregisternummer', placeholder:'xx.xx.xx - xxx.xx', id:'rrn', label: 'label-rrn', class: 'hc-valid', helper: 'help-rrn'})}}
 							{{helper.render('De recto zijde is de voorkant van jouw eID', {id:'help-rrn', class: 'hc-valid'})}}
 						</div>
@@ -29,7 +29,7 @@
 					<div class="col-7--sm col-12--xxs">
 						<div class="mb-3">
 							{{label.render('Nationaliteit', {for: 'nat', id:'label-nat', mandatory: true })}}
-							{{select.render({name: 'country', id:'nat', label: 'label-nat', options:[
+							{{select.render({name: 'country', placeholder:'Nationaliteit', id:'nat', label: 'label-nat', options:[
 								{
 									label: "Australië",
 									value: "AU"

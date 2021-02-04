@@ -1,5 +1,6 @@
 {% macro render(label, options = {}) %}
-<label id="{{- options.id -}}" for="{{- options.for -}}" class="hc-input__label {{- options.class -}}">{{- label -}}
+<label id="{{- options.id -}}" for="{{options.for}}" class="hc-input__label {{options.class}}">
+    {{- label -}}
     {%- if options.optional %}
         <span class="hc-input__label-optional"  focusable="false">({{- options.optional -}})</span> 
     {% endif -%}
