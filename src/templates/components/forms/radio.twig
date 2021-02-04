@@ -2,7 +2,7 @@
     {% import "components/icons/icon.twig" as icon %}
 
     <label class="hc-radio">
-        <input type="radio" name="{{name}}" value="{{value}}" class="hc-radio__input" />
+        <input type="radio" name="{{name}}" value="{{value}}" class="hc-radio__input" {% if options.required %}aria-required="true" required{% endif %}/>
         {{icon.render('circle', 'hc-radio__icon')}}
         <span class="hc-radio__label">{{label|raw}}</span>
     </label>

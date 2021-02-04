@@ -2,8 +2,6 @@
 
 {% import "components/icons/icon.twig" as icon %}
 {% import "components/forms/input.twig" as input %}
-{% import "components/forms/select.twig" as select %}
-{% import "components/forms/checkbox.twig" as checkbox %}
 {% import "components/forms/radio.twig" as radio %}
 {% import "components/forms/helper.twig" as helper %}
 {% import "components/forms/label.twig" as label %}
@@ -31,7 +29,7 @@
 				</div>
 				<div class="row">
 					<div class="col-8--md col-12 mb-3">
-						{{input.render({type: 'email', name:'email', placeholder:'E-mailadres', id:'email', label:'label-email'})}}
+						{{input.render({type: 'email', name:'email', placeholder:'E-mailadres', id:'email', label:'label-email', autocomplete: 'email'})}}
 					</div>
 					<div class="col-4--md col-12 mb-3">
             {{label.render('E-mail gdpr', {id: 'gdpr-email', mandatory:'true', class: "sr-only"})}}
@@ -47,7 +45,7 @@
 
 				<div class="row">
 					<div class="col-8--md col-12 mb-3">
-						{{input.render({type: 'email', name:'confirm-email', placeholder:'Bevestig e-mailadres', id:'confirm-email', label: 'label-confirm-email'})}}
+						{{input.render({type: 'email', name:'confirm-email', placeholder:'Bevestig e-mailadres', id:'confirm-email', label: 'label-confirm-email', autocomplete: 'email'})}}
 					</div>
 					<div class="col-4--md col-12 mb-3">
             {{label.render('Confirm e-mail gdpr', {id: 'gdpr-confirm-email', mandatory:'true', class: "sr-only"})}}
@@ -63,7 +61,7 @@
 
 				<div class="row">
 					<div class="col-8--md col-12 mb-3">
-						{{input.render({type: 'tel', name:'telefoon', placeholder:'+32 (0)x xxx xx xx', id:'telefoon', label: 'label-telefoon', helper: 'phone-helper'})}}
+						{{input.render({type: 'tel', name:'telefoon', placeholder:'+32 (0)x xxx xx xx', id:'telefoon', label: 'label-telefoon', helper: 'phone-helper', autocomplete: 'tel'})}}
             {{helper.render('Alleen belgische nummers zijn toegestaan', {id: 'phone-helper'})}}
 					</div>
 					<div class="col-4--md col-12 mb-3">
@@ -80,7 +78,7 @@
 
 				<div class="row">
 					<div class="col-8--md col-12 mb-3">
-						{{input.render({type:'tel', name:'mobile', placeholder:'+32 04xx xx xx xx', id:'mobile', label: 'label-mobile'})}}
+						{{input.render({type:'tel', name:'mobile', placeholder:'+32 04xx xx xx xx', id:'mobile', label: 'label-mobile', autocomplete: 'tel'})}}
 					</div>
 					<div class="col-4--md col-12 mb-3">
             {{label.render('GSM gdpr', {id: 'gdpr-mobile', mandatory:'true', class: "sr-only"})}}
@@ -106,12 +104,12 @@
 				</div>
 
         <div class="row mt-2">
-          <div class="col-12">
-            <button type="button" class="hc-button hc-button__outline-primary mr-2" tabindex="0"  onclick="window.location.href='step2.html'">
-              <span class="hc-button__label"><span class="hc-button__icon hc-button__icon--start">{{icon.render('prev-arrow', 'hc-icon')}}</span>Vorige</span>
-            </button>
-            <button type="button" class="hc-button hc-button__primary" tabindex="0"  onclick="window.location.href='step4.html'">
+          <div class="col-12 flex--md direction-row-reverse--md justify-end--md">
+            <button type="button" class="hc-button hc-button__primary mb-2 w-100 w-auto--md" tabindex="0"  onclick="window.location.href='step4.html'">
               <span class="hc-button__label">Volgende<span class="hc-button__icon hc-button__icon--end">{{icon.render('next-arrow', 'hc-icon')}}</span></span>
+            </button>
+            <button type="button" class="hc-button hc-button__outline-primary mr-2 mb-2 w-100 w-auto--md" tabindex="0"  onclick="window.location.href='step2.html'">
+              <span class="hc-button__label"><span class="hc-button__icon hc-button__icon--start">{{icon.render('prev-arrow', 'hc-icon')}}</span>Vorige</span>
             </button>
           </div>
         </div>

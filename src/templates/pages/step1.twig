@@ -31,7 +31,7 @@
 				<div class="col-7--sm col-12--xxs">
 					<div class="mb-3">
                         {{label.render('Nationaliteit', {for: 'nat', id:'label-nat', mandatory: true })}}
-						{{select.render('Country', {id:'nat', label: 'label-nat', options:[
+						{{select.render({name: 'country', id:'nat', label: 'label-nat', options:[
 							{
 								label: "Australië",
 								value: "AU"
@@ -61,20 +61,20 @@
 				</div>
 				<div class="col-6--sm col-12--xxs">
 					<div class="mb-3">
-                        {{label.render('Naam', {id: 'naam', mandatory:'true'})}}
-                        {{input.render({name:'Naam', placeholder:'Naam', id:'naam'})}}
+                        {{label.render('Naam', { mandatory:'true', for: 'naam', id: 'label-naam'})}}
+                        {{input.render({name:'Naam', placeholder:'Naam', id:'naam', label: 'label-naam'})}}
                     </div>
 				</div>
 				<div class="col-6--sm col-12--xxs">
 					<div class="mb-3">
-                        {{label.render('Voornaam', {id: 'voornaam', mandatory:'true'})}}
-                        {{input.render({name:'voornaam', placeholder:'Voornaam', id:'voornaam'})}}
+                        {{label.render('Voornaam', {mandatory:'true', for: 'voornaam', id: 'label-voornaam'})}}
+                        {{input.render({name:'voornaam', placeholder:'Voornaam', id:'voornaam', label: 'label-voornaam', autocomplete: 'given-name'})}}
                     </div>
 				</div>
 				<div class="col-4--sm col-12--xxs">
 					<div class="mb-3">
-                        {{label.render('Geboortedatum', { id:'bd', mandatory: true })}}
-						{{select.render('bd', {id:'bd', placeholder: 'Kies je geboortedatum', options: [
+                        {{label.render('Geboortedatum', {mandatory: true, for: 'bd', id:'label-bd' })}}
+						{{select.render({name: 'bd', placeholder: 'Kies je geboortedatum', id:'bd', label:'label-bd', autocomplete:'bday', options: [
 							{
 								label: "UXMen",
 								value: "uxmen"
@@ -99,12 +99,12 @@
 			</fieldset>	
 
 			<div class="row">
-				<div class="col-12 mt-2">
-					<button type="button" class="hc-button hc-button__outline-primary mr-2" tabindex="0"  onclick="window.location.href='start.html'">
-						<span class="hc-button__label"><span class="hc-button__icon hc-button__icon--start">{{icon.render('prev-arrow', 'hc-icon')}}</span>Vorige</span>
-					</button>
-					<button type="button" class="hc-button hc-button__primary" tabindex="0"  onclick="window.location.href='step2.html'">
+				<div class="col-12 flex--md direction-row-reverse--md justify-end--md mt-2">
+					<button type="button" class="hc-button hc-button__primary mb-2 w-100 w-auto--md" tabindex="0"  onclick="window.location.href='step2.html'">
 						<span class="hc-button__label">Volgende<span class="hc-button__icon hc-button__icon--end">{{icon.render('next-arrow', 'hc-icon')}}</span></span>
+					</button>
+					<button type="button" class="hc-button hc-button__outline-primary mb-2 mr-2 w-100 w-auto--md" tabindex="0"  onclick="window.location.href='start.html'">
+						<span class="hc-button__label"><span class="hc-button__icon hc-button__icon--start">{{icon.render('prev-arrow', 'hc-icon')}}</span>Vorige</span>
 					</button>
 				</div>
 			</div>

@@ -5,7 +5,7 @@
         {% if options.icon %}
             {{icon.render(options.icon, 'hc-input__icon')}}
         {% endif %}
-        <input type="{{options.type|default('text')}}" {% if options.label %} id="{{options.id}}"{% endif %} {% if options.label %}aria-labelledby="{{options.label}}"{% endif %} name="{{options.name}}" placeholder="{{options.placeholder}}" class="hc-input__input" {% if options.helper %} aria-describedby="{{options.helper}}" {% endif %}{% if options.required %}aria-required="true"{% endif %} {% if options.disabled %} aria-disabled="true" disabled{% endif %} autocomplete="{{options.autocomplete|default('on')}}" />
+        <input type="{{options.type|default('text')}}" {% if options.label %} id="{{options.id}}"{% endif %} {% if options.label %}aria-labelledby="{{options.label}}"{% endif %} name="{{options.name}}" placeholder="{{options.placeholder}}" class="hc-input__input" {% if options.helper %} aria-describedby="{{options.helper}}" {% endif %}{% if options.required %}aria-required="true" required{% endif %} {% if options.disabled %} aria-disabled="true" disabled{% endif %} autocomplete="{{options.autocomplete|default('on')}}" />
     </div>
     
 {% endmacro %}

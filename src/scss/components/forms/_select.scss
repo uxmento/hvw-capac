@@ -30,6 +30,7 @@
 
         &:hover {
             cursor: pointer;
+            border-color: $color_default-text;
         }
 
         /*&:focus-visible {

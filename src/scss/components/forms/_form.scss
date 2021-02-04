@@ -17,3 +17,9 @@ fieldset {
         font-weight: 600;
     }
 }
+
+.#{$ns}accent-block {
+    border-radius: $border-radius;
+    background-color: $color_background-page;
+    padding: 0 rem(40px) !important;
+}

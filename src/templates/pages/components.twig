@@ -430,7 +430,7 @@
         <div class="hc-container accent py-4">
             <h2 class="hc-h3">Dropdown</h2>  
             {{label.render('dropdown', { mandatory: true })}}
-            {{select.render('company', [
+            {{select.render({ name:'company', options:[
                 {
                     label: "UXMen",
                     value: "uxmen"
@@ -439,7 +439,7 @@
                     label: "Calibrate",
                     value: "calibrate"
                 }
-            ])}}
+            ]})}}
         </div>
 
         <div class="hc-container accent py-4">

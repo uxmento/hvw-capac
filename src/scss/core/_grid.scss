@@ -17,6 +17,19 @@
     &-#{$i} {
       width: #{100% / $grid-columns * $i} !important;
       padding: 0px #{rem($grid-gutter) / 2} !important;
+
+      &.pad-half {
+        padding: 0px #{rem($grid-gutter) / 4} !important;
+      }
+
+      &.pad-half--r {
+        padding-right: #{rem($grid-gutter) / 4};
+      }
+
+      &.pad-half--l {
+        padding-left: #{rem($grid-gutter) / 4};
+      }
+
     }
   }
 
@@ -26,6 +39,19 @@
         &-#{$i}--#{$breakpoint} {
           width: #{100% / $grid-columns * $i} !important;
           padding: 0px #{rem($grid-gutter) / 2} !important;
+
+          &.pad-half {
+            padding: 0px #{rem($grid-gutter) / 4} !important;
+          }
+
+          &.pad-half--r {
+            padding-right: #{rem($grid-gutter) / 4};
+          }
+
+          &.pad-half--l {
+            padding-left: #{rem($grid-gutter) / 4};
+          }
+
         }
       }
     }
