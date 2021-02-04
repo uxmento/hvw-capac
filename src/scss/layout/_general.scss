@@ -3,10 +3,13 @@
  * General layout code
  */
  
+html, body {
+    overflow-x: hidden;
+}
 body {
     background: $color_background-page;
+    position: relative;
 }
-
 
 @mixin sr-only {
     position: absolute;

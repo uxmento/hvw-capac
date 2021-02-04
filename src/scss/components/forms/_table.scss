@@ -4,7 +4,12 @@
     margin-bottom: 1rem;
     vertical-align: top;
     border-color: $color_border-table;
-    overflow-x: scroll;
+
+    display: block;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    overflow-x: auto;
+    white-space: nowrap;
 
     &>:not(caption) > * > * {
         padding: 1rem 1.4rem;
@@ -34,6 +39,7 @@
 
     &__icon-cell{
         width: 40px;
+        min-width: 40px;
     }
 
     &--hover tr:hover td{

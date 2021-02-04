@@ -10,6 +10,11 @@ $font-size_heading4: rem(22px);
 //$font-size_heading5: rem(48px);
 //$font-size_heading6: rem(48px);
 
+$font-size_mobile-heading1: rem(28px);
+$font-size_mobile-heading2: rem(22px);
+
+$font-size_tablet-heading1: rem(34px);
+$font-size_tablet-heading2: rem(28px);
 
 // --------------
 // line-heights
@@ -23,6 +28,12 @@ $line-height_heading4: rem(30px);
 //$line-height_heading5: rem(32px);
 //$line-height_heading6: rem(30px);
 
+$line-height_mobile-heading1: rem(34px);
+$line-height_mobile-heading2: rem(30px);
+
+$line-height_tablet-heading1: rem(34px);
+$line-height_tablet-heading2: rem(30px);
+
 // ------------------------
 // binding heading elements
 // ------------------------
@@ -35,15 +46,15 @@ $line-height_heading4: rem(30px);
 
 h1,
 .#{$ns}h1 {
-  font-size: $font-size_heading1;
-  line-height: $line-height_heading1;
+  font-size: $font-size_mobile-heading1;
+  line-height: $line-height_mobile-heading1;
   color: $color-tertiary;
 }
 
 h2,
 .#{$ns}h2 {
-  font-size: $font-size_heading2;
-  line-height: $line-height_heading2;
+  font-size: $font-size_mobile-heading2;
+  line-height: $line-height_mobile-heading2;
   color: $color-primary;
 }
 
@@ -76,9 +87,39 @@ h6,
 .#{$ns}tiny {
   font-size: $font-size_tiny;
   line-height: $line-height_tiny;
-  color: $color_tiny-text;
-  letter-spacing: 1px;
 }
+
+@include mq('xs'){
+  h1,
+  .#{$ns}h1 {
+    font-size: $font-size_tablet-heading1;
+    line-height: $line-height_tablet-heading1;
+  }
+
+  h2,
+  .#{$ns}h2 {
+    font-size: $font-size_tablet-heading2;
+    line-height: $line-height_tablet-heading2;
+  }
+
+}
+
+
+@include mq('md'){
+  h1,
+  .#{$ns}h1 {
+    font-size: $font-size_heading1;
+    line-height: $line-height_heading1;
+  }
+
+  h2,
+  .#{$ns}h2 {
+    font-size: $font-size_heading2;
+    line-height: $line-height_heading2;
+  }
+  
+}
+
 
 ul, ol {
   padding-left: 1rem;

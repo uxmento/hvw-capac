@@ -13,6 +13,10 @@
   padding: 0 rem($container-gutter) !important;
   background-color: transparent;
 
+  @include mq('xxs', 'max'){
+    padding: 0 rem($container-gutter/2) !important;
+  }
+
   &#{$root}-fluid {
     max-width: none;
   }

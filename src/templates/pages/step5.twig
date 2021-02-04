@@ -11,21 +11,18 @@
 
 {% block body %}
 	<!-- html goes here -->
-	<header>
-		<div class="hc-container hc-container-condensed">
-			<h1>Aanvraag voor volledige werkloosheidsuitkeringen (C1)</h1>
-		</div>
-	</header>
-
+	
+	{% include 'layouts/header.twig' %}
+	
 	<section role="main">
 
       <div class="hc-container hc-container-condensed accent py-4">
             
 			<h2>Mijn persoonlijke gegevens extra's</h2>
-			<fieldset class="mb-4">
+			<fieldset class="my-4">
 				<legend>Ik vraag de hulp van CAPAC om mijn aanvraag voor een toelage in te dienen van</legend>
-				<div class="row">
-					<div class="col-3--sm col-6 mt-3 mb-3">
+				<div class="row mb-3">
+					<div class="col-3--sm col-6 mt-3 mb-1">
 						{{label.render('Dag', {mandatory: true, for:'day', id: 'label-day'})}}
 						{{select.render({id:'day', name:'day', label: 'label-day', placeholder:'dd', autocomplete: 'bday-day', required: true,  options:[
 							{label: "1",  value: "1" }, 
@@ -61,7 +58,7 @@
 							{label: "31",  value: "31" },
 						]})}}
 					</div>
-					<div class="col-3--sm col-6 mt-3 mb-3">
+					<div class="col-3--sm col-6 mt-3 mb-1">
 						{{label.render('Maand', {mandatory: true, for:'mnth', id: 'label-mnth'})}}
 						{{select.render({id:'mnth', name:'mnth', label: 'label-mnth', placeholder:'mm', autocomplete: 'bday-month', required: true,  options:[
 							{label: "1",  value: "1" }, 
@@ -78,7 +75,7 @@
 							{label: "12",  value: "12" }, 
 						]})}}
 					</div>
-					<div class="col-6--sm col-12 mt-3 mb-3">
+					<div class="col-6--sm col-12 mt-3 mb-1">
 						{{label.render('Jaar', {mandatory: true, for:'yr', id: 'label-yr'})}}
 						{{select.render({id:'yr', name:'yr',label: 'label-yr', placeholder:'jjjj', autocomplete: 'bday-year', required: true,  options:[
 							{label: "2010",  value: "2010" }, 
@@ -126,7 +123,7 @@
 							<li>{{radio.render('vergoeding', 'Door een andere betalingsorganisatie (FGTB, CGSLB, CSC)', 'other')}}
 								<div class="hc-message hc-warning ml-3 mt-3">
 									{{icon.render('warning', 'hc-message__icon')}}
-									<span>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Etiam porta sem malesuada magna mollis euismod.</span>
+									<span>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Etiam <a href="#een-link" target='_blank'>porta sem</a> malesuada magna mollis euismod.</span>
 								</div>
 							</li>
 							<li>{{radio.render('vergoeding', 'Ik heb nooit een uitkering gekregen', 'none')}}</li>
@@ -167,7 +164,7 @@
 									<div class="col-2--sm col-12 text-align-left text-align-center--sm pad-half">
 										<div class="my-2">Van</div>
 									</div>
-									<div class="col-3--sm col-6 mt-3 mb-3 pad-half">
+									<div class="col-3 mt-3 mb-3 pad-half">
 										{{label.render('Dag', {mandatory: true, for: 'fromday', id: 'label-fromday'})}}
 										{{select.render({id:'fromday', name: 'fromday',  label: 'label-fromday', placeholder:'dd', autocomplete: 'bday-day', required: true,  options:[
 											{label: "1",  value: "1" }, 
@@ -203,7 +200,7 @@
 											{label: "31",  value: "31" },
 										]})}}
 									</div>
-									<div class="col-3--sm col-6 mt-3 mb-3 pad-half">
+									<div class="col-3 mt-3 mb-3 pad-half">
 										{{label.render('Maand', {mandatory: true, for:'frommnth', id: 'label-frommnth'})}}
 										{{select.render({id:'frommnth', name:'frommnth', label: 'label-frommnth', placeholder:'mm', autocomplete: 'bday-month', required: true,  options:[
 											{label: "1",  value: "1" }, 
@@ -220,7 +217,7 @@
 											{label: "12",  value: "12" }, 
 										]})}}
 									</div>
-									<div class="col-4--sm col-12 mt-3 mb-3 pad-half">
+									<div class="col-3--sm col-4 mt-3 mb-3 pad-half">
 										{{label.render('Jaar', {mandatory: true, for:'fromyr', id: 'label-fromyr'})}}
 										{{select.render({id:'fromyr', name:'fromyr', label: 'label-fromyr', placeholder:'jjjj', autocomplete: 'bday-year', required: true,  options:[
 											{label: "2010",  value: "2010" }, 
@@ -263,7 +260,7 @@
 									<div class="col-2--sm col-12  text-align-left text-align-center--sm pad-half">
 										<div class="my-2">tot</div>
 									</div>
-									<div class="col-3--sm col-6 mt-3 mb-3 pad-half">
+									<div class="col-3 mt-3 mb-3 pad-half">
 										{{label.render('Dag', {mandatory: true, for:'today', id: 'label-today'})}}
 										{{select.render({id:'today', name:'today', label: 'label-today', placeholder:'dd', autocomplete: 'bday-day', required: true,  options:[
 											{label: "1",  value: "1" }, 
@@ -299,7 +296,7 @@
 											{label: "31",  value: "31" },
 										]})}}
 									</div>
-									<div class="col-3--sm col-6 mt-3 mb-3 pad-half">
+									<div class="col-3 mt-3 mb-3 pad-half">
 										{{label.render('Maand', {mandatory: true, for:'tomnth', id: 'label-tomnth'})}}
 										{{select.render({id:'tomnth', name:'tomnth', label: 'label-tomnth', placeholder:'mm', autocomplete: 'bday-month', required: true,  options:[
 											{label: "1",  value: "1" }, 
@@ -316,7 +313,7 @@
 											{label: "12",  value: "12" }, 
 										]})}}
 									</div>
-									<div class="col-4--sm col-12 mt-3 mb-3 pad-half">
+									<div class="col-4--sm col-6 mt-3 mb-3 pad-half">
 										{{label.render('Jaar', {mandatory: true, for:'toyr', id: 'label-toyr'})}}
 										{{select.render({id:'toyr', name:"toyr", label: 'label-toyr', placeholder:'jjjj', autocomplete: 'bday-year', required: true,  options:[
 											{label: "2010",  value: "2010" }, 

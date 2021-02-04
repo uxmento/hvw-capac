@@ -10,91 +10,92 @@
 
 {% block body %}
 	<!-- html goes here -->
-	<header>
-		<div class="hc-container hc-container-condensed">
-			<h1>Aanvraag voor volledige werkloosheidsuitkeringen (C1)</h1>
-		</div>
-	</header>
+
+	{% include 'layouts/header.twig' %}
 
 	<section role="main">
 
         <div class="hc-container hc-container-condensed accent py-4">
             <h2>Mijn persoonsgegevens</h2>
-			<fieldset class="row">
-                <div class="col-5--sm col-12--xxs">
-					<div class="mb-3">
-                        {{label.render('Rijksregisternummer', { mandatory:true , for: 'rrn', id: 'label-rrn', class: "hc-valid"})}}
-                        {{input.render({name:'rijksregisternummer', placeholder:'xx.xx.xx - xxx.xx', id:'rrn', label: 'label-rrn', class: 'hc-valid', helper: 'help-rrn'})}}
-                        {{helper.render('De recto zijde is de voorkant van jouw eID', {id:'help-rrn', class: 'hc-valid'})}}
-                    </div>
-				</div>
-				<div class="col-7--sm col-12--xxs">
-					<div class="mb-3">
-                        {{label.render('Nationaliteit', {for: 'nat', id:'label-nat', mandatory: true })}}
-						{{select.render({name: 'country', id:'nat', label: 'label-nat', options:[
-							{
-								label: "Australië",
-								value: "AU"
-							},
-							{
-								label: "België",
-								value: "BE"
-							},
-							{
-								label: "Canada",
-								value: "CA"
-							},
-							{
-								label: "Denemarken",
-								value: "DK"
-							},
-							{
-								label: "Estland",
-								value: "EST"
-							},
-							{
-								label: "Frankrijk",
-								value: "FR"
-							}
-						]})}}
-                    </div>
-				</div>
-				<div class="col-6--sm col-12--xxs">
-					<div class="mb-3">
-                        {{label.render('Naam', { mandatory:'true', for: 'naam', id: 'label-naam'})}}
-                        {{input.render({name:'Naam', placeholder:'Naam', id:'naam', label: 'label-naam'})}}
-                    </div>
-				</div>
-				<div class="col-6--sm col-12--xxs">
-					<div class="mb-3">
-                        {{label.render('Voornaam', {mandatory:'true', for: 'voornaam', id: 'label-voornaam'})}}
-                        {{input.render({name:'voornaam', placeholder:'Voornaam', id:'voornaam', label: 'label-voornaam', autocomplete: 'given-name'})}}
-                    </div>
-				</div>
-				<div class="col-4--sm col-12--xxs">
-					<div class="mb-3">
-                        {{label.render('Geboortedatum', {mandatory: true, for: 'bd', id:'label-bd' })}}
-						{{select.render({name: 'bd', placeholder: 'Kies je geboortedatum', id:'bd', label:'label-bd', autocomplete:'bday', options: [
-							{
-								label: "UXMen",
-								value: "uxmen"
-							},
-							{
-								label: "Calibrate",
-								value: "calibrate"
-							}
-						]})}}
-                    </div>
+			<fieldset>
+				<div class="row mt-2">
+					<div class="col-5--sm col-12--xxs">
+						<div class="mb-3">
+							{{label.render('Rijksregisternummer', { mandatory:true , for: 'rrn', id: 'label-rrn', class: "hc-valid"})}}
+							{{input.render({name:'rijksregisternummer', placeholder:'xx.xx.xx - xxx.xx', id:'rrn', label: 'label-rrn', class: 'hc-valid', helper: 'help-rrn'})}}
+							{{helper.render('De recto zijde is de voorkant van jouw eID', {id:'help-rrn', class: 'hc-valid'})}}
+						</div>
+					</div>
+					<div class="col-7--sm col-12--xxs">
+						<div class="mb-3">
+							{{label.render('Nationaliteit', {for: 'nat', id:'label-nat', mandatory: true })}}
+							{{select.render({name: 'country', id:'nat', label: 'label-nat', options:[
+								{
+									label: "Australië",
+									value: "AU"
+								},
+								{
+									label: "België",
+									value: "BE"
+								},
+								{
+									label: "Canada",
+									value: "CA"
+								},
+								{
+									label: "Denemarken",
+									value: "DK"
+								},
+								{
+									label: "Estland",
+									value: "EST"
+								},
+								{
+									label: "Frankrijk",
+									value: "FR"
+								}
+							]})}}
+						</div>
+					</div>
+					<div class="col-6--sm col-12--xxs">
+						<div class="mb-3">
+							{{label.render('Naam', { mandatory:'true', for: 'naam', id: 'label-naam'})}}
+							{{input.render({name:'Naam', placeholder:'Naam', id:'naam', label: 'label-naam'})}}
+						</div>
+					</div>
+					<div class="col-6--sm col-12--xxs">
+						<div class="mb-3">
+							{{label.render('Voornaam', {mandatory:'true', for: 'voornaam', id: 'label-voornaam'})}}
+							{{input.render({name:'voornaam', placeholder:'Voornaam', id:'voornaam', label: 'label-voornaam', autocomplete: 'given-name'})}}
+						</div>
+					</div>
+					<div class="col-4--sm col-12--xxs">
+						<div class="mb-3">
+							{{label.render('Geboortedatum', {mandatory: true, for: 'bd', id:'label-bd' })}}
+							{{select.render({name: 'bd', placeholder: 'Kies je geboortedatum', id:'bd', label:'label-bd', autocomplete:'bday', options: [
+								{
+									label: "UXMen",
+									value: "uxmen"
+								},
+								{
+									label: "Calibrate",
+									value: "calibrate"
+								}
+							]})}}
+						</div>
+					</div>
 				</div>
 			</fieldset>
 
-			<fieldset class="row mt-2">
+			<fieldset class="mt-2">
 				<legend>Gelieve een kopie van de identiteitskaart op te laden</legend>	
-				<div class="col-12">	
-                    <ul class="hc-input__list hc-input__list--vertical mt-2">
-                        <li>{{radio.render('type', 'Arbeider', 'worker')}}</li>
-                        <li>{{radio.render('type', 'Bediende', 'employee')}}</li>
-                    </ul>
+				<div class="row">
+					<div class="col-12">	
+						<ul class="hc-input__list hc-input__list--vertical mt-2">
+							<li>{{radio.render('type', 'Arbeider', 'worker')}}</li>
+							<li>{{radio.render('type', 'Bediende', 'employee')}}</li>
+						</ul>
+					</div>
 				</div>
 			</fieldset>	
 

@@ -10,11 +10,8 @@
 
 {% block body %}
 	<!-- html goes here -->
-	<header>
-		<div class="hc-container hc-container-condensed">
-			<h1>Aanvraag voor volledige werkloosheidsuitkeringen (C1)</h1>
-		</div>
-	</header>
+	
+	{% include 'layouts/header.twig' %}
 
 	<section role="main">
 
@@ -23,24 +20,26 @@
 			<h2>Mijn persoonsgegevens</h2>
 			<h3 class="hc-h4">Gelieve een kopie van de identiteitskaart op te laden</h3>
 			<p>Een foto of een scan van uw identiteitskaart (voor- en achterkant) is vereist om uw informatieverzoek voort te zetten</p>
-			<fieldset class="row" disabled>
-                <div class="col-12">
-					<div class="mb-3">
-                        {{label.render('Recto van jouw eID', {id: 'reid', mandatory:'true'})}}
-                        <div class="hc-input hc-input--file">
-							<input class="hc-input__input" aria-labelledby="reid" type="file" placeholder='Kies bestand'>
+			<fieldset disabled>
+				<div class="row">
+					<div class="col-12">
+						<div class="mb-3">
+							{{label.render('Recto van jouw eID', {id: 'reid', mandatory:'true'})}}
+							<div class="hc-input hc-input--file">
+								<input class="hc-input__input" aria-labelledby="reid" type="file" placeholder='Kies bestand'>
+							</div>
+							{{helper.render('De recto zijde is de voorkant van jouw eID')}}
 						</div>
-                        {{helper.render('De recto zijde is de voorkant van jouw eID')}}
-                    </div>
-				</div>
-				<div class="col-12">
-					<div class="mb-3">
-                        {{label.render('Verso van jouw eID', {id: 'veid', mandatory:'true'})}}
-                        <div class="hc-input hc-input--file">
-							<input class="hc-input__input" aria-labelledby="veid" type="file" placeholder='Kies bestand'>
+					</div>
+					<div class="col-12">
+						<div class="mb-3">
+							{{label.render('Verso van jouw eID', {id: 'veid', mandatory:'true'})}}
+							<div class="hc-input hc-input--file">
+								<input class="hc-input__input" aria-labelledby="veid" type="file" placeholder='Kies bestand'>
+							</div>
+							{{helper.render('De recto zijde is de voorkant van jouw eID')}}
 						</div>
-                        {{helper.render('De recto zijde is de voorkant van jouw eID')}}
-                    </div>
+					</div>
 				</div>
 			</fieldset>
 
