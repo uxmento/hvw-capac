@@ -49,8 +49,12 @@
       border: $border-width solid $color_tertiary;
     }
 
-    [class*="input__icon"] + & {
-      padding-right: $input-height;
+    &--icon-left {
+      padding-left: $icon-padding;
+    }
+    
+    &--icon-right {
+      padding-right: $icon-padding;
     }
 
     // textarea options
@@ -64,15 +68,31 @@
   &__icon {
     position: absolute;
     top: 50%;
-    right: 1rem;;
+    right: 1rem;
     fill: $color_icons;
     pointer-events: none;
     transform: translateY(-50%);
+
+    &--start{
+      left: .85rem;
+    }
+
+    &--end {
+      right: .85rem;
+    }
 
     // case multiline
     #{$root}--multiline &{
       height: calc(3rem - 2px);
     }
+  }
+
+  &__icon--start {
+    margin-right: rem(16px);
+  }
+
+  &__icon--end {
+      margin-left: rem(16px);
   }
 
   // states

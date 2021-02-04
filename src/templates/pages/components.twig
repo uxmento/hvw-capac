@@ -293,7 +293,7 @@
                 <div class="col-3--xl col-4--lg col-6--md col-12--xxs">
                     <div class="mb-3">
                         {{label.render('text', {for: 'name', mandatory:'true'})}}
-                        {{input.render('text', {name:'name', placeholder:'Enter your full name', icon:'user-alt', id:'name'})}}
+                        {{input.render({name:'name', placeholder:'Enter your full name', iconBefore:'heart', iconAfter:'user-alt', id:'name'})}}
                         {{helper.render('Vergeet je naam niet in te vullen')}}
                     </div>
                 </div>
@@ -301,7 +301,7 @@
                 <div class="col-3--xl col-4--lg col-6--md col-12--xxs">
                     <div class="mb-3">
                         {{label.render('text', {for: 'firstname', class: 'hc-valid '})}}
-                        {{input.render('text', {name:'firstname', placeholder:'Naam', icon:'user-alt', id:'firstname', class:'hc-valid  '})}}
+                        {{input.render({name:'firstname', placeholder:'Naam', iconAfter:'user-alt', id:'firstname', class:'hc-valid  '})}}
                         {{helper.render('Vergeet je naam niet in te vullen', {class:'hc-valid '})}}
                     </div>
                 </div>
@@ -309,7 +309,7 @@
                 <div class="col-3--xl col-4--lg col-6--md col-12--xxs">
                     <div class="mb-3">
                         {{label.render('text', {for: 'secondname', class:'hc-warning '})}}
-                        {{input.render('text', {name:'secondname', placeholder:'Second Name', icon:'user-alt', id:'secondname', class:'hc-warning '})}}
+                        {{input.render({name:'secondname', placeholder:'Second Name', iconAfter:'user-alt', id:'secondname', class:'hc-warning '})}}
                         {{helper.render('Vergeet je naam niet in te vullen', {class:'hc-warning '})}}
                     </div>
                 </div>
@@ -317,7 +317,7 @@
                 <div class="col-3--xl col-4--lg col-6--md col-12--xxs">
                     <div class="mb-3">
                         {{label.render('text', {for: 'address', class:'hc-error'})}}
-                        {{input.render('text', {name:'address', placeholder:'Address', icon:'user-alt', id:'address', class:'hc-error '})}}
+                        {{input.render({name:'address', placeholder:'Address', iconAfter:'user-alt', id:'address', class:'hc-error '})}}
                         {{helper.render('Vergeet je naam niet in te vullen', {class:'hc-error '})}}
                     </div>
                 </div>
@@ -327,7 +327,7 @@
                 <div class="col-4--md col-6--sm col-12--xxs">
                     <div class="mb-3">
                         {{label.render('text', {for: 'name', mandatory:'true'})}}
-                        {{input.render('text', {name:'name', placeholder:'Enter your full name', icon:'user-alt', id:'name'})}}
+                        {{input.render({name:'name', placeholder:'Enter your full name', iconAfter:'user-alt', id:'name'})}}
                         {{helper.render('Vergeet je naam niet in te vullen')}}
                     </div>
                 </div>
@@ -335,7 +335,7 @@
                 <div class="col-8--md col-6--sm col-12--xxs">
                     <div class="mb-3">
                         {{label.render('text', {for: 'firstname', class: 'hc-valid '})}}
-                        {{input.render('text', {name:'firstname', placeholder:'Naam', icon:'user-alt', id:'firstname', class:'hc-valid  '})}}
+                        {{input.render({name:'firstname', placeholder:'Naam', iconAfter:'user-alt', id:'firstname', class:'hc-valid  '})}}
                         {{helper.render('Vergeet je naam niet in te vullen', {class:'hc-valid '})}}
                     </div>
                 </div>
@@ -343,7 +343,7 @@
                 <div class="col-4--md col-6--sm col-12--xxs">
                     <div class="mb-3">
                         {{label.render('text', {for: 'secondname', class:'hc-warning '})}}
-                        {{input.render('text', {name:'secondname', placeholder:'Second Name', icon:'user-alt', id:'secondname', class:'hc-warning '})}}
+                        {{input.render({name:'secondname', placeholder:'Second Name', iconAfter:'user-alt', id:'secondname', class:'hc-warning '})}}
                         {{helper.render('Vergeet je naam niet in te vullen', {class:'hc-warning '})}}
                     </div>
                 </div>
@@ -351,7 +351,7 @@
                 <div class="col-8--md col-6--sm col-12--xxs">
                     <div class="mb-3">
                         {{label.render('text', {for: 'address', class:'hc-error '})}}
-                        {{input.render('text', {name:'address', placeholder:'Address', icon:'user-alt', id:'address', class:'hc-error '})}}
+                        {{input.render({name:'address', placeholder:'Address', iconAfter:'user-alt', id:'address', class:'hc-error '})}}
                         {{helper.render('Vergeet je naam niet in te vullen', {class:'hc-error '})}}
                     </div>
                 </div>
@@ -360,7 +360,7 @@
                         <div class="col-4--md col-6--sm col-12--xxs">
                             <div class="mb-3">
                                 {{label.render('text', {for: 'name', mandatory:'true'})}}
-                                {{input.render('text', {name:'name', placeholder:'Enter your full name', icon:'user-alt', id:'name'})}}
+                                {{input.render({name:'name', placeholder:'Enter your full name', iconAfter:'user-alt', id:'name'})}}
                                 {{helper.render('Vergeet je naam niet in te vullen')}}
                             </div>
                         </div>
@@ -368,7 +368,7 @@
                         <div class="col-8--md col-6--sm col-12--xxs">
                             <div class="mb-3">
                                 {{label.render('text', {for: 'firstname', class: 'hc-valid '})}}
-                                {{input.render('text', {name:'firstname', placeholder:'Naam', icon:'user-alt', id:'firstname', class:'hc-valid  '})}}
+                                {{input.render({name:'firstname', placeholder:'Naam', iconAfter:'user-alt', id:'firstname', class:'hc-valid  '})}}
                                 {{helper.render('Vergeet je naam niet in te vullen', {class:'hc-valid '})}}
                             </div>
                         </div>
@@ -376,7 +376,7 @@
                         <div class="col-4--md col-6--sm col-12--xxs">
                             <div class="mb-3">
                                 {{label.render('text', {for: 'secondname', class:'hc-warning '})}}
-                                {{input.render('text', {name:'secondname', placeholder:'Second Name', icon:'user-alt', id:'secondname', class:'hc-warning '})}}
+                                {{input.render({name:'secondname', placeholder:'Second Name', iconAfter:'user-alt', id:'secondname', class:'hc-warning '})}}
                                 {{helper.render('Vergeet je naam niet in te vullen', {class:'hc-warning '})}}
                             </div>
                         </div>
@@ -384,7 +384,7 @@
                         <div class="col-8--md col-6--sm col-12--xxs">
                             <div class="mb-3">
                                 {{label.render('text', {for: 'address', class:'hc-error '})}}
-                                {{input.render('text', {name:'address', placeholder:'Address', icon:'user-alt', id:'address', class:'hc-error '})}}
+                                {{input.render({name:'address', placeholder:'Address', iconAfter:'user-alt', id:'address', class:'hc-error '})}}
                                 {{helper.render('Vergeet je naam niet in te vullen', {class:'hc-error '})}}
                             </div>
                         </div>
@@ -392,7 +392,7 @@
                         <div class="col-8--md col-6--sm col-12--xxs">
                             <div class="mb-3">
                                 {{label.render('text', {for: 'birth', class:'hc-disabled'})}}
-                                {{input.render('text', {name:'birth', placeholder:'Birth', icon:'user-alt', id:'birth', class:'hc-disabled', disabled: true, autocomplete: 'bday'})}}
+                                {{input.render({name:'birth', placeholder:'Birth', iconAfter:'user-alt', id:'birth', class:'hc-disabled', disabled: true, autocomplete: 'bday'})}}
                                 {{helper.render('Vergeet je naam niet in te vullen', {class:'hc-disabled '})}}
                             </div>
                         </div>
