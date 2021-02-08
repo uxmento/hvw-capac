@@ -284,3 +284,28 @@
     }
 }
 
+.#{$ns}disabled {
+    .#{$ns}button {
+        &__primary, 
+        &__secondary,
+        &__tertiary {
+            background-color: $color_background-disabled;
+            color: $color_disabled;
+            pointer-events: none;
+        }
+
+        &__outline-primary, 
+        &__outline-secondary,
+        &__outline-tertiary,
+        &__outline-disabled,
+        &__ghost-primary, 
+        &__ghost-secondary,
+        &__ghost-tertiary,
+        &__ghost-disabled {
+            border-color: $color_background-disabled;
+            color: $color_disabled;
+            pointer-events: none;
+        }
+
+    }
+}

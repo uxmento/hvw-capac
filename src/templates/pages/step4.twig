@@ -26,38 +26,47 @@
 					<div class="col-12">	
 						<ul class="hc-input__list hc-input__list--vertical mt-2">
 							<li>{{radio.render('type', 'Ik woon alleen', 'alone')}}</li>
-							<li>{{radio.render('type', 'Ik woon met iemand samen', 'together')}}</li>
+							<li style="position: relative">{{radio.render('type', 'Ik woon met iemand samen', 'together')}}{{icon.render('info-circle')}}
+								<div class="hc-popup" style="width: 400px; left: 49px; top: 1.75rem;">
+									<div class="hc-popup__title">Wanneer woon je met iemand samen?</div>
+									<div class="hc-popup__content">
+										<p>U woont samen met iemand als die persoon deel uitmaakt van uw huishouden, ook als die persoon op een ander adres is gedomicilieerd.</p>
+									</div>
+								</div>
+							</li>
 						</ul>
 					</div>
 
 					<div class="col-12 ml-3">
-						<table class="hc-table hc-table-sm hc-table--hover">
-							<thead>
-								<tr>
-									<th scope="col" class="hc-table__icon-cell"><span class="sr-only">Verwijderen</span></li>
-									<th scope="col" class="hc-table__icon-cell"><span class="sr-only">Aanpassen</span></li>
-									<th scope="col">Naam</th>
-									<th scope="col">Voornaam</th>
-									<th scope="col">Relatie</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td><a href="#verwijderen" class="hc-link" role="button" aria-label="Verwijderen"><span class="hc-link__icon hc-link__icon--start">{{icon.render('close', 'hc-icon')}}</span></a></td>
-									<td><a href="#verwijderen" class="hc-link" role="button" aria-label="Aanpassen"><span class="hc-link__icon hc-link__icon--start">{{icon.render('edit', 'hc-icon')}}</span></a></td>
-									<td>Doe</td>
-									<td>John</td>
-									<td>Zoon</td>
-								</tr>
-								<tr>
-									<td><a href="#verwijderen" class="hc-link" role="button" aria-label="Verwijderen"><span class="hc-link__icon hc-link__icon--start">{{icon.render('close', 'hc-icon')}}</span></a></td>
-									<td><a href="#verwijderen" class="hc-link" role="button" aria-label="Aanpassen"><span class="hc-link__icon hc-link__icon--start">{{icon.render('edit', 'hc-icon')}}</span></a></td>
-									<td>Fonda</td>
-									<td>Jane</td>
-									<td>Kleindochter</td>
-								</tr>
-							</tbody>
-						</table>
+						<div class="hc-table hc-table-sm">
+							<table>
+								<thead>
+									<tr>
+										<th scope="col" class="hc-table__icon-cell"><span class="sr-only">Verwijderen</span></li>
+										<th scope="col" class="hc-table__icon-cell"><span class="sr-only">Aanpassen</span></li>
+										<th scope="col">Naam</th>
+										<th scope="col">Voornaam</th>
+										<th scope="col">Relatie</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><a href="#verwijderen" class="hc-link" role="button" aria-label="Verwijderen"><span class="hc-link__icon hc-link__icon--start">{{icon.render('close', 'hc-icon')}}</span></a></td>
+										<td><a href="#verwijderen" class="hc-link" role="button" aria-label="Aanpassen"><span class="hc-link__icon hc-link__icon--start">{{icon.render('edit', 'hc-icon')}}</span></a></td>
+										<td>Doe</td>
+										<td>John</td>
+										<td>Zoon</td>
+									</tr>
+									<tr>
+										<td><a href="#verwijderen" class="hc-link" role="button" aria-label="Verwijderen"><span class="hc-link__icon hc-link__icon--start">{{icon.render('close', 'hc-icon')}}</span></a></td>
+										<td><a href="#verwijderen" class="hc-link" role="button" aria-label="Aanpassen"><span class="hc-link__icon hc-link__icon--start">{{icon.render('edit', 'hc-icon')}}</span></a></td>
+										<td>Fonda</td>
+										<td>Jane</td>
+										<td>Kleindochter</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 						<button type="button" class="hc-button hc-button__secondary hc-button--sm" tabindex="0" >
 							<span class="hc-button__label">
 								<span class="hc-button__icon hc-button__icon--start">{{icon.render('add', 'hc-icon')}}</span>Voeg een gezinslid toe

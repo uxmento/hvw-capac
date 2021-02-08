@@ -1,0 +1,39 @@
+.#{$ns}popup {
+
+    $root: &;
+
+    background: $color_white;
+    border: $border-width solid $color_border-highlight;
+    padding: rem(20px);
+    border-radius: $border-radius;
+    position: absolute;
+    box-shadow: 0 3px 10px rgba($color_default-text,.16);
+
+    &__title {
+        font-weight: 700;
+    }
+
+    &__content {
+        padding: .5rem 0;
+    }
+
+    p:last-child{
+        margin:0;
+        padding: 0;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 14px;
+        height: 14px;
+        background: #fff;
+        border-top: $border-width solid $color_border-highlight;
+        border-right: $border-width solid $color_border-highlight;
+        transform: rotate(-45deg) translateX(-50%);
+        z-index: 0;
+        left: 50%;
+        top: -14px;
+    }
+}

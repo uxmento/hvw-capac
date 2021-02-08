@@ -59,7 +59,7 @@
 				<div class="row">
 					<div class="col-8--md col-12 mb-3">
 						{{input.render({type: 'tel', name:'telefoon', placeholder:'+32 (0)x xxx xx xx', id:'telefoon', label: 'label-telefoon', helper: 'phone-helper', autocomplete: 'tel'})}}
-            {{helper.render('Alleen belgische nummers zijn toegestaan', {id: 'phone-helper'})}}
+            {{helper.render('Alleen belgische nummers zijn toegestaan', {id: 'phone-helper'})}}{{icon.render('')}}
 					</div>
 					<div class="col-4--md col-12 mb-3">
             {{label.render('Telefoon gdpr', {id: 'gdpr-phone', mandatory:'true', class: "sr-only"})}}

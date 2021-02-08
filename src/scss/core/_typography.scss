@@ -142,6 +142,10 @@ a[href] {
 
   @include focus($color_link-hover);
 
+  .#{$ns}disabled &{
+    color: $color_disabled;
+  }
+
 }
 
 .text-align-left{

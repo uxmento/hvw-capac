@@ -24,6 +24,7 @@ $ns: 'hc-';
 
 @import 'components/icons/icon';
 
+@import 'components/forms/states';
 @import 'components/forms/form';
 @import 'components/forms/input';
 @import 'components/forms/select';
@@ -32,8 +33,9 @@ $ns: 'hc-';
 @import 'components/forms/label';
 @import 'components/forms/helper';
 @import 'components/forms/button';
-@import 'components/forms/states';
 @import 'components/forms/link';
 @import 'components/forms/table';
 @import 'components/forms/switcher';
 @import 'components/feedback/message';
+@import 'components/feedback/popup';
+

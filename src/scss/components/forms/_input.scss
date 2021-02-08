@@ -61,6 +61,7 @@
     #{$root}--multiline &{
       resize: vertical;
       height: auto;
+      align-self: top;
     }
 
   }
@@ -95,77 +96,6 @@
       margin-left: rem(16px);
   }
 
-  // states
-
-  &.#{$ns}valid,
-  &.#{$ns}warning,
-  &.#{$ns}info,
-  &.#{$ns}error {
-    #{$root}__input {
-      border: $border-width solid $color_tertiary;
-      @include focus($color_tertiary);
-    }
-  }
-
-  &.#{$ns}valid {
-    #{$root}__input {
-      border-color: $color_valid;
-      //color: $color_valid;
-    }
-
-    #{$root}__icon {
-      fill: $color_valid;
-    }
-  }
-
-  &.#{$ns}warning {
-    #{$root}__input {
-      border-color: $color_warning;
-      //color: $color_warning;
-    }
-
-    #{$root}__icon {
-      fill: $color_warning;
-    }
-  }
-
-  &.#{$ns}info {
-    #{$root}__input {
-      border-color: $color_info;
-      //color: $color_info;
-    }
-
-    #{$root}__icon {
-      fill: $color_info;
-    }
-  }
-
-  &.#{$ns}error {
-    #{$root}__input {
-      border-color: $color_error;
-      //color: $color_error;
-    }
-
-    #{$root}__icon {
-      fill: $color_error;
-    }
-  }
-
-   
-  &.#{$ns}disabled {
-
-    #{$root}__input{
-      border-color: rgba($color-disabled, .25);
-      background-color: $color_background-disabled;
-      pointer-events: none;
-      opacity: $opacity;
-
-      &,&::placeholder {
-        color: $color_disabled;
-      }
-    }
-  }
-
 }
 
 .#{$ns}input__list {
@@ -190,4 +120,73 @@
             margin-top: .5em;
         }
     }
+}
+
+.#{$ns}valid,
+.#{$ns}warning,
+.#{$ns}info,
+.#{$ns}error {
+  .#{$ns}input__input {
+    border: $border-width solid $color_tertiary;
+    @include focus($color_tertiary);
+  }
+}
+
+.#{$ns}valid {
+  .#{$ns}input__input {
+    border-color: $color_valid;
+    //color: $color_valid;
+  }
+
+  .#{$ns}input__icon {
+    fill: $color_valid;
+  }
+}
+
+.#{$ns}warning {
+  .#{$ns}input__input {
+    border-color: $color_warning;
+    //color: $color_warning;
+  }
+
+  .#{$ns}input__icon {
+    fill: $color_warning;
+  }
+}
+
+.#{$ns}info {
+  .#{$ns}input__input {
+    border-color: $color_info;
+    //color: $color_info;
+  }
+
+  .#{$ns}input__icon {
+    fill: $color_info;
+  }
+}
+
+.#{$ns}error {
+  .#{$ns}input__input {
+    border-color: $color_error;
+    //color: $color_error;
+  }
+
+  .#{$ns}input__icon {
+    fill: $color_error;
+  }
+}
+
+  
+.#{$ns}disabled {
+
+  .#{$ns}input__input {
+    border-color: rgba($color-disabled, .25);
+    background-color: $color_background-disabled;
+    pointer-events: none;
+    opacity: $opacity;
+
+    &,&::placeholder {
+      color: $color_disabled;
+    }
+  }
 }

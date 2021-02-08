@@ -126,3 +126,16 @@
         }
     }
 }
+
+.#{$ns}disabled {
+    .#{$ns}switcher {
+        background-color: $color_background-disabled;
+        border-color: rgba($color-disabled, .25);
+
+        &-item__label {
+            color: $color_disabled;
+            cursor:initial;
+            pointer-events: none;
+        }
+    }
+}

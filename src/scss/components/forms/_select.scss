@@ -59,3 +59,72 @@
         transform: translateY(-50%);
     }
 }
+
+.#{$ns}valid,
+.#{$ns}warning,
+.#{$ns}info,
+.#{$ns}error {
+  .#{$ns}select__input {
+    border: $border-width solid $color_tertiary;
+    @include focus($color_tertiary);
+  }
+}
+
+.#{$ns}valid {
+  .#{$ns}select__input {
+    border-color: $color_valid;
+    //color: $color_valid;
+  }
+
+  .#{$ns}select__icon {
+    fill: $color_valid;
+  }
+}
+
+.#{$ns}warning {
+  .#{$ns}select__input {
+    border-color: $color_warning;
+    //color: $color_warning;
+  }
+
+  .#{$ns}select__icon {
+    fill: $color_warning;
+  }
+}
+
+.#{$ns}info {
+  .#{$ns}select__input {
+    border-color: $color_info;
+    //color: $color_info;
+  }
+
+  .#{$ns}select__icon {
+    fill: $color_info;
+  }
+}
+
+.#{$ns}error {
+  .#{$ns}select__input {
+    border-color: $color_error;
+    //color: $color_error;
+  }
+
+  .#{$ns}select__icon {
+    fill: $color_error;
+  }
+}
+
+  
+.#{$ns}disabled {
+
+  .#{$ns}select__input {
+    border-color: rgba($color-disabled, .25);
+    background-color: $color_background-disabled;
+    pointer-events: none;
+    opacity: $opacity;
+
+    &,&::placeholder {
+      color: $color_disabled;
+    }
+  }
+}

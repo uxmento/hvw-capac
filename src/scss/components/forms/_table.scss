@@ -1,15 +1,31 @@
 .#{$ns}table{
-    background: transparent;
-    width: 100%;
-    margin-bottom: 1rem;
-    vertical-align: top;
-    border-color: $color_border-table;
 
-    display: block;
-    max-width: -moz-fit-content;
-    max-width: fit-content;
     overflow-x: auto;
-    white-space: nowrap;
+
+    table {
+        background: transparent;
+        width: 100%;
+        margin-bottom: 1rem;
+        vertical-align: top;
+        border-color: $color_border-table;
+        overflow-x: auto;
+        white-space: nowrap;
+
+        th {
+            font-weight: 600;
+            background-color: $color_background-table-header;
+        }
+
+        tbody {
+            font-weight: 400;
+        }
+    
+    }
+
+    &__icon-cell{
+        width: 40px;
+        min-width: 40px;
+    }
 
     &>:not(caption) > * > * {
         padding: 1rem 1.4rem;
@@ -20,30 +36,16 @@
         border-width: 1px;
     }
 
-    th {
-        font-weight: 600;
-        background-color: $color_background-table-header;
-    }
-
-    tbody {
-        font-weight: 400;
-    }
-
-    & > :not(:last-child) > :last-child > * {
+    & table > :not(:last-child) > :last-child > * {
         border-bottom-color: inherit
     }
 
-    &-sm>:not(caption) > * > * {
+    &-sm table >:not(caption) > * > * {
         padding: .5rem .6rem
     }
 
-    &__icon-cell{
-        width: 40px;
-        min-width: 40px;
-    }
-
     &--hover tr:hover td{
-        /*background-color: $color_background-table-header;*/
+        background-color: $color_background-table-header;
     }
 
 }
