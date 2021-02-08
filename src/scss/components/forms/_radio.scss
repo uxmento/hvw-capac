@@ -115,5 +115,6 @@
     }
     :checked + .#{$ns}radio__icon.#{$ns}icon {
         border-color: $color_disabled;
+        opacity: $opacity;
     }
 }

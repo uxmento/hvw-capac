@@ -33,3 +33,86 @@ $color_background-message--valid: #F0F8F0;
 $color_background-message--warning:#FDF0E2;
 $color_background-message--info: #EDF0F7;
 $color_background-message--error: #FFF7F7;
+
+//////////////////////////////////////////////
+// Text colors 
+//////////////////////////////////////////////
+.color_white {
+    color: #fff !important;
+}
+.color_black {
+    color: #000 !important;
+}
+
+.color_primary {
+    color: #ec5c0e !important;
+}
+.color_secondary {
+    color: #87715E !important;
+}
+.color_tertiary {
+    color: #2650C1 !important;
+}
+
+.color_default-text {
+    color: #161532 !important;
+}
+.color_icons {
+    color: #666666 !important;
+}
+.color_tiny-text {
+    color: #666666 !important;
+}
+
+.color_valid {
+    color: #008A00 !important;
+}
+.color_warning {
+    color: #937100 !important;
+}
+.color_error {
+    color: #DA1E27 !important;
+}
+.color_info {
+    color: #2650C1 !important;
+}
+.color_disabled {
+    color: #646464 !important;
+}
+
+.color_grey-dark{
+    color: #333333;
+}
+.color_grey-medium{
+    color: #989898;
+}
+
+//////////////////////////////////////////////
+// Text colors 
+//////////////////////////////////////////////
+
+.color_background-page {
+    background-color: #F4F4F4;
+}
+.color_background-disabled{
+    background-color: rgba($color_grey-medium, .2);
+}
+.color_background-default {
+    background-color: #d5dcee;
+}
+.color_background-table-header {
+    background-color: rgba(#A18B79, .1);
+}
+
+.color_background-message--valid {
+    background-color: #F0F8F0;
+}
+.color_background-message--warning {
+    background-color:#FDF0E2;
+}
+.color_background-message--info {
+    background-color: #EDF0F7;
+}
+.color_background-message--error {
+    background-color: #FFF7F7;
+}
