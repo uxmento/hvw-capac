@@ -14,7 +14,7 @@
 
 	<section role="main">
 
-      <div class="hc-container hc-container-condensed accent py-4">
+      <div class="hc-container hc-container-condensed hc-accent py-4">
             
 			<h2>Waar kan je mij bereiken</h2>
 
@@ -29,7 +29,7 @@
 						{{input.render({type: 'email', name:'email', placeholder:'E-mailadres', id:'email', label:'label-email', autocomplete: 'email'})}}
 					</div>
 					<div class="col-4--md col-12 mb-3">
-            {{label.render('E-mail gdpr', {id: 'gdpr-email', mandatory:'true', class: "sr-only"})}}
+            			{{label.render('E-mail gdpr', {id: 'gdpr-email', mandatory:'true', class: "sr-only"})}}
 						{{switcher.render('gdpr-email')}}
 					</div>
 				</div>
@@ -45,7 +45,7 @@
 						{{input.render({type: 'email', name:'confirm-email', placeholder:'Bevestig e-mailadres', id:'confirm-email', label: 'label-confirm-email', autocomplete: 'email'})}}
 					</div>
 					<div class="col-4--md col-12 mb-3">
-            {{label.render('Confirm e-mail gdpr', {id: 'gdpr-confirm-email', mandatory:'true', class: "sr-only"})}}
+            			{{label.render('Confirm e-mail gdpr', {id: 'gdpr-confirm-email', mandatory:'true', class: "sr-only"})}}
 						{{switcher.render('gdpr-confirm-email')}}
 					</div>
 				</div>
@@ -59,10 +59,10 @@
 				<div class="row">
 					<div class="col-8--md col-12 mb-3">
 						{{input.render({type: 'tel', name:'telefoon', placeholder:'+32 (0)x xxx xx xx', id:'telefoon', label: 'label-telefoon', helper: 'phone-helper', autocomplete: 'tel'})}}
-            {{helper.render('Alleen belgische nummers zijn toegestaan', {id: 'phone-helper'})}}{{icon.render('')}}
+            			{{helper.render('Alleen belgische nummers zijn toegestaan', {id: 'phone-helper'})}}
 					</div>
 					<div class="col-4--md col-12 mb-3">
-            {{label.render('Telefoon gdpr', {id: 'gdpr-phone', mandatory:'true', class: "sr-only"})}}
+          				 {{label.render('Telefoon gdpr', {id: 'gdpr-phone', mandatory:'true', class: "sr-only"})}}
 						{{switcher.render('gdpr-phone')}}
 					</div>
 				</div>
@@ -78,7 +78,7 @@
 						{{input.render({type:'tel', name:'mobile', placeholder:'+32 04xx xx xx xx', id:'mobile', label: 'label-mobile', autocomplete: 'tel'})}}
 					</div>
 					<div class="col-4--md col-12 mb-3">
-            {{label.render('GSM gdpr', {id: 'gdpr-mobile', mandatory:'true', class: "sr-only"})}}
+            			{{label.render('GSM gdpr', {id: 'gdpr-mobile', mandatory:'true', class: "sr-only"})}}
 						{{switcher.render('gdpr-mobile')}}
 					</div>
 				</div>
@@ -92,10 +92,10 @@
 				<div class="row">
 					<div class="col-8--md col-12 mb-3">
 						{{input.render({name:'whatsapp', placeholder:'Whatsapp', helper: 'whatsapp-helper', id:'whatsapp', label: 'label-whatsapp'})}}
-            {{helper.render('Alleen belgische nummers zijn toegestaan', {id:'whatsapp-helper' })}}
+            			{{helper.render('Alleen belgische nummers zijn toegestaan', {id:'whatsapp-helper' })}}
 					</div>
 					<div class="col-4--md col-12 mb-3">
-            {{label.render('GSM whatsapp', {id: 'gdpr-whatsapp', mandatory:'true', optional: 'dit veld is optioneel', class: "sr-only"})}}
+            			{{label.render('GSM whatsapp', {id: 'gdpr-whatsapp', mandatory:'true', optional: 'dit veld is optioneel', class: "sr-only"})}}
 						{{switcher.render('gdpr-whatsapp')}}
 					</div>
 				</div>
@@ -103,10 +103,10 @@
         <div class="row mt-2">
           <div class="col-12 flex--md direction-row-reverse--md justify-end--md">
             <button type="button" class="hc-button hc-button__primary mb-2 w-100 w-auto--md" tabindex="0"  onclick="window.location.href='step4.html'">
-              <span class="hc-button__label">Volgende<span class="hc-button__icon hc-button__icon--end">{{icon.render('next-arrow', 'hc-icon')}}</span></span>
+              <span class="hc-button__label">Volgende<span class="hc-button__icon hc-button__icon--end">{{icon.render('next-arrow')}}</span></span>
             </button>
             <button type="button" class="hc-button hc-button__outline-primary mr-2 mb-2 w-100 w-auto--md" tabindex="0"  onclick="window.location.href='step2.html'">
-              <span class="hc-button__label"><span class="hc-button__icon hc-button__icon--start">{{icon.render('prev-arrow', 'hc-icon')}}</span>Vorige</span>
+              <span class="hc-button__label"><span class="hc-button__icon hc-button__icon--start">{{icon.render('prev-arrow')}}</span>Vorige</span>
             </button>
           </div>
         </div>

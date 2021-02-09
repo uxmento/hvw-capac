@@ -3,11 +3,11 @@
 
     <div class="hc-input {{options.class}}">
         {% if options.iconBefore %}
-            {{icon.render(options.iconBefore, 'hc-input__icon hc-input__icon--start')}}
+            {{icon.render(options.iconBefore, { class: 'hc-input__icon hc-input__icon--start'} )}}
         {% endif %}
         <input type="{{options.type|default('text')}}" {% if options.label %} id="{{options.id}}"{% endif %} {% if options.label %}aria-labelledby="{{options.label}}"{% endif %} name="{{options.name}}" placeholder="{{options.placeholder}}" class="hc-input__input {% if options.iconBefore %} hc-input__input--icon-left {% endif %} {% if options.iconAfter %} hc-input__input--icon-right {% endif %}" {% if options.helper %} aria-describedby="{{options.helper}}" {% endif %}{% if options.required %}aria-required="true" required{% endif %} {% if options.disabled %} aria-disabled="true" disabled{% endif %} autocomplete="{{options.autocomplete|default('on')}}" />
         {% if options.iconAfter %}
-            {{icon.render(options.iconAfter, 'hc-input__icon hc-input__icon--end')}}
+            {{icon.render(options.iconAfter, { class: 'hc-input__icon hc-input__icon--end'} )}}
         {% endif %}
     </div>
     

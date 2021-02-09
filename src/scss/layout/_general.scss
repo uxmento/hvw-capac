@@ -36,19 +36,36 @@ body {
     }
 }
 
-.hide {
+.#{$ns}hide {
     display:none;
     visibility: hidden;
 }
 
-.show {
+.#{$ns}show {
     display: block;
     visibility: visible;
 }
 
-.sr-only{
+.#{$ns}sr-only{
     @include sr-only();
 }
-.sr-only-focusable{
+
+.#{$ns}sr-only-focusable{
     @include sr-only-focusable();
+}
+
+.#{$ns}pointer {
+    cursor: pointer;
+}
+
+.#{$ns}no-pointer-events {
+    pointer-events: none;
+}
+
+.#{$ns}border {
+    border: $border-width solid $color_border;
+
+    &--thin{
+        border: 1px solid $color_border;;
+    }
 }

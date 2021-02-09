@@ -1,5 +1,8 @@
-{% macro render(symbol, class) %}
-    <svg class="hc-icon {{class}}" aria-hidden="true" focusable="false">
+{% macro render(symbol, options = {}) %}
+    <svg class="hc-icon {{options.class}}" {% if options.id %}id="{{- options.id -}}"{% endif %} aria-hidden="true" focusable="false">
         <use xlink:href="icons/sprite.svg#{{symbol}}"></use>
     </svg>
+    {% if options.printText %}
+        <div class="hc-tiny w-100 pt-4">{{symbol}}</div>
+    {% endif %}
 {% endmacro %}

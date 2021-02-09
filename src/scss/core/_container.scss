@@ -28,7 +28,7 @@
 
 }
 
-.accent {
+.#{$ns}accent {
   background: $color_white;
   border-radius: $border-radius;         
 }

@@ -16,7 +16,7 @@
 
 	<section role="main">
 
-      <div class="hc-container hc-container-condensed accent py-4">
+      <div class="hc-container hc-container-condensed hc-accent py-4">
             
 			<h2>Mijn gezinssituatie</h2>
 
@@ -26,14 +26,26 @@
 					<div class="col-12">	
 						<ul class="hc-input__list hc-input__list--vertical mt-2">
 							<li>{{radio.render('type', 'Ik woon alleen', 'alone')}}</li>
-							<li style="position: relative">{{radio.render('type', 'Ik woon met iemand samen', 'together')}}{{icon.render('info-circle')}}
-								<div class="hc-popup" style="width: 400px; left: 49px; top: 1.75rem;">
+							<li style="position: relative">{{radio.render('type', 'Ik woon met iemand samen', 'together')}}{{icon.render('info-circle', { class:'hc-pointer', id:'click-icon' })}}
+								<div class="hc-popup" style="max-width: 400px; left: 49px; top: 1.75rem;">
 									<div class="hc-popup__title">Wanneer woon je met iemand samen?</div>
 									<div class="hc-popup__content">
 										<p>U woont samen met iemand als die persoon deel uitmaakt van uw huishouden, ook als die persoon op een ander adres is gedomicilieerd.</p>
 									</div>
 								</div>
 							</li>
+
+							<script>
+							const clickIcon = document.querySelector('#click-icon');
+							const popup = document.querySelector('.hc-popup');
+							clickIcon.addEventListener('click', e => {
+								if(popup.classList.contains('hc-hide')){
+									popup.classList.remove('hc-hide');
+								}else{
+									popup.classList.add('hc-hide');
+								}
+							});
+							</script>
 						</ul>
 					</div>
 
@@ -42,8 +54,8 @@
 							<table>
 								<thead>
 									<tr>
-										<th scope="col" class="hc-table__icon-cell"><span class="sr-only">Verwijderen</span></li>
-										<th scope="col" class="hc-table__icon-cell"><span class="sr-only">Aanpassen</span></li>
+										<th scope="col" class="hc-table__icon-cell"><span class="hc-sr-only">Verwijderen</span></li>
+										<th scope="col" class="hc-table__icon-cell"><span class="hc-sr-only">Aanpassen</span></li>
 										<th scope="col">Naam</th>
 										<th scope="col">Voornaam</th>
 										<th scope="col">Relatie</th>
@@ -51,15 +63,15 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td><a href="#verwijderen" class="hc-link" role="button" aria-label="Verwijderen"><span class="hc-link__icon hc-link__icon--start">{{icon.render('close', 'hc-icon')}}</span></a></td>
-										<td><a href="#verwijderen" class="hc-link" role="button" aria-label="Aanpassen"><span class="hc-link__icon hc-link__icon--start">{{icon.render('edit', 'hc-icon')}}</span></a></td>
+										<td><a href="#verwijderen" class="hc-link" role="button" aria-label="Verwijderen"><span class="hc-link__icon hc-link__icon--start">{{icon.render('close')}}</span></a></td>
+										<td><a href="#verwijderen" class="hc-link" role="button" aria-label="Aanpassen"><span class="hc-link__icon hc-link__icon--start">{{icon.render('edit')}}</span></a></td>
 										<td>Doe</td>
 										<td>John</td>
 										<td>Zoon</td>
 									</tr>
 									<tr>
-										<td><a href="#verwijderen" class="hc-link" role="button" aria-label="Verwijderen"><span class="hc-link__icon hc-link__icon--start">{{icon.render('close', 'hc-icon')}}</span></a></td>
-										<td><a href="#verwijderen" class="hc-link" role="button" aria-label="Aanpassen"><span class="hc-link__icon hc-link__icon--start">{{icon.render('edit', 'hc-icon')}}</span></a></td>
+										<td><a href="#verwijderen" class="hc-link" role="button" aria-label="Verwijderen"><span class="hc-link__icon hc-link__icon--start">{{icon.render('close')}}</span></a></td>
+										<td><a href="#verwijderen" class="hc-link" role="button" aria-label="Aanpassen"><span class="hc-link__icon hc-link__icon--start">{{icon.render('edit')}}</span></a></td>
 										<td>Fonda</td>
 										<td>Jane</td>
 										<td>Kleindochter</td>
@@ -69,7 +81,7 @@
 						</div>
 						<button type="button" class="hc-button hc-button__secondary hc-button--sm" tabindex="0" >
 							<span class="hc-button__label">
-								<span class="hc-button__icon hc-button__icon--start">{{icon.render('add', 'hc-icon')}}</span>Voeg een gezinslid toe
+								<span class="hc-button__icon hc-button__icon--start">{{icon.render('add')}}</span>Voeg een gezinslid toe
 							</span>
 						</button>
 					</div>
@@ -97,10 +109,10 @@
 			<div class="row mt-2">
 				<div class="col-12 flex--md direction-row-reverse--md justify-end--md">
 					<button type="button" class="hc-button hc-button__primary mb-2 w-100 w-auto--md" tabindex="0"  onclick="window.location.href='step5.html'">
-						<span class="hc-button__label">Volgende<span class="hc-button__icon hc-button__icon--end">{{icon.render('next-arrow', 'hc-icon')}}</span></span>
+						<span class="hc-button__label">Volgende<span class="hc-button__icon hc-button__icon--end">{{icon.render('next-arrow')}}</span></span>
 					</button>
 					<button type="button" class="hc-button hc-button__outline-primary mb-2 mr-2 w-100 w-auto--md" tabindex="0"  onclick="window.location.href='step3.html'">
-						<span class="hc-button__label"><span class="hc-button__icon hc-button__icon--start">{{icon.render('prev-arrow', 'hc-icon')}}</span>Vorige</span>
+						<span class="hc-button__label"><span class="hc-button__icon hc-button__icon--start">{{icon.render('prev-arrow')}}</span>Vorige</span>
 					</button>
 				</div>
 			</div>

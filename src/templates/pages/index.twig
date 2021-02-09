@@ -11,218 +11,25 @@
 {% block body %}
 	<!-- html goes here -->
 
-	{% include 'layouts/header.twig' %}
+	<header>
+		<div class="hc-container">
+			<h1 class="hc-h1">Overzicht van items</h1>
+		</div>
+	</header>
 
 	<section>
-		<div class="container">
-			<div class="grid">
-				<div class="grid-item-1">
-					col
-				</div>
-				<div class="grid-item-1">
-					col
-				</div>
-				<div class="grid-item-1">
-					col
-				</div>
-				<div class="grid-item-1">
-					col
-				</div>
-				<div class="grid-item-1">
-					col
-				</div>
-				<div class="grid-item-1">
-					col
-				</div>
-				<div class="grid-item-1">
-					col
-				</div>
-				<div class="grid-item-1">
-					col
-				</div>
-				<div class="grid-item-1">
-					col
-				</div>
-				<div class="grid-item-1">
-					col
-				</div>
-				<div class="grid-item-1">
-					col
-				</div>
-				<div class="grid-item-1">
-					col
-				</div>
-			</div>
-	</section>
-
-	<section>
-		<div class="container">
-			<div class="grid">
-				<div class="grid-item-12 grid-item-6--lg">
-					<h2>Icon system</h2>
-					<p>Our icon system uses an automated Gulp task that bundles your icons into one sprite. Use the the name of the icon to render it by using our Twig icon component.</p>
-					<p>
-						{{icon.render('angle-down', 'hc-icon hc-icon--md')}}
-						{{icon.render('angle-up', 'hc-icon hc-icon--md')}}
-						{{icon.render('angle-left', 'hc-icon hc-icon--md')}}
-						{{icon.render('angle-right', 'hc-icon hc-icon--md')}}
-						{{icon.render('arrow-circle-down', 'hc-icon hc-icon--md')}}
-						{{icon.render('arrow-circle-up', 'hc-icon hc-icon--md')}}
-						{{icon.render('arrow-circle-left', 'hc-icon hc-icon--md')}}
-						{{icon.render('arrow-circle-right', 'hc-icon hc-icon--md')}}
-						{{icon.render('arrow-down', 'hc-icon hc-icon--md')}}
-						{{icon.render('arrow-up', 'hc-icon hc-icon--md')}}
-						{{icon.render('arrow-left', 'hc-icon hc-icon--md')}}
-						{{icon.render('arrow-right', 'hc-icon hc-icon--md')}}
-						{{icon.render('caret-down', 'hc-icon hc-icon--md')}}
-						{{icon.render('caret-up', 'hc-icon hc-icon--md')}}
-						{{icon.render('caret-left', 'hc-icon hc-icon--md')}}
-						{{icon.render('caret-right', 'hc-icon hc-icon--md')}}
-						{{icon.render('chevron-circle-down', 'hc-icon hc-icon--md')}}
-						{{icon.render('chevron-circle-up', 'hc-icon hc-icon--md')}}
-						{{icon.render('chevron-circle-left', 'hc-icon hc-icon--md')}}
-						{{icon.render('chevron-circle-right', 'hc-icon hc-icon--md')}}
-						{{icon.render('chevron-down', 'hc-icon hc-icon--md')}}
-						{{icon.render('chevron-up', 'hc-icon hc-icon--md')}}
-						{{icon.render('chevron-left', 'hc-icon hc-icon--md')}}
-						{{icon.render('chevron-right', 'hc-icon hc-icon--md')}}
-						{{icon.render('long-arrow-alt-down', 'hc-icon hc-icon--md')}}
-						{{icon.render('long-arrow-alt-up', 'hc-icon hc-icon--md')}}
-						{{icon.render('long-arrow-alt-left', 'hc-icon hc-icon--md')}}
-						{{icon.render('long-arrow-alt-right', 'hc-icon hc-icon--md')}}
-						{{icon.render('ellipsis-h', 'hc-icon hc-icon--md')}}
-						{{icon.render('ellipsis-v', 'hc-icon hc-icon--md')}}
-					</p>
-				</div>
-			</div>
+		<div class="hc-container hc-accent py-4">
+			<ul>
+				<li>Typography: <a href="typography.html">Typography</a></li>
+				<li>Grid: <a href="grid.html">Grid</a></li>
+				<li>Icons: <a href="icons.html">Icons</a></li>
+				<li>Components: <a href="components.html">Components</a></li>
+				<li>Example: <a href="start.html">Example form</a></li>
+			</ul>
 		</div>
 	</section>
 
-	<section>
-		<div class="container">
-			<div class="grid">
-				<div class="grid-item-12 grid-item-6--lg">
-					<h2>Forms</h2>
-					<p>Use our Twig form components to render your inputfields.</p>
-
-					<form action="#" method="post" class="form">
-						<h3>Create an account</h3>
-
-						<div class="form__row mb-3">
-							{{label.render('Name', {for: 'name'})}}
-							{{input.render('text', 'name', 'Enter your full name', 'user-alt', 'name')}}
-							{{helper.render('Vergeet je naam niet in te vullen')}}
-						</div>
-
-						<div class="form__row mb-3">
-							{{label.render('E-mail')}}
-							{{input.render('email', 'email', 'Enter your e-mailaddress', 'envelope')}}
-						</div>
-
-						<div class="form__row mb-3">
-							{{label.render('Password')}}
-							{{input.render('password', 'password', 'Enter your password')}}
-						</div>
-
-						<div class="form__row mb-3">
-							{{label.render('Repeat password')}}
-							{{input.render('password', 'password_repeat', 'Repeat your password')}}
-						</div>
-
-						<div class="form__row mb-3">
-							{{label.render('Gender')}}
-							<ul class="input__list input__list--horizontal">
-								<li>{{radio.render('gender', 'Man', 'man')}}</li>
-								<li>{{radio.render('gender', 'Woman', 'woman')}}</li>
-							</ul>
-						</div>
-
-						<div class="form__row mb-3">
-							{{label.render('Company')}}
-							{{select.render('company', [
-                                {
-                                    label: "UXMen",
-                                    value: "uxmen"
-                                },
-                                {
-                                    label: "Calibrate",
-                                    value: "calibrate"
-                                }
-                            ])}}
-						</div>
-
-						<div class="form__row mb-3">
-							{{label.render('Pick your skills')}}
-							<ul class="input__list input__list--vertical">
-								<li>{{checkbox.render('skillset', 'Adobe Photoshop', 'photoshop')}}</li>
-								<li>{{checkbox.render('skillset', 'Adobe Illustrator', 'illustrator')}}</li>
-								<li>{{checkbox.render('skillset', 'Adobe Indesign', 'indesign')}}</li>
-								<li>{{checkbox.render('skillset', 'Adobe XD', 'xd')}}</li>
-								<li>{{checkbox.render('skillset', 'Sketch', 'sketch')}}</li>
-								<li>{{checkbox.render('skillset', 'Figma', 'figma')}}</li>
-							</ul>
-						</div>
-
-						<div class="form__row mb-3">
-							<label class="hc-input__label mb-1">Name</label>
-							{{input.render('text', 'name', 'Enter your full name', 'user-alt')}}
-							{{helper.render('Vergeet je naam niet in te vullen')}}
-						</div>
-
-						<div class="form__row mb-3">
-							<label class="hc-input__label mb-1">E-mail</label>
-							{{input.render('email', 'email', 'Enter your e-mailaddress', 'envelope')}}
-						</div>
-
-						<div class="form__row mb-3">
-							<label class="hc-input__label mb-1">Password</label>
-							{{input.render('password', 'password', 'Enter your password')}}
-						</div>
-
-						<div class="form__row mb-3">
-							<label class="hc-input__label mb-1">Repeat password</label>
-							{{input.render('password', 'password_repeat', 'Repeat your password')}}
-						</div>
-
-						<div class="form__row mb-3">
-							<label class="hc-input__label mb-1">Gender</label>
-							<ul class="input__list input__list--horizontal">
-								<li>{{radio.render('gender', 'Man', 'man')}}</li>
-								<li>{{radio.render('gender', 'Woman', 'woman')}}</li>
-							</ul>
-						</div>
-
-						<div class="form__row mb-3">
-							<label class="hc-input__label mb-1">Company</label>
-							{{select.render('company', [
-                                {
-                                    label: "UXMen",
-                                    value: "uxmen"
-                                },
-                                {
-                                    label: "Calibrate",
-                                    value: "calibrate"
-                                }
-                            ])}}
-						</div>
-
-						<div class="form__row mb-3">
-							<label class="hc-input__label mb-1">Pick your skills</label>
-							<ul class="input__list input__list--vertical">
-								<li>{{checkbox.render('skillset', 'Adobe Photoshop', 'photoshop')}}</li>
-								<li>{{checkbox.render('skillset', 'Adobe Illustrator', 'illustrator')}}</li>
-								<li>{{checkbox.render('skillset', 'Adobe Indesign', 'indesign')}}</li>
-								<li>{{checkbox.render('skillset', 'Adobe XD', 'xd')}}</li>
-								<li>{{checkbox.render('skillset', 'Sketch', 'sketch')}}</li>
-								<li>{{checkbox.render('skillset', 'Figma', 'figma')}}</li>
-							</ul>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</section>
-
+	
 
 {% endblock %}
 

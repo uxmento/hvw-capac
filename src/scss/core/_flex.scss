@@ -75,6 +75,18 @@
   }
 }
 
+.justify-stretch {
+  justify-content: stretch !important;
+
+  @each $breakpoint in map-keys($breakpoints) {
+    @include mq($breakpoint) {
+      &--#{$breakpoint} {
+        justify-content: stretch !important;
+      }
+    }
+  }
+}
+
 .justify-around {
   justify-content: space-around !important;
 
