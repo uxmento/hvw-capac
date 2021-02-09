@@ -49,16 +49,6 @@ $spacings: (
   8: 128px
 );
 
-// ----------
-// Typography
-// ----------
-
-$font-family: 'Source Sans Pro', sans-serif;
-$font-size: 18px;
-$font-weight: normal;
-$line-height: 1.345;
-$color: $color_default-text;
-
 // ------------
 // Widths
 // -------------
@@ -118,3 +108,15 @@ $opacity: .85;
 // Icons
 // ----------
 $icon_size: 1rem;
+
+// ------------
+// font-weights
+// ------------
+$weights : (
+  200: 200,
+  300: 300,
+  400: 400,
+  600: 600,
+  700: 700,
+  900: 900,
+);

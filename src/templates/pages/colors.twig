@@ -1,0 +1,69 @@
+{% extends "layouts/default.twig" %}
+
+{% import "components/icons/icon.twig" as icon %}
+{% import "components/forms/input.twig" as input %}
+{% import "components/forms/select.twig" as select %}
+{% import "components/forms/checkbox.twig" as checkbox %}
+{% import "components/forms/radio.twig" as radio %}
+{% import "components/forms/helper.twig" as helper %}
+{% import "components/forms/label.twig" as label %}
+
+{% block body %}
+	<header>
+		<div class="hc-container">
+			<h1 class="hc-h1">Colors</h1>
+		</div>
+	</header>
+
+	 <section>
+		<div class="hc-container hc-accent py-4">
+			<div class="row justify-stretch align-stretch">
+
+				<div class="col-12 mb-3">
+
+					<div class="font-size--tiny mb-2">-- color classes</div>
+                
+					<p class="color_white" style="background:grey">text met kleur .color_white </p>
+					<p class="color_black">text met kleur .color_black </p>
+
+					<p class="color_primary">text met kleur .color_primary </p>
+					<p class="color_secondary">text met kleur .color_secondary </p>
+					<p class="color_tertiary">text met kleur .color_tertiary </p>
+
+					<p class="color_default-text">text met kleur .color_default-text </p>
+					<p class="color_icons">text met kleur .color_icons </p>
+					<p class="color_tiny-text">text met kleur .color_tiny-text </p>
+
+					<p class="color_valid">text met kleur .color_valid </p>
+					<p class="color_warning">text met kleur .color_warning </p>
+					<p class="color_error">text met kleur .color_error </p>
+					<p class="color_info">text met kleur .color_info </p>
+					<p class="color_disabled">text met kleur .color_disabled </p>
+
+					<p class="color_grey-dark">text met kleur .color_grey-dark</p>
+					<p class="color_grey-medium">text met kleur .color_grey-medium</p>
+
+					<p class="color_border-highlight">tekst met kleur .color_border-highlight</p>
+					<p class="color_border-table">tekst met kleur .color_border-table</p>
+					<p class="color_border">tekst met kleur .color_border</p>
+
+				</div>
+
+				<div class="col-12 mb-3">
+					<div class="font-size--tiny mb-2">-- background color classes</div>
+					<p class="color_background-page">background met kleur .color_background-page</p>
+					<p class="color_background-disabled">background met kleur .color_background-disabled</p>
+					<p class="color_background-default">background met kleur .color_background-default</p>
+					<p class="color_background-table-header">background met kleur .color_background-table-header</p>
+
+					<p class="color_background-message--valid">background met kleur .color_background-message--valid</p>
+					<p class="color_background-message--warning">background met kleur .color_background-message--warning</p>
+					<p class="color_background-message--info">background met kleur .color_background-message--info</p>
+					<p class="color_background-message--error">background met kleur .color_background-message--error</p>
+				</div>
+
+			</div>
+
+		</div>
+	</section>
+{% endblock %}

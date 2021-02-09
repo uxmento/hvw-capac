@@ -10,6 +10,7 @@ $ns: 'hc-';
 
 @import 'core/functions';
 @import 'core/mixins';
+@import 'core/typography';
 @import 'core/reset';
 @import 'core/display';
 @import 'core/container';
@@ -18,7 +19,6 @@ $ns: 'hc-';
 @import 'core/padding';
 @import 'core/width';
 @import 'core/flex';
-@import 'core/typography';
 
 @import 'layout/general';
 
@@ -38,4 +38,3 @@ $ns: 'hc-';
 @import 'components/forms/switcher';
 @import 'components/feedback/message';
 @import 'components/feedback/popup';
-

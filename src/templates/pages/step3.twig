@@ -29,7 +29,7 @@
 						{{input.render({type: 'email', name:'email', placeholder:'E-mailadres', id:'email', label:'label-email', autocomplete: 'email'})}}
 					</div>
 					<div class="col-4--md col-12 mb-3">
-            			{{label.render('E-mail gdpr', {id: 'gdpr-email', mandatory:'true', class: "sr-only"})}}
+            			{{label.render('E-mail gdpr', {id: 'gdpr-email', mandatory:'true', class: "hc-sr-only"})}}
 						{{switcher.render('gdpr-email')}}
 					</div>
 				</div>
@@ -45,7 +45,7 @@
 						{{input.render({type: 'email', name:'confirm-email', placeholder:'Bevestig e-mailadres', id:'confirm-email', label: 'label-confirm-email', autocomplete: 'email'})}}
 					</div>
 					<div class="col-4--md col-12 mb-3">
-            			{{label.render('Confirm e-mail gdpr', {id: 'gdpr-confirm-email', mandatory:'true', class: "sr-only"})}}
+            			{{label.render('Confirm e-mail gdpr', {id: 'gdpr-confirm-email', mandatory:'true', class: "hc-sr-only"})}}
 						{{switcher.render('gdpr-confirm-email')}}
 					</div>
 				</div>
@@ -62,7 +62,7 @@
             			{{helper.render('Alleen belgische nummers zijn toegestaan', {id: 'phone-helper'})}}
 					</div>
 					<div class="col-4--md col-12 mb-3">
-          				 {{label.render('Telefoon gdpr', {id: 'gdpr-phone', mandatory:'true', class: "sr-only"})}}
+          				 {{label.render('Telefoon gdpr', {id: 'gdpr-phone', mandatory:'true', class: "hc-sr-only"})}}
 						{{switcher.render('gdpr-phone')}}
 					</div>
 				</div>
@@ -78,7 +78,7 @@
 						{{input.render({type:'tel', name:'mobile', placeholder:'+32 04xx xx xx xx', id:'mobile', label: 'label-mobile', autocomplete: 'tel'})}}
 					</div>
 					<div class="col-4--md col-12 mb-3">
-            			{{label.render('GSM gdpr', {id: 'gdpr-mobile', mandatory:'true', class: "sr-only"})}}
+            			{{label.render('GSM gdpr', {id: 'gdpr-mobile', mandatory:'true', class: "hc-sr-only"})}}
 						{{switcher.render('gdpr-mobile')}}
 					</div>
 				</div>
@@ -95,7 +95,7 @@
             			{{helper.render('Alleen belgische nummers zijn toegestaan', {id:'whatsapp-helper' })}}
 					</div>
 					<div class="col-4--md col-12 mb-3">
-            			{{label.render('GSM whatsapp', {id: 'gdpr-whatsapp', mandatory:'true', optional: 'dit veld is optioneel', class: "sr-only"})}}
+            			{{label.render('GSM whatsapp', {id: 'gdpr-whatsapp', mandatory:'true', optional: 'dit veld is optioneel', class: "hc-sr-only"})}}
 						{{switcher.render('gdpr-whatsapp')}}
 					</div>
 				</div>

@@ -1,8 +1,21 @@
+// ----------
+// Typography
+// ----------
+
+$font-family: 'Source Sans Pro', sans-serif;
+$font-size: 18px;
+$font-weight: normal;
+$line-height: 1.345;
+$color: $color_default-text;
+
+
 // --------------
 // font-sizes
 // --------------
 
 $font-size_tiny: rem(14px);
+$font-size_small: rem(16px);
+
 $font-size_heading1: rem(48px);
 $font-size_heading2: rem(34px);
 $font-size_heading3: rem(24px);
@@ -86,9 +99,13 @@ h6,
   line-height: $line-height_heading4;
 }*/
 
-.#{$ns}tiny {
+.font-size--tiny {
   font-size: $font-size_tiny;
   line-height: $line-height_tiny;
+}
+
+.font-size--small {
+  font-size: $font-size_small;
 }
 
 @include mq('xs'){
@@ -124,7 +141,7 @@ h6,
 
 
 ul, ol {
-  padding-left: 1rem;
+  padding-left: 1rem !important;
 }
 
 // List styling 
@@ -174,6 +191,14 @@ a[href] {
           text-align: $position !important;
         }
       }
+    }
+  }
+}
+
+.font-weight {
+  @each $name, $weight in $weights {
+    &--#{$name} {
+      font-weight: $weight !important;
     }
   }
 }
