@@ -11,7 +11,11 @@
 {% block body %}
 	<!-- html goes here -->
 	
-	{% include 'layouts/header.twig' %}
+	<header>
+		<div class="hc-container">
+			<h1 class="hc-h1">Components</h1>
+		</div>
+	</header>
 
 	<section role="main">
 
@@ -42,10 +46,10 @@
             <div class="component">
                 <div class="html">
                     <div class="col-12 pb-2">
-                        <button type="button" class="hc-button hc-button__ghost-primary hc-button--lg" tabindex="0" >
+                        <button type="button" class="hc-button hc-button__primary hc-button--lg" tabindex="0" >
                             <span class="hc-button__label"><span class="hc-button__icon hc-button__icon--start">{{icon.render('envelope', 'hc-icon')}}</span>Primary button</span>
                         </button>
-                        <button type="button" class="hc-button hc-button__ghost-primary hc-button--md" tabindex="0" >
+                        <button type="button" class="hc-button hc-button__outline-primary hc-button--md" tabindex="0" >
                             <span class="hc-button__label">Primary button<span class="hc-button__icon hc-button__icon--end">{{icon.render('envelope', 'hc-icon')}}</span></span>
                         </button>
                         <button type="button" class="hc-button hc-button__ghost-primary hc-button--sm" tabindex="0" >
@@ -60,6 +64,40 @@
                     </div>
                 </div>
             </div>
+
+
+            <div class="component">
+                <div class="html">
+                    <button type="button" class="hc-button hc-button__primary hc-button--lg" tabindex="0" >
+                        <span class="hc-button__label"><span class="hc-button__icon hc-button__icon--start">{{icon.render('envelope')}}</span>Primary button</span>
+                    </button>
+
+                     <button type="button" class="hc-button hc-button__outline-primary hc-button--lg" tabindex="0" >
+                        <span class="hc-button__label"><span class="hc-button__icon hc-button__icon--start">{{icon.render('envelope')}}</span>Primary button</span>
+                    </button>
+
+                    <button type="button" class="hc-button hc-button__ghost-primary hc-button--lg" tabindex="0" >
+                        <span class="hc-button__label"><span class="hc-button__icon hc-button__icon--start">{{icon.render('envelope')}}</span>Primary button</span>
+                    </button>
+
+                    <button type="button" class="hc-button hc-button__secondary mb-2 hc-button--lg" tabindex="0" >
+                        <span class="hc-button__label">
+                            <span class="hc-button__icon hc-button__icon--start">{{icon.render('envelope')}}</span>Secondary button
+                        </span>
+                    </button>
+
+                    <button type="button" class="hc-button hc-button__outline-secondary w-100 mb-2 hc-button--md" tabindex="0" >
+                        <span class="hc-button__label">Secondary button<span class="hc-button__icon hc-button__icon--end">{{icon.render('envelope')}}</span></span>
+                    </button>
+
+                    <button type="button" class="hc-button hc-button__outline-tertiary hc-button--lg" tabindex="0" >
+                        <span class="hc-button__label">
+                            <span class="hc-button__icon hc-button__icon--start">{{icon.render('envelope')}}</span>Tertiary button
+                        </span>
+                    </button>
+                </div>
+            </div>
+
         </div>
            
 	</section>
