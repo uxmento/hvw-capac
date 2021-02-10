@@ -10,12 +10,15 @@
 
 {% block body %}
 	<!-- html goes here -->
+
+	{% include 'layouts/nav.twig' %}
 	
 	<header>
 		<div class="hc-container">
-			<h1 class="hc-h1">Library</h1>
+			<h1 class="hc-h1">Code library</h1>
 		</div>
 	</header>
+
 
 	<section role="main">
 
@@ -150,11 +153,11 @@
                         </button>
                         
                         <button type="button" class="hc-button hc-button__outline-secondary" tabindex="0" >
-                            <span class="hc-button__label">Primary button<span class="hc-button__icon hc-button__icon--end">{{icon.render('envelope')}}</span></span>
+                            <span class="hc-button__label">Secondary button<span class="hc-button__icon hc-button__icon--end">{{icon.render('envelope')}}</span></span>
                         </button>
 
                         <button type="button" class="hc-button hc-button__ghost-tertiary" tabindex="0" >
-                            <span class="hc-button__label">Secondary button<span class="hc-button__icon hc-button__icon--end">{{icon.render('envelope')}}</span></span>
+                            <span class="hc-button__label">Tertiary button<span class="hc-button__icon hc-button__icon--end">{{icon.render('envelope')}}</span></span>
                         </button>
                         
                     </div>
@@ -167,7 +170,7 @@
                     <div class="row justify-center align-center">
                     
                         <button type="button" class="hc-button hc-button__primary hc-button--lg" tabindex="0" >
-                            <span class="hc-button__label"><span class="hc-button__icon hc-button__icon--start">{{icon.render('envelope')}}</span>Large(standaard) button</span>
+                            <span class="hc-button__label"><span class="hc-button__icon hc-button__icon--start">{{icon.render('envelope')}}</span>Large(default) button</span>
                         </button>
                         
                         <button type="button" class="hc-button hc-button__outline-secondary hc-button--md" tabindex="0" >
@@ -201,11 +204,11 @@
                 <div class="html">
                     <div class="row justify-center align-center">
                     
-                        {{input.render({name:'name', placeholder:'Input', id:'name'})}}
-                        {{input.render({name:'name', placeholder:'Input valid', id:'name', class: 'hc-valid'})}}
-                        {{input.render({name:'name', placeholder:'Input warning', id:'name', class: 'hc-warning'})}}
-                        {{input.render({name:'name', placeholder:'Input error', id:'name', class: 'hc-error'})}}
-                        {{input.render({name:'name', placeholder:'Input disabled', id:'name', class: 'hc-disabled', disabled: true})}}
+                        {{input.render({name:'nm1', placeholder:'Input', id:'name'})}}
+                        {{input.render({name:'nm2', placeholder:'Input valid', id:'name', class: 'hc-valid'})}}
+                        {{input.render({name:'nm3', placeholder:'Input warning', id:'name', class: 'hc-warning'})}}
+                        {{input.render({name:'nm4', placeholder:'Input error', id:'name', class: 'hc-error'})}}
+                        {{input.render({name:'nm5', placeholder:'Input disabled', id:'name', class: 'hc-disabled', disabled: true})}}
                         
                     </div>
                 </div>
@@ -216,8 +219,8 @@
                 <div class="html">
                     <div class="row justify-center align-center">
                     
-                        {{input.render({name:'address', placeholder:'Icon vooraan', iconBefore:'heart', id:'address'})}}
-                        {{input.render({name:'address', placeholder:'Icon achteraan', iconAfter:'user-alt', id:'address'})}}
+                        {{input.render({name:'addr', placeholder:'Icon vooraan', iconBefore:'heart', id:'address'})}}
+                        {{input.render({name:'add', placeholder:'Icon achteraan', iconAfter:'user-alt', id:'address'})}}
                         {{input.render({name:'address', placeholder:'Icon vooraan en achteraan', iconBefore:'heart', iconAfter:'eye', id:'address'})}}
                         
                     </div>
@@ -340,7 +343,7 @@
                 </div>
             </div>
 
-            <h3>Radio list horizontal</h3>
+            <h3>Radio list vertical </h3>
             <div class="component">
                 <div class="html">
                     <div class="row justify-center align-center">
@@ -390,7 +393,7 @@
                 </div>
             </div>
 
-            <h3>Checkbox list horizontal</h3>
+            <h3>Checkbox list vertical</h3>
             <div class="component">
                 <div class="html">
                     <div class="row justify-center align-center">
