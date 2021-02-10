@@ -448,20 +448,20 @@
                 <div class="col-6--sm col-12--xxs mb-3">
                     {{label.render('Pick your skills', {optional: 'Optional'})}}
                     <ul class="hc-input__list hc-input__list--vertical">
-                        <li>{{checkbox.render('skillset', 'Adobe Photoshop', 'photoshop')}}</li>
-                        <li>{{checkbox.render('skillset', 'Adobe Illustrator', 'illustrator')}}</li>
-                        <li>{{checkbox.render('skillset', 'Adobe Indesign', 'indesign')}}</li>
-                        <li>{{checkbox.render('skillset', 'Adobe XD', 'xd')}}</li>
-                        <li>{{checkbox.render('skillset', 'Sketch', 'sketch')}}</li>
-                        <li>{{checkbox.render('skillset', 'Figma', 'figma')}}</li>
+                        <li>{{checkbox.render('skillset', {label:'Adobe Photoshop', value:'photoshop' })}}</li>
+                        <li>{{checkbox.render('skillset', {label:'Adobe Illustrator', value:'illustrator' })}}</li>
+                        <li>{{checkbox.render('skillset', {label:'Adobe Indesign', value:'indesign' })}}</li>
+                        <li>{{checkbox.render('skillset', {label:'Adobe XD', value:'xd' })}}</li>
+                        <li>{{checkbox.render('skillset', {label:'Sketch', value:'sketch' })}}</li>
+                        <li>{{checkbox.render('skillset', {label:'Figma', value:'figma' })}}</li>
                     </ul>
                 </div>
 
                 <div class="col-6--sm col-12--xxs mb-3">
                     <label class="hc-input__label mb-1">Gender</label>
                     <ul class="hc-input__list hc-input__list--horizontal">
-                        <li>{{radio.render('gender', 'Man', 'man')}}</li>
-                        <li>{{radio.render('gender', 'Woman', 'woman')}}</li>
+                        <li>{{radio.render('gender',{label:'Man', value:'man'})}}</li>
+                        <li>{{radio.render('gender',{label:'Woman', value:'woman'})}}</li>
                     </ul>
                 </div>
 

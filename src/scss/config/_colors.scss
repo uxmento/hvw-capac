@@ -19,6 +19,7 @@ $color_disabled: #646464;
 
 $color_grey-dark: #333333;
 $color_grey-medium: #989898;
+$color_grey-light: #ccc;
 
 $color_border-highlight: #FCBC00;
 $color_border-table: #DEDEDE;
@@ -38,53 +39,56 @@ $color_background-message--error: #FFF7F7;
 // Text colors 
 //////////////////////////////////////////////
 .color_white {
-    color: #fff !important;
+    color: $color_white !important;
 }
 .color_black {
-    color: #000 !important;
+    color: $color_black !important;
 }
 
 .color_primary {
-    color: #ec5c0e !important;
+    color: $color_primary !important;
 }
 .color_secondary {
-    color: #87715E !important;
+    color: $color_secondary !important;
 }
 .color_tertiary {
-    color: #2650C1 !important;
+    color: $color_tertiary !important;
 }
 
 .color_default-text {
-    color: #161532 !important;
+    color: $color_default-text !important;
 }
 .color_icons {
-    color: #666666 !important;
+    color: $color_icons !important;
 }
 .color_tiny-text {
-    color: #666666 !important;
+    color: $color_tiny-text !important;
 }
 
 .color_valid {
-    color: #008A00 !important;
+    color: $color_valid !important;
 }
 .color_warning {
-    color: #937100 !important;
+    color: $color_warning!important;
 }
 .color_error {
-    color: #DA1E27 !important;
+    color: $color_error !important;
 }
 .color_info {
-    color: #2650C1 !important;
+    color: $color_info !important;
 }
 .color_disabled {
-    color: #646464 !important;
+    color: $color_disabled !important;
 }
 
 .color_grey-dark{
-    color: #333333;
+    color: $color_grey-dark;
 }
 .color_grey-medium{
-    color: #989898;
+    color: $color_grey-medium;
+}
+.color_grey-light{
+    color: $color_grey-light;
 }
 
 //////////////////////////////////////////////
@@ -92,27 +96,27 @@ $color_background-message--error: #FFF7F7;
 //////////////////////////////////////////////
 
 .color_background-page {
-    background-color: #F4F4F4;
+    background-color: $color_background-page;
 }
 .color_background-disabled{
     background-color: rgba($color_grey-medium, .2);
 }
 .color_background-default {
-    background-color: #d5dcee;
+    background-color: $color_background-default
 }
 .color_background-table-header {
     background-color: rgba(#A18B79, .1);
 }
 
 .color_background-message--valid {
-    background-color: #F0F8F0;
+    background-color: $color_background-message--valid;
 }
 .color_background-message--warning {
-    background-color:#FDF0E2;
+    background-color: $color_background-message--warning;
 }
 .color_background-message--info {
-    background-color: #EDF0F7;
+    background-color: $color_background-message--info;
 }
 .color_background-message--error {
-    background-color: #FFF7F7;
+    background-color: $color_background-message--error;
 }

@@ -13,89 +13,403 @@
 	
 	<header>
 		<div class="hc-container">
-			<h1 class="hc-h1">Components</h1>
+			<h1 class="hc-h1">Library</h1>
 		</div>
 	</header>
 
 	<section role="main">
 
         <div class="hc-container hc-accent py-4">
+
+            <h2>Labels</h2>
+            <p>Beschrijving over labels</p>
             <div class="component">
                 <div class="html">
-                    <h2 class="hc-h3">Labels</h2>   
-                    <div class="row">
-                        <div class="col-3--xxl col-4--lg col-6--xs col-12 pb-1">
-                            {{label.render('Label', {for: 'test-name'})}}
-                        </div>
+                    <div class="row justify-center align-center">
+                        
+                        {{label.render('Label', {for: 'test-name'})}}
+                        {{label.render('Label', {class:'hc-error', for: 'Voornaam'})}}
+                        {{label.render('Label', {for: 'Familienaam', optional: 'Optioneel'})}}
+                        {{label.render('Label', {for: 'Anderenaam', mandatory: 'true'})}}
                     
-                        <div class="col-3--xxl col-4--lg col-6--xs col-12 pb-1">
-                            {{label.render('Label', {class:'hc-error', for: 'Voornaam'})}}
-                        </div>
-                    
-                        <div class="col-3--xxl col-4--lg col-6--xs col-12 pb-1">
-                            {{label.render('Label', {for: 'Familienaam', optional: 'Optioneel'})}}
-                        </div>
-                    
-                        <div class="col-3--xxl col-4--lg col-6--xs col-12 pb-1">
-                            {{label.render('Label', {for: 'Anderenaam', mandatory: 'true'})}}
-                        </div>
                     </div>
                 </div>
             </div>
 
+            <h2>Buttons</h2>
+            <p>Beschrijving over Buttons</p>
+            <h3>Standaard buttons</h3>
             <div class="component">
                 <div class="html">
-                    <div class="col-12 pb-2">
-                        <button type="button" class="hc-button hc-button__primary hc-button--lg" tabindex="0" >
-                            <span class="hc-button__label"><span class="hc-button__icon hc-button__icon--start">{{icon.render('envelope', 'hc-icon')}}</span>Primary button</span>
-                        </button>
-                        <button type="button" class="hc-button hc-button__outline-primary hc-button--md" tabindex="0" >
-                            <span class="hc-button__label">Primary button<span class="hc-button__icon hc-button__icon--end">{{icon.render('envelope', 'hc-icon')}}</span></span>
-                        </button>
-                        <button type="button" class="hc-button hc-button__ghost-primary hc-button--sm" tabindex="0" >
+                    <div class="row justify-center align-center">
+
+                        <button type="button" class="hc-button hc-button__primary" tabindex="0" >
                             <span class="hc-button__label">Primary button</span>
                         </button>
-                        <button type="button" class="hc-button hc-button--sm hc-button__ghost-disabled" aria-disabled="true" tabindex="-1"  disabled>
-                            <span class="hc-button__label">Primary button<span class="hc-button__icon hc-button__icon--end">{{icon.render('envelope', 'hc-icon')}}</span></span>
+
+                        <button type="button" class="hc-button hc-button__secondary" tabindex="0" >
+                            <span class="hc-button__label">Secondary button</span>
                         </button>
-                        <button type="button" class="hc-button hc-button--sm hc-button__ghost-disabled" aria-disabled="true" tabindex="-1"  disabled>
-                            <span class="hc-button__label">Primary button<span class="hc-button__icon hc-button__icon--end">{{icon.render('envelope', 'hc-icon')}}</span></span>
+
+                        <button type="button" class="hc-button hc-button__tertiary" tabindex="0" >
+                            <span class="hc-button__label">Tertiary button</span>
                         </button>
+
+                        <button type="button" class="hc-button hc-button__primary hc-button__disabled" aria-disabled="true" tabindex="-1"  disabled>
+                            <span class="hc-button__label">Disabled button</span>
+                        </button>
+
+                        <a type="button" class="hc-button hc-button__primary" tabindex="0" >
+                            <span class="hc-button__label">Link button</span>
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <h3>Outline buttons</h3>
+            <div class="component">
+                <div class="html">
+                    <div class="row justify-center align-center">
+                    
+                        <button type="button" class="hc-button hc-button__outline-primary" tabindex="0" >
+                            <span class="hc-button__label">Primary button</span>
+                        </button>
+
+                        <button type="button" class="hc-button hc-button__outline-secondary" tabindex="0" >
+                            <span class="hc-button__label">Secondary button</span>
+                        </button>
+
+                        <button type="button" class="hc-button hc-button__outline-tertiary" tabindex="0" >
+                            <span class="hc-button__label">Tertiary button</span>
+                        </button>
+
+                        <button type="button" class="hc-button hc-button__outline-disabled" aria-disabled="true" tabindex="-1"  disabled>
+                            <span class="hc-button__label">Disabled button</span>
+                        </button>
+
+                        <a type="button" class="hc-button hc-button__outline-primary" tabindex="0" >
+                            <span class="hc-button__label">Link button</span>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+            <h3>Ghost buttons</h3>
+            <div class="component">
+                <div class="html">
+                    <div class="row justify-center align-center">
+                    
+                        <button type="button" class="hc-button hc-button__ghost-primary" tabindex="0" >
+                            <span class="hc-button__label">Primary button</span>
+                        </button>
+
+                        <button type="button" class="hc-button hc-button__ghost-secondary" tabindex="0" >
+                            <span class="hc-button__label">Secondary button</span>
+                        </button>
+
+                        <button type="button" class="hc-button hc-button__ghost-tertiary" tabindex="0" >
+                            <span class="hc-button__label">Tertiary button</span>
+                        </button>
+
+                        <button type="button" class="hc-button hc-button__ghost-disabled" aria-disabled="true" tabindex="-1"  disabled>
+                            <span class="hc-button__label">Disabled button</span>
+                        </button>
+
+                        <a type="button" class="hc-button hc-button__ghost-primary" tabindex="0" >
+                            <span class="hc-button__label">Link button</span>
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <h3>Icon buttons</h3>
+            <div class="component">
+                <div class="html">
+                    <div class="row justify-center align-center">
+                    
+                        <button type="button" class="hc-button hc-button__primary" tabindex="0" >
+                            <span class="hc-button__label"><span class="hc-button__icon hc-button__icon--start">{{icon.render('envelope')}}</span>Primary button</span>
+                        </button>
+                        
+                        <button type="button" class="hc-button hc-button__outline-secondary" tabindex="0" >
+                            <span class="hc-button__label">Primary button<span class="hc-button__icon hc-button__icon--end">{{icon.render('envelope')}}</span></span>
+                        </button>
+
+                        <button type="button" class="hc-button hc-button__ghost-tertiary" tabindex="0" >
+                            <span class="hc-button__label">Secondary button<span class="hc-button__icon hc-button__icon--end">{{icon.render('envelope')}}</span></span>
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <h3>Buttons sizes</h3>
+            <div class="component">
+                <div class="html">
+                    <div class="row justify-center align-center">
+                    
+                        <button type="button" class="hc-button hc-button__primary hc-button--lg" tabindex="0" >
+                            <span class="hc-button__label"><span class="hc-button__icon hc-button__icon--start">{{icon.render('envelope')}}</span>Large(standaard) button</span>
+                        </button>
+                        
+                        <button type="button" class="hc-button hc-button__outline-secondary hc-button--md" tabindex="0" >
+                            <span class="hc-button__label">Medium button<span class="hc-button__icon hc-button__icon--end">{{icon.render('envelope')}}</span></span>
+                        </button>
+
+                        <button type="button" class="hc-button hc-button__ghost-tertiary hc-button--sm" tabindex="0" >
+                            <span class="hc-button__label">Small button<span class="hc-button__icon hc-button__icon--end">{{icon.render('envelope')}}</span></span>
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <h2>Input velden</h2>
+            <p>Beschrijving over inputvelden</p>
+
+            <h3>Standaard input </h3>
+            <div class="component">
+                <div class="html">
+                    <div class="row justify-center align-center">
+                    
+                        {{input.render({name:'name', placeholder:'Input', id:'name'})}}
+                        {{input.render({name:'name', placeholder:'Input valid', id:'name', class: 'hc-valid'})}}
+                        {{input.render({name:'name', placeholder:'Input warning', id:'name', class: 'hc-warning'})}}
+                        {{input.render({name:'name', placeholder:'Input error', id:'name', class: 'hc-error'})}}
+                        {{input.render({name:'name', placeholder:'Input disabled', id:'name', class: 'hc-disabled', disabled: true})}}
+                        
+                    </div>
+                </div>
+            </div>
+
+            <h3>Input met iconen </h3>
+            <div class="component">
+                <div class="html">
+                    <div class="row justify-center align-center">
+                    
+                        {{input.render({name:'address', placeholder:'Icon vooraan', iconBefore:'heart', id:'address'})}}
+                        {{input.render({name:'address', placeholder:'Icon achteraan', iconAfter:'user-alt', id:'address'})}}
+                        {{input.render({name:'address', placeholder:'Icon vooraan en achteraan', iconBefore:'heart', iconAfter:'eye', id:'address'})}}
+                        
+                    </div>
+                </div>
+            </div>
+
+            <h3>Input met autocomplete options </h3>
+            <div class="component">
+                <div class="html">
+                    <div class="row justify-center align-center">
+                    
+                        {{input.render({name:'emailadress', placeholder:'E-mail address', autocomplete: 'email'})}}
+                        {{input.render({name:'birthhhday', placeholder:'Geboortedatum', id:'address', autocomplete: "bday"})}}
+                        {{input.render({name:'wachtwoord', type:'password', placeholder:'Wachtwoord', iconAfter:'eye', id:'address', autocomplete: "current-password"})}}
+                        
                     </div>
                 </div>
             </div>
 
 
+            <h3>Input/textarea</h3>
             <div class="component">
                 <div class="html">
-                    <button type="button" class="hc-button hc-button__primary hc-button--lg" tabindex="0" >
-                        <span class="hc-button__label"><span class="hc-button__icon hc-button__icon--start">{{icon.render('envelope')}}</span>Primary button</span>
-                    </button>
+                    <div class="row justify-center align-center">
+                    
+                        <div class="hc-input hc-input--multiline">
+                            <textarea class="hc-input__input" placeholder='Textarea placeholer' aria-describedby="chars1"></textarea>
+                        </div>
 
-                     <button type="button" class="hc-button hc-button__outline-primary hc-button--lg" tabindex="0" >
-                        <span class="hc-button__label"><span class="hc-button__icon hc-button__icon--start">{{icon.render('envelope')}}</span>Primary button</span>
-                    </button>
-
-                    <button type="button" class="hc-button hc-button__ghost-primary hc-button--lg" tabindex="0" >
-                        <span class="hc-button__label"><span class="hc-button__icon hc-button__icon--start">{{icon.render('envelope')}}</span>Primary button</span>
-                    </button>
-
-                    <button type="button" class="hc-button hc-button__secondary mb-2 hc-button--lg" tabindex="0" >
-                        <span class="hc-button__label">
-                            <span class="hc-button__icon hc-button__icon--start">{{icon.render('envelope')}}</span>Secondary button
-                        </span>
-                    </button>
-
-                    <button type="button" class="hc-button hc-button__outline-secondary w-100 mb-2 hc-button--md" tabindex="0" >
-                        <span class="hc-button__label">Secondary button<span class="hc-button__icon hc-button__icon--end">{{icon.render('envelope')}}</span></span>
-                    </button>
-
-                    <button type="button" class="hc-button hc-button__outline-tertiary hc-button--lg" tabindex="0" >
-                        <span class="hc-button__label">
-                            <span class="hc-button__icon hc-button__icon--start">{{icon.render('envelope')}}</span>Tertiary button
-                        </span>
-                    </button>
+                        <div class="hc-input hc-input--multiline hc-error">
+                            {{icon.render('error-circle', {class:'hc-input__icon'})}}
+                            <textarea class="hc-input__input hc-input__input--icon-right" placeholder='Textarea placeholer' aria-describedby="chars1"></textarea>
+                        </div>
+                    </div>
                 </div>
+            </div>
+
+            <h2>Dropdown of select</h2>
+            <p>Beschrijving over inputvelden</p>
+            <div class="component">
+                <div class="html">
+                    <div class="row justify-center align-center">
+                        {{select.render({ name:'company', options:[
+                            {
+                                label: "UXMen",
+                                value: "uxmen"
+                            },
+                            {
+                                label: "Calibrate",
+                                value: "calibrate"
+                            }
+                        ]})}}
+
+                        {{select.render({ name:'company', placeholder:'Status valid', class:"hc-valid", options:[
+                            {
+                                label: "UXMen",
+                                value: "uxmen"
+                            },
+                            {
+                                label: "Calibrate",
+                                value: "calibrate"
+                            }
+                        ]})}}
+
+                        {{select.render({ name:'company', placeholder: 'Status error', class:"hc-error", options:[
+                            {
+                                label: "UXMen",
+                                value: "uxmen"
+                            },
+                            {
+                                label: "Calibrate",
+                                value: "calibrate"
+                            }
+                        ]})}}
+
+                        {{select.render({ name:'company', placeholder: 'Status disabled', class:"hc-disabled", disabled: true, options:[
+                            {
+                                label: "UXMen",
+                                value: "uxmen"
+                            },
+                            {
+                                label: "Calibrate",
+                                value: "calibrate"
+                            }
+                        ]})}}
+                    </div>
+                </div>
+            </div>
+
+            <h2>Radio buttons</h2>
+            <p>Beschrijving over radiobuttons</p>
+
+            <h3>Radio states</h3>
+            <div class="component">
+                <div class="html">
+                    <div class="row justify-center align-center">
+                        {{radio.render('gender', { label:'Radio button', value:'man' })}}
+                        {{radio.render('gender', { label:'Radio checked', value:'man', checked: true})}}
+                        {{radio.render('gender', { label:'Radio checked valid', value:'man', checked: true, class:'hc-valid'})}}
+                        {{radio.render('gender', { label:'Radio error', value:'man', class:'hc-error' })}}
+                        {{radio.render('gender', { label:'Radio disabled', value:'man', class:'hc-disabled', disabled: true})}}
+                    </div>
+                </div>
+            </div>
+
+            <h3>Radio list horizontal</h3>
+            <div class="component">
+                <div class="html">
+                    <div class="row justify-center align-center">
+
+                        <ul class="hc-input__list hc-input__list--horizontal">
+                            <li>{{radio.render('genders', { label:'Radio button', value:'man' })}}</li>
+                            <li>{{radio.render('genders', { label:'Radio checked', value:'man', checked: true})}}</li>
+                            <li>{{radio.render('genders', { label:'Radio checked valid', value:'man', checked: true, class:'hc-valid'})}}</li>
+                            <li>{{radio.render('genders', { label:'Radio error', value:'man', class:'hc-error' })}}</li>
+                            <li>{{radio.render('genders', { label:'Radio disabled', value:'man', class:'hc-disabled', disabled: true})}}</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+            <h3>Radio list horizontal</h3>
+            <div class="component">
+                <div class="html">
+                    <div class="row justify-center align-center">
+
+                        <ul class="hc-input__list hc-input__list--vertical">
+                            <li>{{radio.render('genderz', { label:'Radio button', value:'man' })}}</li>
+                            <li>{{radio.render('genderz', { label:'Radio checked', value:'man', checked: true})}}</li>
+                            <li>{{radio.render('genderz', { label:'Radio checked valid', value:'man', checked: true, class:'hc-valid'})}}</li>
+                            <li>{{radio.render('genderz', { label:'Radio error', value:'man', class:'hc-error' })}}</li>
+                            <li>{{radio.render('genderz', { label:'Radio disabled', value:'man', class:'hc-disabled', disabled: true})}}</li>
+                        </ul>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <h2>Checkbox buttons</h2>
+            <p>Beschrijving over Checkboxes</p>
+
+            <h3>Checkbox states</h3>
+            <div class="component">
+                <div class="html">
+                    <div class="row justify-center align-center">
+                        {{checkbox.render('skillset', {label:'Checkbox', value:'checkbox' })}}
+                        {{checkbox.render('skillset', {label:'Checkbox checked', value:'checkbox', checked: true})}}
+                        {{checkbox.render('skillset', {label:'Checkbox checked valid', value:'checkbox', checked: true, class:'hc-valid'})}}
+                        {{checkbox.render('skillset', {label:'Checkbox error', value:'checkbox', class:'hc-error' })}}
+                        {{checkbox.render('skillset', {label:'Checkbox disabled', value:'checkbox', class:'hc-disabled', disabled: true })}}
+                    </div>
+                </div>
+            </div>
+
+            <h3>Checkbox list horizontal</h3>
+            <div class="component">
+                <div class="html">
+                    <div class="row justify-center align-center">
+
+                        <ul class="hc-input__list hc-input__list--horizontal">
+                            <li>{{checkbox.render('skillset', {label:'Checkbox', value:'checkbox' })}}</li>
+                            <li>{{checkbox.render('skillset', {label:'Checkbox checked', value:'checkbox', checked: true})}}</li>
+                            <li>{{checkbox.render('skillset', {label:'Checkbox checked valid', value:'checkbox', checked: true, class:'hc-valid'})}}</li>
+                            <li>{{checkbox.render('skillset', {label:'Checkbox error', value:'checkbox', class:'hc-error' })}}</li>
+                            <li>{{checkbox.render('skillset', {label:'Checkbox disabled', value:'checkbox', class:'hc-disabled', disabled: true })}}</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+            <h3>Checkbox list horizontal</h3>
+            <div class="component">
+                <div class="html">
+                    <div class="row justify-center align-center">
+
+                        <ul class="hc-input__list hc-input__list--vertical">
+                            <li>{{checkbox.render('skillset', {label:'Checkbox', value:'checkbox' })}}</li>
+                            <li>{{checkbox.render('skillset', {label:'Checkbox checked', value:'checkbox', checked: true})}}</li>
+                            <li>{{checkbox.render('skillset', {label:'Checkbox checked valid', value:'checkbox', checked: true, class:'hc-valid'})}}</li>
+                            <li>{{checkbox.render('skillset', {label:'Checkbox error', value:'checkbox', class:'hc-error' })}}</li>
+                            <li>{{checkbox.render('skillset', {label:'Checkbox disabled', value:'checkbox', class:'hc-disabled', disabled: true })}}</li>
+                        </ul>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <h2>Switcher</h2>
+            <h3>Switcher states</h3>
+            <div class="component">
+                <div class="html">
+                    <div class="row justify-center align-center">
+
+                        <div class="hc-switcher">
+                            <div class="hc-switcher-item">
+                                <input class="hc-switcher-item__input" type="radio" name="yes-no" id="yes" />
+                                <label class="hc-switcher-item__label" for="yes">Yes</label>
+                            </div>
+                            <div class="hc-switcher-item">
+                                <input class="hc-switcher-item__input" type="radio" name="yes-no" id="no" />
+                                <label class="hc-switcher-item__label" for="no">No</label>
+                            </div>
+                        </div>
+                
+                        <div class="hc-switcher hc-disabled">
+                            <div class="hc-switcher-item">
+                                <input class="hc-switcher-item__input" type="radio" name="yes-no" id="yes" aria-disabled="true" disabled/>
+                                <label class="hc-switcher-item__label" for="yes">Yes</label>
+                            </div>
+                            <div class="hc-switcher-item">
+                                <input class="hc-switcher-item__input" type="radio" name="yes-no" id="no" aria-disabled="true" disabled/>
+                                <label class="hc-switcher-item__label" for="no">No</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
             </div>
 
         </div>
@@ -111,32 +425,57 @@
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
 
-            document.querySelectorAll('.component .html').forEach((block) => {
+            document.querySelectorAll('.component .html .row').forEach((block) => {
 
                 var _shadowBlock = document.createElement('div');
                 _shadowBlock.classList.add('shadowDom')
+                
                 var _pre = document.createElement('pre');
                 var _code = document.createElement('code');
                 _code.innerHTML = block.innerHTML.replace(/</g, '&lt').replace(/>/g, '&gt');
                 
                 _pre.appendChild(_code);
                 _shadowBlock.appendChild(_pre);
-                block.parentNode.appendChild(_shadowBlock);
+                block.parentNode.parentNode.appendChild(_shadowBlock);
 
                 hljs.highlightBlock(_shadowBlock);
 
+                var _html =  _shadowBlock.parentNode.querySelector('.html');
+
+                var toggleButton = document.createElement('button');
+                toggleButton.textContent = 'Show code';
+                toggleButton.classList.add('btn', 'show', 'right');
+
+                _shadowBlock.parentNode.insertBefore(toggleButton, _html.nextSibling);
+
+                toggleButton.addEventListener('click', e => {
+                    var element= e.target;
+                    console.info(element);
+                    var dom = element.parentNode.querySelector('.shadowDom');
+                    if(dom.classList.contains('code-show')) {
+                        dom.classList.remove('code-show');
+                        e.target.innerHTML = 'Show code';
+                        e.target.classList.remove('active');
+                    } else {
+                        dom.classList.add('code-show');
+                        e.target.innerHTML = 'Hide code';
+                        e.target.classList.add('active');
+                    }
+                });
 
                 var clipboardButton = document.createElement('button');
                 clipboardButton.textContent = 'Copy Code';
-                clipboardButton.classList.add('btn');
+                clipboardButton.classList.add('btn', 'right');
                 clipboardButton.setAttribute('data-clipboard-action', 'copy')
 
-                _shadowBlock.appendChild(clipboardButton);
-
+                //_shadowBlock.parentNode.appendChild(clipboardButton);
+                
+                _shadowBlock.parentNode.insertBefore(clipboardButton, _html.nextSibling);
+                
                 clipboardButton = new ClipboardJS(clipboardButton, {
                     text: function(trigger){
                         console.info(trigger);
-                        elem = trigger.parentNode.querySelector('.html ');
+                        elem = trigger.parentNode.querySelector('.html > *');
                         return  elem.innerHTML;
                     }
                 });

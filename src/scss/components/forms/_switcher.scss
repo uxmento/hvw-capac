@@ -8,6 +8,7 @@
     border: 1px solid $color_secondary;
     justify-content: stretch;
     height: $input-height;
+    min-width: 100px;
 
     &-item {
         display: flex;

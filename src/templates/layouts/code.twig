@@ -18,17 +18,55 @@
   <script src="./vendor/node_modules/svgxuse/svgxuse.min.js"></script>
   <style>
     pre {
-      border-radius: 8px;
       font-size: .75rem;
     }
+
+    .btn{
+      border: 1px solid #256db1;
+      background: white;
+      border-radius: 4px;
+      color: #256db1;
+      padding: .5rem 1rem;
+      margin-right: .25rem;
+      margin-top: .5rem;
+      margin-bottom: 1rem;
+    }
+
+    .btn.active {
+      background-color: #256db1;
+      color: white;
+      border: 1px solid #256db1;
+    }
+
+    .right {
+      float: right;
+    }
+    
+    .html {
+      border: 1px solid #DEDEDE;
+      border-radius: 4px;
+      padding: 1rem 1.5rem;
+    }
+    
     .shadowDom {
       position: relative;
+      border-radius: 4px;
+      display: none;
+      clear: both;
     }
-    .btn {
-      position: absolute; 
-      right: 1rem;
-      top: 1rem;
+
+    .component {
+      margin-bottom: 3rem;
     }
+    
+    .component .html .row > * {
+      margin: .25rem;
+    }
+
+    .code-show {
+      display: block;
+    }
+    
   </style>
 </head>
 <body>
