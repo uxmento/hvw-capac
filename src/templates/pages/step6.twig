@@ -23,9 +23,9 @@
 			<div class="row">
 				<div class="col-12 mt-3 mb-3">
                     <ul class="hc-input__list hc-input__list--vertical">
-                        <li>{{checkbox.render('confirmation', 'Door dit verzoek te verzenden, geef ik HVW uitdrukkelijk de opdracht om mijn dossier te beheren, ik accepteer de <a href="#link-to-page" target="_blank">HVW-privacyverklaring</a> en verklaar dat ik niet hetzelfde verzoek heb ingediend bij.', 'consent')}}</li>
-                        <li>{{checkbox.render('confirmation', 'Ik geef HVW toestemming om langs elektronische weg bij de <strong>Kruispuntbank voor Sociale Zekerheid de informatie</strong> te verzamelen die nodig is voor mijn toekomstige inschrijving.', 'access')}}</li>
-                        <li>{{checkbox.render('confirmation', 'Ik heb het <a href="#link-to-page" target="_blank">informatieblad over de aangifte van de persoonlijke en gezinssituatie van een socialezekerheidsmedewerker</a> die een werkloosheidsuitkering aanvraagt, gelezen en begrepen.', 'confirm')}}</li>
+                        <li>{{checkbox.render('confirmation', { label: 'Door dit verzoek te verzenden, geef ik HVW uitdrukkelijk de opdracht om mijn dossier te beheren, ik accepteer de <a href="#link-to-page" target="_blank">HVW-privacyverklaring</a> en verklaar dat ik niet hetzelfde verzoek heb ingediend bij.', value: 'consent'} )}}</li>
+                        <li>{{checkbox.render('confirmation', { label: 'Ik geef HVW toestemming om langs elektronische weg bij de <strong>Kruispuntbank voor Sociale Zekerheid de informatie</strong> te verzamelen die nodig is voor mijn toekomstige inschrijving.', value: 'access'})}}</li>
+                        <li>{{checkbox.render('confirmation', { label: 'Ik heb het <a href="#link-to-page" target="_blank">informatieblad over de aangifte van de persoonlijke en gezinssituatie van een socialezekerheidsmedewerker</a> die een werkloosheidsuitkering aanvraagt, gelezen en begrepen.', value: 'confirm'} )}}</li>
                     </ul>
                 </div>
 			</div>

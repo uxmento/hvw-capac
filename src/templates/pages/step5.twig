@@ -119,14 +119,14 @@
 				<div class="row">
 					<div class="col-12">	
 						<ul class="hc-input__list hc-input__list--vertical mt-2">
-							<li>{{radio.render('vergoeding', 'Door HVW', 'hvw')}}</li>
-							<li>{{radio.render('vergoeding', 'Door een andere betalingsorganisatie (FGTB, CGSLB, CSC)', 'other')}}
+							<li>{{radio.render('vergoeding', {label: 'Door HVW', value: 'hvw'} )}}</li>
+							<li>{{radio.render('vergoeding', {label: 'Door een andere betalingsorganisatie (FGTB, CGSLB, CSC)', value: 'other'} )}}
 								<div class="hc-message hc-warning ml-3 mt-3">
 									{{icon.render('warning', 'hc-message__icon')}}
 									<span>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Etiam <a href="#een-link" target='_blank'>porta sem</a> malesuada magna mollis euismod.</span>
 								</div>
 							</li>
-							<li>{{radio.render('vergoeding', 'Ik heb nooit een uitkering gekregen', 'none')}}</li>
+							<li>{{radio.render('vergoeding', {label: 'Ik heb nooit een uitkering gekregen', value: 'none'} )}}</li>
 						</ul>
 					</div>
 				</div>
@@ -137,8 +137,8 @@
 				<div class="row">
 					<div class="col-12">	
 						<ul class="hc-input__list hc-input__list--horizontal mt-2">
-							<li>{{radio.render('c4', 'Ja', 'yes')}}</li>
-							<li>{{radio.render('c4', 'Neen', 'no')}}</li>
+							<li>{{radio.render('c4', {label: 'Ja', value: 'yes'} )}}</li>
+							<li>{{radio.render('c4', {label: 'Neen', value: 'no'} )}}</li>
 						</ul>
 						<div class="hc-message hc-warning">
 							{{icon.render('warning', 'hc-message__icon')}}
@@ -153,8 +153,8 @@
 				<div class="row">
 					<div class="col-12">	
 						<ul class="hc-input__list hc-input__list--horizontal mt-2">
-							<li>{{radio.render('incapacity', 'Ja', 'yes')}}</li>
-							<li>{{radio.render('incapacity', 'Neen', 'no')}}</li>
+							<li>{{radio.render('incapacity', {label: 'Ja', value: 'yes'} )}}</li>
+							<li>{{radio.render('incapacity', {label: 'Neen', value: 'no'} )}}</li>
 						</ul>
 					</div>
 					<div class="col-12 hc-accent-block">

@@ -25,8 +25,8 @@
 				<div class="row">
 					<div class="col-12">	
 						<ul class="hc-input__list hc-input__list--vertical mt-2">
-							<li>{{radio.render('type', 'Ik woon alleen', 'alone')}}</li>
-							<li style="position: relative">{{radio.render('type', 'Ik woon met iemand samen', 'together')}}{{icon.render('info-circle', { class:'hc-pointer', id:'click-icon' })}}
+							<li>{{radio.render('type', { label: 'Ik woon alleen', value: 'alone'} )}}</li>
+							<li style="position: relative">{{radio.render('type', { label: 'Ik woon met iemand samen', value: 'together'})}}{{icon.render('info-circle', { class:'hc-pointer', id:'click-icon' })}}
 								<div class="hc-popup" style="max-width: 400px; left: 49px; top: 1.75rem;">
 									<div class="hc-popup__title">Wanneer woon je met iemand samen?</div>
 									<div class="hc-popup__content">
@@ -36,15 +36,15 @@
 							</li>
 
 							<script>
-							const clickIcon = document.querySelector('#click-icon');
-							const popup = document.querySelector('.hc-popup');
-							clickIcon.addEventListener('click', e => {
-								if(popup.classList.contains('hc-hide')){
-									popup.classList.remove('hc-hide');
-								}else{
-									popup.classList.add('hc-hide');
-								}
-							});
+								const clickIcon = document.querySelector('#click-icon');
+								const popup = document.querySelector('.hc-popup');
+								clickIcon.addEventListener('click', e => {
+									if(popup.classList.contains('hc-hide')){
+										popup.classList.remove('hc-hide');
+									}else{
+										popup.classList.add('hc-hide');
+									}
+								});
 							</script>
 						</ul>
 					</div>

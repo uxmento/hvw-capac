@@ -27,7 +27,7 @@
         min-width: 40px;
     }
 
-    &>:not(caption) > * > * {
+    & > :not(caption) > * > * {
         padding: 1rem 1.4rem;
         -webkit-transition: background-color .2s ease-in;
         transition: background-color .2s ease-in;
