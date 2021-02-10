@@ -22,7 +22,7 @@
         <div class="hc-container hc-accent py-4">
 
             <h2>Labels</h2>
-            <p>Beschrijving over labels</p>
+            
             <div class="component">
                 <div class="html">
                     <div class="row justify-center align-center">
@@ -36,8 +36,23 @@
                 </div>
             </div>
 
+            <h2>Icons</h2>
+            
+            <div class="component">
+                <div class="html">
+                    <div class="row justify-center align-center">
+                        
+                        {{icon.render('check-circle')}}
+                        {{icon.render('check-circle', {class:'hc-icon--sm'})}}
+                        {{icon.render('check-circle', {class:'hc-icon--md'})}}
+                        {{icon.render('check-circle', {class:'hc-icon--lg'})}}
+                    
+                    </div>
+                </div>
+            </div>
+
             <h2>Buttons</h2>
-            <p>Beschrijving over Buttons</p>
+            
             <h3>Standaard buttons</h3>
             <div class="component">
                 <div class="html">
@@ -168,7 +183,7 @@
             </div>
 
             <h2>Input velden</h2>
-            <p>Beschrijving over inputvelden</p>
+            
 
             <h3>Standaard input </h3>
             <div class="component">
@@ -230,7 +245,7 @@
             </div>
 
             <h2>Dropdown of select</h2>
-            <p>Beschrijving over inputvelden</p>
+            
             <div class="component">
                 <div class="html">
                     <div class="row justify-center align-center">
@@ -282,7 +297,7 @@
             </div>
 
             <h2>Radio buttons</h2>
-            <p>Beschrijving over radiobuttons</p>
+            
 
             <h3>Radio states</h3>
             <div class="component">
@@ -332,7 +347,7 @@
             </div>
 
             <h2>Checkbox buttons</h2>
-            <p>Beschrijving over Checkboxes</p>
+            
 
             <h3>Checkbox states</h3>
             <div class="component">
@@ -408,6 +423,44 @@
                                 <label class="hc-switcher-item__label" for="no">No</label>
                             </div>
                         </div>
+                    </div>
+                </div>  
+            </div>
+
+            <h2>Messages</h2>
+            <h3>Messages states</h3>
+            <div class="component">
+                <div class="html">
+                    <div class="row justify-center align-center">
+
+                        <div class="col-12 mb-3">
+                            <div class="hc-message hc-valid">
+                                {{icon.render('check-circle', {class:'hc-message__icon'})}}
+                                <span>Dit is een standaard message box</span>
+                            </div>
+                        </div>
+
+                        <div class="col-12 mb-3">
+                            <div class="hc-message hc-warning">
+                                {{icon.render('warning', {class:'hc-message__icon'})}}
+                                <span>Dit is een standaard message box</span>
+                            </div>
+                        </div>
+
+                        <div class="col-12 mb-3">
+                            <div class="hc-message hc-info">
+                                {{icon.render('info', {class:'hc-message__icon'})}}
+                                <span><p>Maecenas faucibus mollis interdum. Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis. Donec sed odio dui.<br />Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nulla vitae elit libero, a pharetra augue. Maecenas faucibus mollis interdum.</p></span>
+                            </div>
+                        </div>
+
+                        <div class="col-12 mb-3">
+                            <div class="hc-message hc-error">
+                                {{icon.render('error-circle', {class:'hc-message__icon'})}}
+                                <span><p>Maecenas faucibus mollis interdum. Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis. Donec sed odio dui.<br />Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nulla vitae elit libero, a pharetra augue. Maecenas faucibus mollis interdum.</p></span>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>  
             </div>
