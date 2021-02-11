@@ -25,8 +25,9 @@
 <nav class="nav">
     
     <div class="text-align--center py-3 font-weight--600 color_grey-dark">Navigatie</div>
+    {% if active %}
     <a class="btn-nav font-weight--200" href="index.html"> &lt; Naar overzicht</a>
-    
+    {% endif %}
     <a class="btn-nav {% if active == 'grid'%} active{% endif %}" href="grid.html">Grid</a>
     <a class="btn-nav {% if active == 'util'%} active{% endif %}" href="utility-classes.html">Utility classes</a>
     <a class="btn-nav {% if active == 'typo'%} active{% endif %}" href="typography.html">Typography</a>
