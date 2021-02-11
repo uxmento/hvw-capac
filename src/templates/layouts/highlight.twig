@@ -23,6 +23,7 @@
 
             var toggleButton = document.createElement('button');
             toggleButton.textContent = 'Show code';
+            toggleButton.setAttribute('tabindex', '-1');
             toggleButton.classList.add('btn', 'show', 'right');
 
             _shadowBlock.parentNode.insertBefore(toggleButton, _html.nextSibling);
@@ -44,6 +45,7 @@
 
             var clipboardButton = document.createElement('button');
             clipboardButton.textContent = 'Copy Code';
+            clipboardButton.setAttribute('tabindex', '-1');
             clipboardButton.classList.add('btn', 'right');
             clipboardButton.setAttribute('data-clipboard-action', 'copy')
 
