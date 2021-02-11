@@ -34,10 +34,11 @@
     }
 
     &:focus {
-      border: $border-width solid $color_tertiary;
+      box-shadow: $color_tertiary 0px 0px 0px 2px;
       outline: 0;
     }
     &:focus:not(:focus-visible) {
+      box-shadow: none;
       border: none;
     }
 
@@ -46,7 +47,8 @@
     &:not(:placeholder-shown),
     &.#{$ns}has-value {
       outline: 0;
-      border: $border-width solid $color_tertiary;
+      border: 1px solid $color_tertiary;
+      box-shadow: $color_tertiary 0px 0px 0px 2px;
     }
 
     &--icon-left {

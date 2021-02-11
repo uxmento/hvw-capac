@@ -530,6 +530,20 @@
                 </div>  
             </div>
 
+            <h2>Screenreader classes</h2>
+            <p>Voor de toegankelijkheid van de bezoeker is er soms nood aan een label of tekst die opgevangen kan worden door een screenreader maar hoeft deze visueel misschien niet aanwezig te zien. Om dit te kunnen bekomen hebben we de <strong>.hc-sr-only</strong> class. Deze zal de content visueel onzichtbaar maken maar een screen reader zal deze nog steeds opnemen.<br>Daarnaast is er ook de mogelijkheid om velden of knoppen te verbergen maar toch weer zichtbaar te maken eens ze de focus krijgen. Een 'skip to content' of 'ga naar inhoud' knop is daar een voorbeeld van. Om dit te maken moeten we <strong>.hc-sr-only</strong> en <strong>.hc-sr-only-focusable</strong> voegen aan het element.</p>
+            <p>Om dit voorbeeld te bekijken, gebruik je best de code-view of klik in ondestaand code blok of een vorig element en gebruik de tab-toets.</p>
+            <div class="component">
+                <div class="html">
+                    <div class="row justify-center align-center">
+
+                        <label class="hc-sr-only">Dit label kan voorgelezen worden</label>
+                        <a href="#link-tekst" class="mr-4 hc-link hc-sr-only hc-sr-only-focusable"><span class="hc-link__icon hc-link__icon--start">{{icon.render('envelope')}}</span>Dit is een link met een icoon ervoor</a>
+                        
+                    </div>
+                </div>  
+            </div>
+
         </div>
            
 	</section>
@@ -550,7 +564,8 @@
                 
                 var _pre = document.createElement('pre');
                 var _code = document.createElement('code');
-                _code.innerHTML = block.innerHTML.replace(/</g, '&lt').replace(/>/g, '&gt');
+                var _cleanup = hljs.highlightAuto(block.innerHTML).value;
+                _code.innerHTML = _cleanup;
                 
                 _pre.appendChild(_code);
                 _shadowBlock.appendChild(_pre);
