@@ -18,16 +18,34 @@
       width: #{100% / $grid-columns * $i} !important;
       padding: 0px #{rem($grid-gutter) / 2} !important;
 
-      &.pad-half {
-        padding: 0px #{rem($grid-gutter) / 4} !important;
+      &.p-half {
+        padding: #{rem($grid-gutter) / 4} !important;
       }
 
-      &.pad-half--r {
-        padding-right: #{rem($grid-gutter) / 4};
+      &.px-half {
+        padding-right: #{rem($grid-gutter) / 4} !important;
+        padding-left: #{rem($grid-gutter) / 4} !important;
       }
 
-      &.pad-half--l {
-        padding-left: #{rem($grid-gutter) / 4};
+      &.py-half {
+        padding-top: #{rem($grid-gutter) / 4} !important;
+        padding-bottom: #{rem($grid-gutter) / 4} !important;
+      }
+
+      &.p-half--r {
+        padding-right: #{rem($grid-gutter) / 4} !important;
+      }
+
+      &.p-half--l {
+        padding-left: #{rem($grid-gutter) / 4} !important;
+      }
+
+      &.p-half--t {
+        padding-top: #{rem($grid-gutter) / 4} !important;
+      }
+
+      &.p-half--b {
+        padding-bottom: #{rem($grid-gutter) / 4} !important;
       }
 
     }
@@ -40,17 +58,36 @@
           width: #{100% / $grid-columns * $i} !important;
           padding: 0px #{rem($grid-gutter) / 2} !important;
 
-          &.pad-half {
-            padding: 0px #{rem($grid-gutter) / 4} !important;
+          &.p-half {
+            padding: #{rem($grid-gutter) / 4} !important;
           }
-
-          &.pad-half--r {
-            padding-right: #{rem($grid-gutter) / 4};
+    
+          &.px-half {
+            padding-right: #{rem($grid-gutter) / 4} !important;
+            padding-left: #{rem($grid-gutter) / 4} !important;
           }
-
-          &.pad-half--l {
-            padding-left: #{rem($grid-gutter) / 4};
+    
+          &.py-half {
+            padding-top: #{rem($grid-gutter) / 4} !important;
+            padding-bottom: #{rem($grid-gutter) / 4} !important;
           }
+    
+          &.p-half--r {
+            padding-right: #{rem($grid-gutter) / 4} !important;
+          }
+    
+          &.p-half--l {
+            padding-left: #{rem($grid-gutter) / 4} !important;
+          }
+    
+          &.p-half--t {
+            padding-top: #{rem($grid-gutter) / 4} !important;
+          }
+    
+          &.p-half--b {
+            padding-bottom: #{rem($grid-gutter) / 4} !important;
+          }
+    
 
         }
       }

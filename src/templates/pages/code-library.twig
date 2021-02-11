@@ -25,7 +25,6 @@
         <div class="hc-container hc-accent py-4">
 
             <h2>Labels</h2>
-            
             <div class="component">
                 <div class="html">
                     <div class="row justify-center align-center">
@@ -272,6 +271,20 @@
             </div>
 
 
+            <h2>Combo of input label and helper</h2>
+             <div class="component">
+                <div class="html">
+                    <div class="row justify-center">
+                        <div class="combo w-50">
+                            {{label.render('Veld label', {mandatory:'true', for:'field-name', id: 'label-field-name'})}}
+                            {{input.render({name:'field-name', placeholder:'Placeholder', iconAfter:'user-alt', id:'field-name', label: 'label-field-name', helper: 'field-name-helper', autocomplete: 'name'})}}
+                            {{helper.render('Helper text linked to input field', {id: 'field-name-helper'})}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
             <h2>Dropdown of select</h2>
             
             <div class="component">
@@ -330,7 +343,7 @@
             <h3>Radio states</h3>
             <div class="component">
                 <div class="html">
-                    <div class="row justify-center align-center">
+                    <div class="row justify-center align-center" role="radiogroup">
                         {{radio.render('gender', { label:'Radio button', value:'man' })}}
                         {{radio.render('gender', { label:'Radio checked', value:'man', checked: true})}}
                         {{radio.render('gender', { label:'Radio checked valid', value:'man', checked: true, class:'hc-valid'})}}
@@ -345,7 +358,7 @@
                 <div class="html">
                     <div class="row justify-center align-center">
 
-                        <ul class="hc-input__list hc-input__list--horizontal">
+                        <ul class="hc-input__list hc-input__list--horizontal" role="radiogroup">
                             <li>{{radio.render('genders', { label:'Radio button', value:'man' })}}</li>
                             <li>{{radio.render('genders', { label:'Radio checked', value:'man', checked: true})}}</li>
                             <li>{{radio.render('genders', { label:'Radio checked valid', value:'man', checked: true, class:'hc-valid'})}}</li>
@@ -362,7 +375,7 @@
                 <div class="html">
                     <div class="row justify-center align-center">
 
-                        <ul class="hc-input__list hc-input__list--vertical">
+                        <ul class="hc-input__list hc-input__list--vertical" role="radiogroup">
                             <li>{{radio.render('genderz', { label:'Radio button', value:'man' })}}</li>
                             <li>{{radio.render('genderz', { label:'Radio checked', value:'man', checked: true})}}</li>
                             <li>{{radio.render('genderz', { label:'Radio checked valid', value:'man', checked: true, class:'hc-valid'})}}</li>
@@ -380,7 +393,7 @@
             <h3>Checkbox states</h3>
             <div class="component">
                 <div class="html">
-                    <div class="row justify-center align-center">
+                    <div class="row justify-center align-center" role="group">
                         {{checkbox.render('skillset', {label:'Checkbox', value:'checkbox' })}}
                         {{checkbox.render('skillset', {label:'Checkbox checked', value:'checkbox', checked: true})}}
                         {{checkbox.render('skillset', {label:'Checkbox checked valid', value:'checkbox', checked: true, class:'hc-valid'})}}
@@ -395,7 +408,7 @@
                 <div class="html">
                     <div class="row justify-center align-center">
 
-                        <ul class="hc-input__list hc-input__list--horizontal">
+                        <ul class="hc-input__list hc-input__list--horizontal" role="group">
                             <li>{{checkbox.render('skillset', {label:'Checkbox', value:'checkbox' })}}</li>
                             <li>{{checkbox.render('skillset', {label:'Checkbox checked', value:'checkbox', checked: true})}}</li>
                             <li>{{checkbox.render('skillset', {label:'Checkbox checked valid', value:'checkbox', checked: true, class:'hc-valid'})}}</li>
@@ -412,7 +425,7 @@
                 <div class="html">
                     <div class="row justify-center align-center">
 
-                        <ul class="hc-input__list hc-input__list--vertical">
+                        <ul class="hc-input__list hc-input__list--vertical" role="group">
                             <li>{{checkbox.render('skillset', {label:'Checkbox', value:'checkbox' })}}</li>
                             <li>{{checkbox.render('skillset', {label:'Checkbox checked', value:'checkbox', checked: true})}}</li>
                             <li>{{checkbox.render('skillset', {label:'Checkbox checked valid', value:'checkbox', checked: true, class:'hc-valid'})}}</li>
