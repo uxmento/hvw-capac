@@ -12,7 +12,7 @@
 {% block body %}
 	<!-- html goes here -->
 
-		{% include 'layouts/nav.twig' %}
+		{% include 'layouts/nav.twig'  with {'active' : 'form'}  %}
 	
 	{% include 'layouts/header.twig' %}
 	
@@ -124,7 +124,7 @@
 							<li>{{radio.render('vergoeding', {label: 'Door HVW', value: 'hvw'} )}}</li>
 							<li>{{radio.render('vergoeding', {label: 'Door een andere betalingsorganisatie (FGTB, CGSLB, CSC)', value: 'other'} )}}
 								<div class="hc-message hc-warning ml-3 mt-3">
-									{{icon.render('warning', 'hc-message__icon')}}
+									{{icon.render('warning', {class:'hc-message__icon'})}}
 									<span>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Etiam <a href="#een-link" target='_blank'>porta sem</a> malesuada magna mollis euismod.</span>
 								</div>
 							</li>
@@ -143,7 +143,7 @@
 							<li>{{radio.render('c4', {label: 'Neen', value: 'no'} )}}</li>
 						</ul>
 						<div class="hc-message hc-warning">
-							{{icon.render('warning', 'hc-message__icon')}}
+							{{icon.render('warning', {class: 'hc-message__icon'})}}
 							<span>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Etiam porta sem malesuada magna mollis euismod.</span>
 						</div>
 					</div>
@@ -358,13 +358,13 @@
 				</div>
 			</fieldset>
 
-			<div class="row mt-2">
+			<div class="row mt-4">
 				<div class="col-12 flex--md direction-row-reverse--md justify-end--md">
-					<button type="button" class="hc-button hc-button__primary mb-2 w-100 w-auto--md" tabindex="0"  onclick="window.location.href='step6.html'">
-						<span class="hc-button__label">Aanvraag indienen<span class="hc-button__icon hc-button__icon--end">{{icon.render('check', 'hc-icon')}}</span></span>
+					<button type="button" class="hc-button hc-button__tertiary mb-2 w-100 w-auto--md" tabindex="0"  onclick="window.location.href='step6.html'">
+						<span class="hc-button__label">Aanvraag indienen<span class="hc-button__icon hc-button__icon--end">{{icon.render('check')}}</span></span>
 					</button>
-					<button type="button" class="hc-button hc-button__outline-primary mb-2 mr-2 w-100 w-auto--md" tabindex="0"  onclick="window.location.href='step4.html'">
-						<span class="hc-button__label"><span class="hc-button__icon hc-button__icon--start">{{icon.render('prev-arrow', 'hc-icon')}}</span>Vorige</span>
+					<button type="button" class="hc-button hc-button__outline-tertiary mb-2 mr-2 w-100 w-auto--md" tabindex="0"  onclick="window.location.href='step4.html'">
+						<span class="hc-button__label"><span class="hc-button__icon hc-button__icon--start">{{icon.render('prev-arrow')}}</span>Vorige</span>
 					</button>
 				</div>
 			</div>

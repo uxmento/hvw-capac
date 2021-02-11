@@ -11,10 +11,10 @@
 {% block body %}
 	<!-- html goes here -->
 
-	{% include 'layouts/nav.twig' %}
+	{% include 'layouts/nav.twig' with {'active' : 'code'} %}
 	
 	<header>
-		<div class="hc-container">
+		<div class="hc-container py-6" >
 			<h1 class="hc-h1">Code library</h1>
 		</div>
 	</header>
@@ -200,11 +200,13 @@
             
 
             <h3>Standaard input </h3>
+            <p>De inputvelden krijgen een kleure wanneer er content ingevuld is. Deze visuele status kan ook gezet worden via javascript door de class <strong>.hc-has-value</strong> te plaatsen op het input veld</p>
             <div class="component">
                 <div class="html">
                     <div class="row justify-center align-center">
                     
                         {{input.render({name:'nm1', placeholder:'Input', id:'name'})}}
+                        {{input.render({name:'nm1', placeholder:'Input .hc-has-value', id:'name', class:"hc-has-value"})}}
                         {{input.render({name:'nm2', placeholder:'Input valid', id:'name', class: 'hc-valid'})}}
                         {{input.render({name:'nm3', placeholder:'Input warning', id:'name', class: 'hc-warning'})}}
                         {{input.render({name:'nm4', placeholder:'Input error', id:'name', class: 'hc-error'})}}
@@ -257,6 +259,18 @@
                     </div>
                 </div>
             </div>
+
+            <h2>Helper (text)</h2>
+            <div class="component">
+                <div class="html">
+                    <div class="row justify-center align-center">
+                    
+                        {{helper.render('Vergeet je naam niet in te vullen')}}
+
+                    </div>
+                </div>
+            </div>
+
 
             <h2>Dropdown of select</h2>
             
@@ -549,72 +563,7 @@
 	</section>
 
 {% endblock %}
-
+   
 {% block javascript %}
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.0/highlight.min.js"></script> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-
-            document.querySelectorAll('.component .html .row').forEach((block) => {
-
-                var _shadowBlock = document.createElement('div');
-                _shadowBlock.classList.add('shadowDom')
-                
-                var _pre = document.createElement('pre');
-                var _code = document.createElement('code');
-                var _cleanup = hljs.highlightAuto(block.innerHTML).value;
-                _code.innerHTML = _cleanup;
-                
-                _pre.appendChild(_code);
-                _shadowBlock.appendChild(_pre);
-                block.parentNode.parentNode.appendChild(_shadowBlock);
-
-                hljs.highlightBlock(_shadowBlock);
-
-                var _html =  _shadowBlock.parentNode.querySelector('.html');
-
-                var toggleButton = document.createElement('button');
-                toggleButton.textContent = 'Show code';
-                toggleButton.classList.add('btn', 'show', 'right');
-
-                _shadowBlock.parentNode.insertBefore(toggleButton, _html.nextSibling);
-
-                toggleButton.addEventListener('click', e => {
-                    var element= e.target;
-                    console.info(element);
-                    var dom = element.parentNode.querySelector('.shadowDom');
-                    if(dom.classList.contains('code-show')) {
-                        dom.classList.remove('code-show');
-                        e.target.innerHTML = 'Show code';
-                        e.target.classList.remove('active');
-                    } else {
-                        dom.classList.add('code-show');
-                        e.target.innerHTML = 'Hide code';
-                        e.target.classList.add('active');
-                    }
-                });
-
-                var clipboardButton = document.createElement('button');
-                clipboardButton.textContent = 'Copy Code';
-                clipboardButton.classList.add('btn', 'right');
-                clipboardButton.setAttribute('data-clipboard-action', 'copy')
-
-                //_shadowBlock.parentNode.appendChild(clipboardButton);
-                
-                _shadowBlock.parentNode.insertBefore(clipboardButton, _html.nextSibling);
-                
-                clipboardButton = new ClipboardJS(clipboardButton, {
-                    text: function(trigger){
-                        console.info(trigger);
-                        elem = trigger.parentNode.querySelector('.html > *');
-                        return  elem.innerHTML;
-                    }
-                });
-
-            });
-
-        });
-    </script>
+     {% include 'layouts/highlight.twig' %}
 {% endblock %}

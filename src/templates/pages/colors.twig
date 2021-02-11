@@ -11,22 +11,22 @@
 {% block body %}
 
 
-	{% include 'layouts/nav.twig' %}
+	{% include 'layouts/nav.twig'  with {'active': 'colors'} %}
 
 	<header>
-		<div class="hc-container">
-			<h1 class="hc-h1">Colors</h1>
+		<div class="hc-container  hc-container-condensed  py-6">
+			<h1 class="hc-h1">Kleuren</h1>
 		</div>
 	</header>
 
 
 	 <section>
-		<div class="hc-container hc-accent py-4">
+		<div class="hc-container  hc-container-condensed hc-accent py-4">
 			<div class="row justify-stretch align-stretch">
 
 				<div class="col-12 mb-3">
 
-					<div class="font-size--tiny mb-2">-- color classes</div>
+					<h2>Kleur classes</h2>
                 
 					<p class="color_white" style="background:grey">text met kleur .color_white </p>
 					<p class="color_black">text met kleur .color_black </p>
@@ -55,7 +55,7 @@
 				</div>
 
 				<div class="col-12 mb-3">
-					<div class="font-size--tiny mb-2">-- background color classes</div>
+					<h2>Achtergrond kleur classes</h2>
 					<p class="color_background-page">background met kleur .color_background-page</p>
 					<p class="color_background-disabled">background met kleur .color_background-disabled</p>
 					<p class="color_background-default">background met kleur .color_background-default</p>

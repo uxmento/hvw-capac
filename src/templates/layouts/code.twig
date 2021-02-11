@@ -58,8 +58,12 @@
     .component {
       margin-bottom: 3rem;
     }
+
+    .component + *{
+      clear:both;
+    }
     
-    .component .html .row > * {
+    .component .html > .row > * {
       margin: .25rem;
     }
 

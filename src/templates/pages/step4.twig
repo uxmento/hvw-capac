@@ -12,7 +12,7 @@
 {% block body %}
 	<!-- html goes here -->
 
-		{% include 'layouts/nav.twig' %}
+		{% include 'layouts/nav.twig'  with {'active' : 'form'} %}
 	
 	{% include 'layouts/header.twig' %}
 
@@ -103,17 +103,17 @@
 				<div class="col-8--md col-12">
 					{{helper.render('Geef hier eventuele nuttige opmerkingen aan om uw gezinssituatie te omschrijven. HVW zal contact met u opnemen om uw situatie te verduidelijken.', {id: 'info'})}}
 				</div>
-				<div class="col-4--md col-12 text-align-right--md">
+				<div class="col-4--md col-12 text-align--right--md">
 					{{helper.render('Nog 150 karakters over', {id: 'chars'})}}
 				</div>
 			</div>
 
-			<div class="row mt-2">
+			<div class="row mt-4">
 				<div class="col-12 flex--md direction-row-reverse--md justify-end--md">
-					<button type="button" class="hc-button hc-button__primary mb-2 w-100 w-auto--md" tabindex="0"  onclick="window.location.href='step5.html'">
+					<button type="button" class="hc-button hc-button__tertiary mb-2 w-100 w-auto--md" tabindex="0"  onclick="window.location.href='step5.html'">
 						<span class="hc-button__label">Volgende<span class="hc-button__icon hc-button__icon--end">{{icon.render('next-arrow')}}</span></span>
 					</button>
-					<button type="button" class="hc-button hc-button__outline-primary mb-2 mr-2 w-100 w-auto--md" tabindex="0"  onclick="window.location.href='step3.html'">
+					<button type="button" class="hc-button hc-button__outline-tertiary mb-2 mr-2 w-100 w-auto--md" tabindex="0"  onclick="window.location.href='step3.html'">
 						<span class="hc-button__label"><span class="hc-button__icon hc-button__icon--start">{{icon.render('prev-arrow')}}</span>Vorige</span>
 					</button>
 				</div>

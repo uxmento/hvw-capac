@@ -1,4 +1,4 @@
-{% extends "layouts/default.twig" %}
+{% extends "layouts/code.twig" %}
 
 {% import "components/icons/icon.twig" as icon %}
 {% import "components/forms/input.twig" as input %}
@@ -12,30 +12,125 @@
 	<!-- html goes here -->
 
 
-	{% include 'layouts/nav.twig' %}
+	{% include 'layouts/nav.twig' with {'active' : 'grid'}  %}
 
 	<header>
-		<div class="hc-container">
+		<div class="hc-container hc-container-condensed py-6">
 			<h1 class="hc-h1">Grid</h1>
 		</div>
 	</header>
 
 
     <section>
-		<div class="hc-container text-align-center">
+		<div class="hc-container hc-container-condensed hc-accent text-align-center py-4">
 
-            <div class="row mb-4">
+    <div class="row mb-4">
                 <div class="col-12">
                     <div class="color_background-table-header py-3">
-                        <p class="font-size--tiny">--breakpoints</p>
+                        <p class="font-size--tiny">--breakpoints / schermbreedtes</p>
                         <p><strong>xxs</strong>: 320px,  <strong>xs</strong>: 480px,  <strong>sm</strong>: 640px,  <strong>md</strong>: 800px,  <strong>lg</strong>: 960px,  <strong>xl</strong>: 1120px,  <strong>xxl</strong>: 1280px</p>
                     </div>
                 </div>
             </div>
 
-            <div class="row mb-4">
+			<div class="row text-align-left">
+				<div class="col-12">
+					<p>Om de website zo responsive mogelijk te maken is het design gebaseerd op een grid systeem bestaande uit <strong>12 kolommen</strong>. De volledige breedte van de container kan zo opgevuld worden met blokken/componenten, die allen of samen 12 kolommen bevatten.
+					Dit in combinatie met de verschillende breakpoints (vooraf bepaalde schermbreedtes) biedt de mogelijkheid om de een pagina op te bouwen die duidelijk en overzichtelijk is op elke pagina.</p>
+					<h2>Gebruik</h2>
+					<p>Om gebruik te maken van het grid systeem moeten we starten met een container initialiseren. Dit doen we door aan een element de class <strong>.hc-container</strong> toe te voegen (voor de formulieren van CAPAC is er een extra class gebruikt om de container standaard te versmallen door het toevoegen van de class <strong>.hc-container-condensed</strong>). <br>Rechtstreeks daarbinnen maken we een rij aan door opnieuw een element aan te brengen met de class <strong>.row</strong>.<br>Binnen deze rij kunnen we nu opnieuw elementen plaatsen die we op hun beurt een aantal kolommen meegeven. Dit doen we door de class <strong>.col(...)</strong> mee te geven, gevold door een aantal kolommen en eventueel op welke schermbreedte (breakpoint) dit moet gebeuren.</p>
+<div class="component">
+  <div class="html">
+    <div class="row">
+<div class="hc-container" >
+  <div class="row">
+    <div class="col-12" style="background: #F4F4F4; padding: 1rem !important;">
+      Dit is de basis setup voor mijn kolommen binnen een normale container.
+    </div>
+  </div>
+</div>
+
+<div class="hc-container hc-container-condensed mt-2">
+  <div class="row">
+    <div class="col-12" style="background: #F4F4F4; padding: 1rem !important;">
+      Dit is de basis setup voor mijn kolommen binnen een versmalde container.
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</div>
+        <h2>Voorbeelden</h2>
+        <p>Wanneer een element over alle schermbreedtes heen, 12 kolommen in beslag mag nemen (de volledige breedte) geven we de class <strong>.col-12</strong> mee. Door dit element meerder col-klasses mee te geven voorzien van een breakpoint, kunnen we bepalen hoeveel kolommen een element in beslag zal nemen op de desbetreffende schermbreedte.<br>
+        Om een eenvoudig voorbeeld te nemen, nemen we een rij waarop 2 even brede elementen naast elkaar staan tot aan de breakpoint md (scherm van 800px breed), daarna komen ze onder elkaar te staan over de volledige breedte. Om dit te bekomen gaan we beide elementen voorzien van volgende classes:<br>
+        <strong>.col-6--md .col-12</strong>. Wanneer ik een kolom breedte meegeef zonder breakpoint zoals hier <strong>.col-12</strong> gaat deze dienen als gedrag voor de schermen kleiner dan 800px.
+        </p>
+
+<div class="component">
+  <div class="html">
+    <div class="row">
+<div class="hc-container">
+  <div class="row">
+    <div class="col-6--md col-12">
+      halve rij &gt; 800px, volledige rij &lt; 800px;
+    </div>
+    <div class="col-6--md col-12">
+      halve rij &gt; 800px, volledige rij &lt; 800px;
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+
+          <p>Het is ook mogelijk om te nesten. Zo kan er opnieuw een <strong>.row</strong> binnen een bepaalde <strong>.col</strong> geplaatst worden om nog complexere layouts maken.Hieronder zijn er nog een aantal mogelijke combinaties </p>
+				
+
+
+<div class="component">
+  <div class="html">
+    <div class="row">
+<div class="hc-container">
+  <div class="row">
+    <div class="col-6--md col-12">
+      <div class="row">
+        <div class="col-6--md col-12">vierde rij &gt; 800px, volle rij &lt; 800px;</div>
+        <div class="col-6--md col-12">vierde rij &gt; 800px, volle rij &lt; 800px;</div>
+      </div>
+    </div>
+    <div class="col-6--md col-12">
+      halve rij &gt; 800px, volledige rij &lt; 800px;
+    </div>
+  </div>
+</div>
+</div>
+    </div>
+  </div>
+</div>
+</div>
+
+      <div class="row mb-4">
 				<div class="col-12">
 					<div class="color_background-table-header py-3">.col-12</div>
+				</div>
+			</div>
+
+			<div class="row mb-4">
+				<div class="col-1">
+					<div class="color_background-table-header py-3">.col-1</div>
+				</div>
+				<div class="col-11">
+					<div class="color_background-table-header py-3">.col-11</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-3--lg col-4--md col-6--xs col-12">
+					<div class="color_background-table-header py-3 mb-4">.col-3--lg .col-4--md .col-6--xs .col-12</div>
+				</div>
+				<div class="col-9--lg col-8--md col-6--xs col-12">
+					<div class="color_background-table-header py-3 mb-4">.col-9--lg .col-8--md .col-6--xs .col-12</div>
 				</div>
 			</div>
         
@@ -159,14 +254,13 @@
 				</div>
 			</div>
 
-            <div class="row mb-4">
-				<div class="col-1 col-12--xxs col-6--xs col-4--sm col-3--md col-2--lg col-1--xl col-1--xxl">
-					<div class="color_background-table-header py-3">.col-1 .col-12--xxs .col-6--xs .col-4--sm .col-3--md .col-2--lg .col-1--xl .col-1--xxl</div>
-				</div>
-			</div>
 
         </div>
 
 	</section>
 
+{% endblock %}
+
+{% block javascript %}
+     {% include 'layouts/highlight.twig' %}
 {% endblock %}

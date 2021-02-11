@@ -11,8 +11,10 @@
 {% block body %}
 	<!-- html goes here -->
 
+	{% include 'layouts/nav.twig' %}
+
 	<header>
-		<div class="hc-container">
+		<div class="hc-container py-6">
 			<h1 class="hc-h1">Overzicht van items</h1>
 		</div>
 	</header>
@@ -45,7 +47,7 @@
 			</div>
 			<div class="mb-3">
 				<h3>Voorbeeld flow</h3> 
-				<p>Toepassing van alle bovenstaande zaken in een voorbeeld flow<br/>Bekijk hier de<a href="start.html">voorbeeld flow</a></p>
+				<p>Toepassing van alle bovenstaande zaken in een voorbeeld flow<br/>Bekijk hier de <a href="start.html">voorbeeld flow</a></p>
 			</div>
 		</div>
 	</section>

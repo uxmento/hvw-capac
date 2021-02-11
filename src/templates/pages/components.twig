@@ -11,10 +11,10 @@
 {% block body %}
 	<!-- html goes here -->
 
-    {% include 'layouts/nav.twig' %}
+    {% include 'layouts/nav.twig'  with {'active' : 'comp'} %}
 
 	<header>
-		<div class="hc-container">
+		<div class="hc-container  py-6">
 			<h1 class="hc-h1">Components</h1>
 		</div>
 	</header>
@@ -23,7 +23,7 @@
 	<section role="main">
 
         <div class="hc-container hc-accent py-4">
-            <h2 class="hc-h3">Yes/No Switcher</h2>
+            <h2>Yes/No Switcher</h2>
             <div class="row">
                 <div class="col-6--sm col-12--xxs mb-3">
                     <div class="hc-switcher">
@@ -55,7 +55,7 @@
         </div>
 
 		<div class="hc-container hc-accent py-4">
-            <h2 class="hc-h3">Labels</h2>   
+            <h2>Labels</h2>   
 			<div class="row">
                 <div class="col-3--xxl col-4--lg col-6--xs col-12 pb-1">
                     {{label.render('Label', {for: 'test-name'})}}
@@ -76,7 +76,7 @@
         </div>
 
 		<div class="hc-container hc-accent py-4">
-            <h2 class="hc-h3">Buttons</h2>
+            <h2>Buttons</h2>
             <div class="row align-center">
 
                 <div class="col-12 pb-1">
@@ -280,7 +280,7 @@
         </div>
         
         <div class="hc-container hc-accent py-4">
-            <h2 class="hc-h3">Links</h2>
+            <h2>Links</h2>
             <div class="row align-center">
 
                 <div class="col-12 pb-1">
@@ -292,7 +292,7 @@
         </div>
 
 		<div class="hc-container hc-accent py-4">
-            <h2 class="hc-h3">Inputfield</h2>
+            <h2>Inputfield</h2>
 			<div class="row">
                 <div class="col-3--xl col-4--lg col-6--md col-12--xxs">
                     <div class="mb-3">
@@ -406,7 +406,7 @@
         </div>
 
         <div class="hc-container hc-accent py-4">
-            <h2 class="hc-h3">Inputfield - multiline</h2>
+            <h2>Inputfield - multiline</h2>
 			<div class="row">
                 <div class="col-8--md col-6--sm col-12--xxs">
                     {{label.render('Birth', {for: 'birth', class:'hc-disabled'})}}
@@ -420,7 +420,7 @@
         </div>
 
         <div class="hc-container hc-accent py-4">
-            <h2 class="hc-h3">Inputfield - file</h2>
+            <h2>Inputfield - file</h2>
 			<div class="row">
                 <div class="col-8--md col-6--sm col-12--xxs">
                     {{label.render('Upload CV', {for: 'cv'})}}
@@ -432,7 +432,7 @@
         </div>
 
         <div class="hc-container hc-accent py-4">
-            <h2 class="hc-h3">Dropdown</h2>  
+            <h2>Dropdown</h2>  
             {{label.render('dropdown', { mandatory: true })}}
             {{select.render({ name:'company', options:[
                 {
@@ -447,7 +447,7 @@
         </div>
 
         <div class="hc-container hc-accent py-4">
-            <h2 class="hc-h3">Checkbox / Radiobuttons</h2>
+            <h2>Checkbox / Radiobuttons</h2>
             <div class="row">
                 <div class="col-6--sm col-12--xxs mb-3">
                     {{label.render('Pick your skills', {optional: 'Optional'})}}
@@ -473,7 +473,7 @@
         </div>
 
         <div class="hc-container hc-accent py-4">
-            <h2 class="hc-h3">Table</h2>
+            <h2>Table</h2>
             <div class="hc-table hc-table-sm">
                 <table>
                     <thead>
@@ -507,7 +507,7 @@
 
         <div class="hc-container hc-accent py-4">
 
-            <h2 class="hc-h3">Messages</h2>
+            <h2>Messages</h2>
             <div class="row">
                 <div class="col-6--sm col-12--xxs mb-3">
                     <div class="hc-message hc-valid">

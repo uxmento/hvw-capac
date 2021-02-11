@@ -1,0 +1,407 @@
+{% extends "layouts/default.twig" %}
+
+{% block body %}
+	<!-- html goes here -->
+
+    {% include 'layouts/nav.twig'  with {'active': 'util'} %}
+
+	<header>
+		<div class="hc-container hc-container-condensed py-6">
+			<h1 class="hc-h1">Utility classes</h1>
+		</div>
+	</header>
+
+	<section role="main">
+        <div class="hc-container hc-container-condensed hc-accent py-4">
+            <h2>Algemeen</h2>
+            <div class="row mb-2">
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .hc-accent
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    <p>Deze class is te gebruiken in combinatie met de <strong>.hc-container</strong> class. Deze al een witte achtergrond voorzien met afgeronde hoeken zoals op deze pagina.</p>
+                </div>
+
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .sr-only
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    <p>Deze class gaat elementen visueel hiden maar zijn wel nog accessible voor screenreaders</p>
+                </div>
+
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .sr-only
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    <p>Deze class gaat elementen visueel hiden maar zijn wel nog accessible voor screenreaders</p>
+                </div>
+
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .sr-only-focusable
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    <p>Dient gebruikt te worden in combinatie met <strong>.sr-only</strong> en zal het element zichtbaar maken bij focus (met keyboard)</p>
+                </div>
+            </div>
+            
+            <h2>Display</h2>
+            <p>Onderstaande classes beïnvloeden de display van een element. Kan steeds gebruik worden in combinatie met een breakpoint selector (bv. .flex--lg)</p>
+
+            <div class="row mb-2">
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .flex
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    Maak het element <strong>display: flex;</strong>
+                </div>
+
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .inline-flex
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    Maak het element <strong>display: inline-flex;</strong>
+                </div>
+                
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .flex
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    Maak het element <strong>display: block;</strong>
+                </div>
+
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .inline-block
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    Maak het element <strong>display: inline-block;</strong>
+                </div>
+
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .inline
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    Maak het element <strong>display: inline;</strong>
+                </div>
+
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .none
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    Maak het element <strong>display: none;</strong>
+                </div>
+            </div>
+            
+            <h2>Flexbox</h2>
+            <p>Gebruik volgende classes in combinatie met flexbox elementen. Kan steeds gebruik worden in combinatie met een breakpoint selector (bv. .justify-start--lg)</p></p>
+
+            <div class="row mb-2">
+
+                <h3 class="col-12 mt-4">Wrap</h3>
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .wrap
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    Maak het element <strong>flex-wrap: wrap;</strong>
+                </div>
+
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .nowrap
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    Maak het element <strong>flex-wrap: nowrap;</strong>
+                </div>
+                
+                <h3 class="col-12 mt-4">Justify-content</h3>
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .justify-start
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    Maak het element <strong>justify-content: flex-start</strong>
+                </div>
+
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .justify-end
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    Maak het element <strong>justify-content: flex-end</strong>
+                </div>
+
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .justify-center
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    Maak het element <strong>justify-content: center</strong>
+                </div>
+
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .justify-between
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    Maak het element <strong>justify-content: space-between;</strong>
+                </div>
+
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .justify-stretch
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    Maak het element <strong>justify-content: stretch;</strong>
+                </div>
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .justify-around
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    Maak het element <strong>justify-content: space-around</strong>
+                </div>
+
+                <h3 class="col-12 mt-4">Align-items</h3>
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .align-start
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    Maak het element <strong>align-items: flex-start;</strong>
+                </div>
+                
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .align-end
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    Maak het element <strong>align-items: flex-end;</strong>
+                </div>
+                
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .align-center
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    Maak het element <strong>align-items: center; </strong>
+                </div>
+                
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .align-stretch
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    Maak het element <strong>align-items: stretch;</strong>
+                </div>
+                
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .align-self-start
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    Maak het element <strong>align-self: flex-start;</strong>
+                </div>
+                
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .align-self-end
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    Maak het element <strong>align-self: flex-end;</strong>
+                </div>
+                
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .align-self-stretch
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    Maak het element <strong>align-self: stretch;</strong>
+                </div>
+                
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .align-self-center
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    Maak het element <strong>align-self: center;</strong>
+                </div>
+                
+                <h3 class="col-12 mt-4">Flex-direction</h3>
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .direction-row
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    Maak het element <strong>flex-direction: row ;</strong>
+                </div>
+                
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .direction-row-reverse
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    Maak het element <strong>flex-direction: row-reverse;</strong>
+                </div>
+                
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .direction-column
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    Maak het element <strong>flex-direction: column ;</strong>
+                </div>
+                
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .direction-column-reverse
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    Maak het element <strong>flex-direction: column-reverse;</strong>
+                </div>
+
+
+            </div>
+
+            <h2>Margins & Paddings</h2>
+            <p>Met deze classes kan je zowel margins als paddings aan een element toevoegen. Elk nummer is voorzien van een vast aantal pixels (auto: auto,  0: 0px, 1: 8px, 2: 16px, 3: 24px, 4: 32px, 5: 48px, 6: 64px, 7: 96px, 8: 128px). Kan steeds gebruik worden in combinatie met een breakpoint selector (bv. .pt-4--lg)</p>
+            <div class="row mb-2">
+
+                <h3 class="col-12 mt-4">Margins</h3>
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .m-0, .m-1, .m-2, ..., .m-8 en m-auto
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    Voegt <strong>overal margin</strong> toe aan een element.
+                </div>
+
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .my-0, .my-1, .my-2, ..., .my-8 en my-auto
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    Voegt <strong>margin-top en margin-bottom</strong> toe aan een element.
+                </div>
+
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .mx-0, .mx-1, .mx-2, ..., .mx-8 en mx-auto
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    Voegt <strong>margin-left en margin-right</strong> toe aan een element.
+                </div>
+
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .ml-0, .ml-1, .ml-2, ..., .ml-8 en ml-auto 
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    Voegt <strong>margin-left</strong> toe aan een element.
+                </div>
+
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .mr-0, .mr-1, .mr-2, ..., .mr-8 en mr-auto 
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    Voegt <strong>margin-right</strong> toe aan een element.
+                </div>
+
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .mt-0, .mt-1, .mt-2, ..., .mt-8 en mt-auto 
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    Voegt <strong>margin-top</strong> toe aan een element.
+                </div>
+
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .mb-0, .mb-1, .mb-2, ..., .mb-8 en mb-auto 
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    Voegt <strong>margin-bottom</strong> toe aan een element.
+                </div>
+
+                <h3 class="col-12 mt-4">Paddings</h3>
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .p-0, .p-1, .p-2, ..., .p-8 en p-auto
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    Voegt <strong>overal padding</strong> toe aan een element.
+                </div>
+
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .py-0, .py-1, .py-2, ..., .py-8 en py-auto
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    Voegt <strong>padding-top en padding-bottom</strong> toe aan een element.
+                </div>
+
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .px-0, .px-1, .px-2, ..., .px-8 en px-auto
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    Voegt <strong>padding-left en padding-right</strong> toe aan een element.
+                </div>
+
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .pl-0, .pl-1, .pl-2, ..., .pl-8 en pl-auto 
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    Voegt <strong>padding-left</strong> toe aan een element.
+                </div>
+
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .pr-0, .pr-1, .pr-2, ..., .pr-8 en pr-auto 
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    Voegt <strong>padding-right</strong> toe aan een element.
+                </div>
+
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .pt-0, .pt-1, .pt-2, ..., .pt-8 en pt-auto 
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    Voegt <strong>padding-top</strong> toe aan een element.
+                </div>
+
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .pb-0, .pb-1, .pb-2, ..., .pb-8 en pb-auto 
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    Voegt <strong>padding-bottom</strong> toe aan een element.
+                </div>
+
+            </div>
+            <h2>Widths</h2>
+            <p>Geef een width mee aan elementen. Elk nummer is voorzien van een vast aantal pixels (auto: auto, 0: 0%, 10: 10%, 20: 20%, 25: 25%, 30: 30%, 40: 40%, 50: 50%, 60: 60%, 70: 70%, 75: 75%, 80: 80%, 90: 90%, 100: 100%). Kan steeds gebruik worden in combinatie met een breakpoint selector (bv. .w-25--lg)</p>
+
+            <div class="row mb-2">
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .w-0, .w-10, .w-25, ..., .w-100 en w-auto 
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    Geeft het element een <strong>procentuele breedte</strong> mee.
+                </div>
+            </div>
+
+            <h2>Status</h2>
+            <p>Door volgende classes toe te voegen aan elementen kan je een status meegeven. Dit heeft vooral betrekking tot de velden.</p>
+
+            <div class="row mb-2">
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .hc-valid
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    Geeft het element een <strong>goedkeurings</strong> status.
+                </div>
+
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .hc-warning
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    Geeft het element een <strong>waarschuwings</strong> status.
+                </div>
+
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .hc-error
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    Geeft het element een <strong>fout</strong> status.
+                </div>
+
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .hc-info
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    Geeft het element een <strong>informatieve</strong> status.
+                </div>
+
+                <div class="col-4--sm font-size--small font-weight--700 col-12 my-2">
+                    .hc-disabled
+                </div>
+                <div class="col-8--sm font-size--small col-12 my-2">
+                    Geeft het element een <strong>niet-actieve</strong> status.
+                </div>
+            </div>
+
+
+        </div>
+
+    </section>
+
+{% endblock %}

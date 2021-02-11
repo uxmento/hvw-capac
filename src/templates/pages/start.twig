@@ -11,7 +11,7 @@
 {% block body %}
 	<!-- html goes here -->
 
-	{% include 'layouts/nav.twig' %}
+	{% include 'layouts/nav.twig'  with {'active' : 'form'} %}
 
 	{% include 'layouts/header.twig' %}
 
@@ -31,8 +31,8 @@
 
 			<div class="row">
 				<div class="col-12 mt-2">
-					<button type="button" class="hc-button hc-button__primary hc-button--lg" tabindex="0" onclick="window.location.href='step1.html'">
-						<span class="hc-button__label">Volgende<span class="hc-button__icon hc-button__icon--end">{{icon.render('next-arrow', 'hc-icon')}}</span></span>
+					<button type="button" class="hc-button hc-button__tertiary hc-button--lg" tabindex="0" onclick="window.location.href='step1.html'">
+						<span class="hc-button__label">Volgende<span class="hc-button__icon hc-button__icon--end">{{icon.render('next-arrow')}}</span></span>
 					</button>
 				</div>
 			</div>

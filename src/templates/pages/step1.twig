@@ -11,7 +11,7 @@
 {% block body %}
 	<!-- html goes here -->
 
-	{% include 'layouts/nav.twig' %}
+	{% include 'layouts/nav.twig'  with {'active' : 'form'} %}
 
 	{% include 'layouts/header.twig' %}
 
@@ -102,11 +102,11 @@
 			</fieldset>	
 
 			<div class="row">
-				<div class="col-12 flex--md direction-row-reverse--md justify-end--md mt-2">
-					<button type="button" class="hc-button hc-button__primary mb-2 w-100 w-auto--md" tabindex="0"  onclick="window.location.href='step2.html'">
+				<div class="col-12 flex--md direction-row-reverse--md justify-end--md mt-4">
+					<button type="button" class="hc-button hc-button__tertiary mb-2 w-100 w-auto--md" tabindex="0"  onclick="window.location.href='step2.html'">
 						<span class="hc-button__label">Volgende<span class="hc-button__icon hc-button__icon--end">{{icon.render('next-arrow')}}</span></span>
 					</button>
-					<button type="button" class="hc-button hc-button__outline-primary mb-2 mr-2 w-100 w-auto--md" tabindex="0"  onclick="window.location.href='start.html'">
+					<button type="button" class="hc-button hc-button__outline-tertiary mb-2 mr-2 w-100 w-auto--md" tabindex="0"  onclick="window.location.href='start.html'">
 						<span class="hc-button__label"><span class="hc-button__icon hc-button__icon--start">{{icon.render('prev-arrow')}}</span>Vorige</span>
 					</button>
 				</div>

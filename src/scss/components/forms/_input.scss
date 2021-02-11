@@ -34,9 +34,10 @@
     }
 
     &:focus {
-      box-shadow: $color_tertiary 0px 0px 0px 2px;
+      box-shadow: $color_tertiary 0px 0px 0px 1px;
       outline: 0;
     }
+
     &:focus:not(:focus-visible) {
       box-shadow: none;
       border: none;
@@ -45,10 +46,11 @@
     &:focus-visible,
     &:active,
     &:not(:placeholder-shown),
-    &.#{$ns}has-value {
+    &.#{$ns}has-value, 
+    .#{$ns}has-value &{
       outline: 0;
       border: 1px solid $color_tertiary;
-      box-shadow: $color_tertiary 0px 0px 0px 2px;
+      box-shadow: inset $color_tertiary 0px 0px 0px 1px;
     }
 
     &--icon-left {
@@ -105,7 +107,7 @@
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    padding: 0;
+    padding: 0 !important;
 
     &--horizontal {
         flex-direction: row;
@@ -131,6 +133,10 @@
 .#{$ns}error {
   .#{$ns}input__input {
     border: $border-width solid $color_tertiary;
+
+    &:not(:placeholder-shown){
+      box-shadow: none;
+    }
     @include focus($color_tertiary);
   }
 }

@@ -12,11 +12,11 @@
 	<!-- html goes here -->
 
 
-  	{% include 'layouts/nav.twig' %}
+  {% include 'layouts/nav.twig' with {'active': 'icons'}%}
 
 	<header>
-		<div class="hc-container">
-			<h1 class="hc-h1">Icons</h1>
+		<div class="hc-container py-6">
+			<h1 class="hc-h1">Iconen</h1>
 		</div>
 	</header>
 
@@ -27,75 +27,75 @@
 
 				<div class="col-12">
 					<h2>Icon system</h2>
-					<p>Our icon system uses an automated Gulp task that bundles your icons into one sprite. Use the the name of the icon to render it by using our Twig icon component.</p>
-                </div>
-                
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('add', {printText:true, class:'hc-icon--lg'} )}}</div>
+					<p>Deze tabel biedt een overzichet van alle iconen die gebruikt kunnen worden door heen de website. Deze lijst kan uigebreid worden door iconen tot te voegen aan de icons folder en vervolgens de gulp task te laten lopen die de iconen omzet naar 1 sprite. (gulp icons)</p>
+        </div>
+        
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('add', {printText:true, class:'hc-icon--lg'} )}}</div>
 
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('angle-down', {printText:true, class:'hc-icon--lg'} )}}</div>
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('angle-up', {printText:true, class:'hc-icon--lg'} )}}</div>
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('angle-left', {printText:true, class:'hc-icon--lg'} )}}</div>
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('angle-right', {printText:true, class:'hc-icon--lg'} )}}</div>
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('angle-down', {printText:true, class:'hc-icon--lg'} )}}</div>
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('angle-up', {printText:true, class:'hc-icon--lg'} )}}</div>
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('angle-left', {printText:true, class:'hc-icon--lg'} )}}</div>
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('angle-right', {printText:true, class:'hc-icon--lg'} )}}</div>
 
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('arrow-circle-down', {printText:true, class:'hc-icon--lg'} )}}</div>
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('arrow-circle-up', {printText:true, class:'hc-icon--lg'} )}}</div>
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('arrow-circle-left', {printText:true, class:'hc-icon--lg'} )}}</div>
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('arrow-circle-right', {printText:true, class:'hc-icon--lg'} )}}</div>
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('arrow-circle-down', {printText:true, class:'hc-icon--lg'} )}}</div>
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('arrow-circle-up', {printText:true, class:'hc-icon--lg'} )}}</div>
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('arrow-circle-left', {printText:true, class:'hc-icon--lg'} )}}</div>
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('arrow-circle-right', {printText:true, class:'hc-icon--lg'} )}}</div>
 
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('arrow-down', {printText:true, class:'hc-icon--lg'} )}}</div>
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('arrow-up', {printText:true, class:'hc-icon--lg'} )}}</div>
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('arrow-left', {printText:true, class:'hc-icon--lg'} )}}</div>
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('arrow-right', {printText:true, class:'hc-icon--lg'} )}}</div>
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('arrow-down', {printText:true, class:'hc-icon--lg'} )}}</div>
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('arrow-up', {printText:true, class:'hc-icon--lg'} )}}</div>
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('arrow-left', {printText:true, class:'hc-icon--lg'} )}}</div>
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('arrow-right', {printText:true, class:'hc-icon--lg'} )}}</div>
 
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('calendar', {printText:true, class:'hc-icon--lg'} )}}</div>
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('calendar', {printText:true, class:'hc-icon--lg'} )}}</div>
 
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('caret-down', {printText:true, class:'hc-icon--lg'} )}}</div>
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('caret-up', {printText:true, class:'hc-icon--lg'} )}}</div>
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('caret-left', {printText:true, class:'hc-icon--lg'} )}}</div>
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('caret-right', {printText:true, class:'hc-icon--lg'} )}}</div>
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('caret-down', {printText:true, class:'hc-icon--lg'} )}}</div>
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('caret-up', {printText:true, class:'hc-icon--lg'} )}}</div>
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('caret-left', {printText:true, class:'hc-icon--lg'} )}}</div>
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('caret-right', {printText:true, class:'hc-icon--lg'} )}}</div>
 
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('chevron-circle-down', {printText:true, class:'hc-icon--lg'} )}}</div>
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('chevron-circle-up', {printText:true, class:'hc-icon--lg'} )}}</div>
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('chevron-circle-left', {printText:true, class:'hc-icon--lg'} )}}</div>
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('chevron-circle-right', {printText:true, class:'hc-icon--lg'} )}}</div>
-                
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('check-circle', {printText:true, class:'hc-icon--lg'} )}}</div>
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('check-small', {printText:true, class:'hc-icon--lg'} )}}</div>
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('check', {printText:true, class:'hc-icon--lg'} )}}</div>
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('chevron-circle-down', {printText:true, class:'hc-icon--lg'} )}}</div>
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('chevron-circle-up', {printText:true, class:'hc-icon--lg'} )}}</div>
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('chevron-circle-left', {printText:true, class:'hc-icon--lg'} )}}</div>
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('chevron-circle-right', {printText:true, class:'hc-icon--lg'} )}}</div>
+        
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('check-circle', {printText:true, class:'hc-icon--lg'} )}}</div>
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('check-small', {printText:true, class:'hc-icon--lg'} )}}</div>
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('check', {printText:true, class:'hc-icon--lg'} )}}</div>
 
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('chevron-down', {printText:true, class:'hc-icon--lg'} )}}</div>
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('chevron-up', {printText:true, class:'hc-icon--lg'} )}}</div>
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('chevron-left', {printText:true, class:'hc-icon--lg'} )}}</div>
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('chevron-right', {printText:true, class:'hc-icon--lg'} )}}</div>
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('chevron-down', {printText:true, class:'hc-icon--lg'} )}}</div>
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('chevron-up', {printText:true, class:'hc-icon--lg'} )}}</div>
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('chevron-left', {printText:true, class:'hc-icon--lg'} )}}</div>
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('chevron-right', {printText:true, class:'hc-icon--lg'} )}}</div>
 
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('circle', {printText:true, class:'hc-icon--lg'} )}}</div>
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('close', {printText:true, class:'hc-icon--lg'} )}}</div>
-                
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('edit', {printText:true, class:'hc-icon--lg'} )}}</div>
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('circle', {printText:true, class:'hc-icon--lg'} )}}</div>
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('close', {printText:true, class:'hc-icon--lg'} )}}</div>
+        
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('edit', {printText:true, class:'hc-icon--lg'} )}}</div>
 
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('ellipsis-h', {printText:true, class:'hc-icon--lg'} )}}</div>
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('ellipsis-v', {printText:true, class:'hc-icon--lg'} )}}</div>
-                
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('envelope', {printText:true, class:'hc-icon--lg'} )}}</div>
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('error-circle', {printText:true, class:'hc-icon--lg'} )}}</div>
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('eye', {printText:true, class:'hc-icon--lg'} )}}</div>
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('ellipsis-h', {printText:true, class:'hc-icon--lg'} )}}</div>
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('ellipsis-v', {printText:true, class:'hc-icon--lg'} )}}</div>
+        
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('envelope', {printText:true, class:'hc-icon--lg'} )}}</div>
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('error-circle', {printText:true, class:'hc-icon--lg'} )}}</div>
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('eye', {printText:true, class:'hc-icon--lg'} )}}</div>
 
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('heart', {printText:true, class:'hc-icon--lg'} )}}</div>
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('heart', {printText:true, class:'hc-icon--lg'} )}}</div>
 
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('info', {printText:true, class:'hc-icon--lg'} )}}</div>
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('info-circle', {printText:true, class:'hc-icon--lg'} )}}</div>
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('info', {printText:true, class:'hc-icon--lg'} )}}</div>
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('info-circle', {printText:true, class:'hc-icon--lg'} )}}</div>
 
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('long-arrow-alt-down', {printText:true, class:'hc-icon--lg'} )}}</div>
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('long-arrow-alt-up', {printText:true, class:'hc-icon--lg'} )}}</div>
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('long-arrow-alt-left', {printText:true, class:'hc-icon--lg'} )}}</div>
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('long-arrow-alt-right', {printText:true, class:'hc-icon--lg'} )}}</div>
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('long-arrow-alt-down', {printText:true, class:'hc-icon--lg'} )}}</div>
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('long-arrow-alt-up', {printText:true, class:'hc-icon--lg'} )}}</div>
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('long-arrow-alt-left', {printText:true, class:'hc-icon--lg'} )}}</div>
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('long-arrow-alt-right', {printText:true, class:'hc-icon--lg'} )}}</div>
 
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('next-arrow', {printText:true, class:'hc-icon--lg'} )}}</div>
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('prev-arrow', {printText:true, class:'hc-icon--lg'} )}}</div>
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('next-arrow', {printText:true, class:'hc-icon--lg'} )}}</div>
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('prev-arrow', {printText:true, class:'hc-icon--lg'} )}}</div>
 
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('user-alt', {printText:true, class:'hc-icon--lg'} )}}</div>
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('user-alt', {printText:true, class:'hc-icon--lg'} )}}</div>
 
-                <div class="col-1 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('warning', {printText:true, class:'hc-icon--lg'} )}}</div>
+        <div class="col-2 hc-border--thin align-items-center py-4 text-align-center">{{icon.render('warning', {printText:true, class:'hc-icon--lg'} )}}</div>
 
 
 			</div>

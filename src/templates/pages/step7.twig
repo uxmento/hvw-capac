@@ -11,7 +11,7 @@
 
 {% block body %}
 	<!-- html goes here -->
-		{% include 'layouts/nav.twig' %}
+		{% include 'layouts/nav.twig'  with {'active' : 'form'}  %}
 	
 	{% include 'layouts/header.twig' %}
 
@@ -23,7 +23,7 @@
 				<div class="col-12 col-7--md">
 					<h2>Egestas Pharetra Nibh Aenean</h2></div>
 				<div class="col-12 col-5--md flex--md justify-end--md"> 
-					<button type="button" class="hc-button hc-button__primary hc-button--lg" tabindex="0" >
+					<button type="button" class="hc-button hc-button__tertiary hc-button--md" tabindex="0" >
                         <span class="hc-button__label"><span class="hc-button__icon hc-button__icon--start">{{icon.render('calendar', 'hc-icon')}}</span>Afspraak maken</span>
                     </button>
 				</div>
@@ -35,9 +35,9 @@
 				</div>
 			</div>
 
-			<div class="row mt-2">
+			<div class="row mt-4">
 				<div class="col-12 flex--md direction-row-reverse--md justify-end--md">
-					<button type="button" class="hc-button hc-button__outline-primary mr-2" tabindex="0"  onclick="window.location.href='step5.html'">
+					<button type="button" class="hc-button hc-button__outline-tertiary mr-2" tabindex="0"  onclick="window.location.href='step6.html'">
 						<span class="hc-button__label"><span class="hc-button__icon hc-button__icon--start">{{icon.render('prev-arrow', 'hc-icon')}}</span>Vorige</span>
 					</button>
 				</div>
