@@ -163,10 +163,12 @@
 						<div class="row">
 							<div class="col-6--md col-12">
 								<div class="row align-center">
-									<div class="col-2--sm col-12 text-align-left text-align-center--sm px-half">
+									
+									<div class="col-2--sm col-12 text-align-left text-align-center--sm px-1">
 										<div class="my-2">Van</div>
 									</div>
-									<div class="col-3 mt-3 mb-3 px-half">
+
+									<div class="col-3 mt-3 mb-3 px-1">
 										{{label.render('Dag', {mandatory: true, for: 'fromday', id: 'label-fromday'})}}
 										{{select.render({id:'fromday', name: 'fromday',  label: 'label-fromday', placeholder:'dd', autocomplete: 'bday-day', required: true,  options:[
 											{label: "1",  value: "1" }, 
@@ -202,7 +204,7 @@
 											{label: "31",  value: "31" },
 										]})}}
 									</div>
-									<div class="col-3 mt-3 mb-3 px-half">
+									<div class="col-3 mt-3 mb-3 px-1">
 										{{label.render('Maand', {mandatory: true, for:'frommnth', id: 'label-frommnth'})}}
 										{{select.render({id:'frommnth', name:'frommnth', label: 'label-frommnth', placeholder:'mm', autocomplete: 'bday-month', required: true,  options:[
 											{label: "1",  value: "1" }, 
@@ -219,7 +221,7 @@
 											{label: "12",  value: "12" }, 
 										]})}}
 									</div>
-									<div class="col-3--sm col-4 mt-3 mb-3 px-half">
+									<div class="col-3--sm col-4 mt-3 mb-3 px-1">
 										{{label.render('Jaar', {mandatory: true, for:'fromyr', id: 'label-fromyr'})}}
 										{{select.render({id:'fromyr', name:'fromyr', label: 'label-fromyr', placeholder:'jjjj', autocomplete: 'bday-year', required: true,  options:[
 											{label: "2010",  value: "2010" }, 
@@ -259,10 +261,12 @@
 							</div>
 							<div class="col-6--md col-12">
 								<div class="row align-center">
-									<div class="col-2--sm col-12  text-align-left text-align-center--sm px-half">
+
+									<div class="col-2--sm col-12  text-align-left text-align-center--sm px-1">
 										<div class="my-2">tot</div>
 									</div>
-									<div class="col-3 mt-3 mb-3 px-half">
+								
+									<div class="col-3 mt-3 mb-3 px-1">
 										{{label.render('Dag', {mandatory: true, for:'today', id: 'label-today'})}}
 										{{select.render({id:'today', name:'today', label: 'label-today', placeholder:'dd', autocomplete: 'bday-day', required: true,  options:[
 											{label: "1",  value: "1" }, 
@@ -298,7 +302,8 @@
 											{label: "31",  value: "31" },
 										]})}}
 									</div>
-									<div class="col-3 mt-3 mb-3 px-half">
+
+									<div class="col-3 mt-3 mb-3 px-1">
 										{{label.render('Maand', {mandatory: true, for:'tomnth', id: 'label-tomnth'})}}
 										{{select.render({id:'tomnth', name:'tomnth', label: 'label-tomnth', placeholder:'mm', autocomplete: 'bday-month', required: true,  options:[
 											{label: "1",  value: "1" }, 
@@ -315,7 +320,8 @@
 											{label: "12",  value: "12" }, 
 										]})}}
 									</div>
-									<div class="col-4--sm col-6 mt-3 mb-3 px-half">
+
+									<div class="col-4--sm col-6 mt-3 mb-3 px-1">
 										{{label.render('Jaar', {mandatory: true, for:'toyr', id: 'label-toyr'})}}
 										{{select.render({id:'toyr', name:"toyr", label: 'label-toyr', placeholder:'jjjj', autocomplete: 'bday-year', required: true,  options:[
 											{label: "2010",  value: "2010" }, 
@@ -351,6 +357,7 @@
 											{label: "2031",  value: "2031" },
 										]})}}
 									</div>
+									
 								</div>
 							</div>
 						</div>

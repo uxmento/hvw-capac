@@ -8,7 +8,26 @@
     border: 1px solid $color_secondary;
     justify-content: stretch;
     height: $input-height;
-    min-width: 100px;
+
+    .#{$ns}valid &,
+    &.#{$ns}valid{
+        border-color: $color_valid;
+    }
+
+    .#{$ns}error &,
+    &.#{$ns}error{
+        border-color: $color_error;
+    }
+
+    .#{$ns}warning &,
+    &.#{$ns}warning{
+        border-color: $color_warning;
+    }
+
+    .#{$ns}info &,
+    &.#{$ns}info{
+        border-color: $color_info;
+    }
 
     &-item {
         display: flex;
@@ -49,10 +68,28 @@
             height: 100%;
             align-items: center;
             justify-content: center;
+            color: $color_brown-dark;
 
             &:hover {
                 background-color: rgba($color_secondary, .1);
             }
+
+            .#{$ns}valid &{
+                color: $color_valid;
+            }
+
+            .#{$ns}error &{
+                color: $color_error;
+            }
+
+            .#{$ns}warning &{
+                color: $color_error;
+            }
+
+            .#{$ns}info &{
+                color: $color_info;
+            }
+
 
         }
 
@@ -79,31 +116,111 @@
             border-radius: 0 $border-radius*2 $border-radius*2 0;
         }
 
+        &:first-child &__input:checked:focus-visible + &__label::after{
+            left: -10px;
+            right: -8px;
+            top: -8px;
+            bottom: -8px;
+            border-radius: $border-radius * 3;
+        }
+        &:last-child &__input:checked:focus-visible + &__label::after {
+            left: -8px;
+            right: -10px;
+            top: -8px;
+            bottom: -8px;
+            border-radius: $border-radius * 3;
+        }
+
         // Selected state
         &__input:checked + &__label {
             color: $color_white;
             background: $color_secondary;
 
+            .#{$ns}valid &{
+                background: $color_valid;
+            }
+
+            .#{$ns}error &{
+                background: $color_error;
+            }
+
+            .#{$ns}warning &{
+                background: $color_warning;
+            }
+
+            .#{$ns}info &{
+                background: $color_info;
+            }
+
+           
             &::before {
                 content: "";
                 position: absolute;
                 top: -4px;
-                right: 0px;
+                right: -4px;
                 bottom: -4px;
-                left: 0px;
+                left: -4px;
                 background: $color_secondary;
                 border-radius: $border-radius*2;
                 z-index: -1;
+
+                .#{$ns}valid &{
+                    background: $color_valid;
+                }
+
+                .#{$ns}error &{
+                    background: $color_error;
+                }
+
+                .#{$ns}warning &{
+                    background: $color_warning;
+                }
+
+                .#{$ns}info &{
+                    background: $color_info;
+                }
             }
 
             &:hover,
             &:hover::before {
                 background: darken($color_secondary, 5%);
+
+                .#{$ns}valid &{
+                    background: darken($color_valid, 5%);
+                }
+                
+                .#{$ns}error &{
+                    background: darken($color_error, 5%);
+                }
+                .#{$ns}warning &{
+                    background: darken($color_warning, 5%);
+                }
+                .#{$ns}info &{
+                    background: darken($color_info, 5%);
+                }
+
             }
             
             &:active, 
             &:active::before {
                 background: darken($color_secondary, 10%);
+
+                .#{$ns}valid &{
+                    background: darken($color_valid, 10%);
+                }
+                
+                .#{$ns}error &{
+                    background: darken($color_error, 10%);
+                }
+
+                .#{$ns}warning &{
+                    background: darken($color_warning, 10%);
+                }
+
+                .#{$ns}info &{
+                    background: darken($color_info, 10%);
+                }
+
             }
         }
 
@@ -129,7 +246,8 @@
 }
 
 .#{$ns}disabled {
-    .#{$ns}switcher {
+    .#{$ns}switcher,
+    &.#{$ns}switcher {
         background-color: $color_background-disabled;
         border-color: rgba($color-disabled, .25);
 
@@ -140,3 +258,4 @@
         }
     }
 }
+

@@ -187,7 +187,7 @@ a[href] {
   @each $breakpoint in map-keys($breakpoints) {
     @include mq($breakpoint) {
       @each $name, $position in $positions {
-        &-#{$name}--#{$breakpoint} {
+        &--#{$name}--#{$breakpoint} {
           text-align: $position !important;
         }
       }

@@ -21,6 +21,8 @@ $color_grey-dark: #333333;
 $color_grey-medium: #989898;
 $color_grey-light: #ccc;
 
+$color_brown-dark: #4E3F32;
+
 $color_border-highlight: #FCBC00;
 $color_border-table: #DEDEDE;
 $color_border: rgba($color_default-text, .4);
@@ -89,6 +91,9 @@ $color_background-message--error: #FFF7F7;
 }
 .color_grey-light{
     color: $color_grey-light;
+}
+.color_brown-dark {
+    color: $color_brown-dark
 }
 
 //////////////////////////////////////////////
