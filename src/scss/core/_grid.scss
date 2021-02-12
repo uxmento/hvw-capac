@@ -26,38 +26,6 @@
         &-#{$i}--#{$breakpoint} {
           width: #{100% / $grid-columns * $i} !important;
           padding: 0px #{rem($grid-gutter) / 2} !important;
-
-          &.p-half {
-            padding: #{rem($grid-gutter) / 4} !important;
-          }
-    
-          &.px-half {
-            padding-right: #{rem($grid-gutter) / 4} !important;
-            padding-left: #{rem($grid-gutter) / 4} !important;
-          }
-    
-          &.py-half {
-            padding-top: #{rem($grid-gutter) / 4} !important;
-            padding-bottom: #{rem($grid-gutter) / 4} !important;
-          }
-    
-          &.pr-half {
-            padding-right: #{rem($grid-gutter) / 4} !important;
-          }
-    
-          &.pl-half {
-            padding-left: #{rem($grid-gutter) / 4} !important;
-          }
-    
-          &.pt-half {
-            padding-top: #{rem($grid-gutter) / 4} !important;
-          }
-    
-          &.pb-half {
-            padding-bottom: #{rem($grid-gutter) / 4} !important;
-          }
-    
-
         }
       }
     }

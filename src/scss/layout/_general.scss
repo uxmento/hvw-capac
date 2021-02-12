@@ -58,6 +58,10 @@ body {
     cursor: pointer;
 }
 
+.#{$ns}pointer-events {
+    pointer-events: auto;
+}
+
 .#{$ns}no-pointer-events {
     pointer-events: none;
 }
@@ -66,6 +70,6 @@ body {
     border: $border-width solid $color_border;
 
     &--thin{
-        border: 1px solid $color_border;;
+        border: 1px solid $color_border;
     }
 }
