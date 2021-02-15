@@ -121,6 +121,10 @@
     &--vertical {
         flex-direction: column;
 
+        li {
+            padding: 0 .5em;
+        }
+
         li:nth-child(n+2) {
             margin-top: .5em;
         }

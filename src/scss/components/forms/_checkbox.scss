@@ -4,19 +4,26 @@
  */
 
 .#{$ns}checkbox {
-    display: flex;
+    display: inline-flex;
     vertical-align: baseline;
+    -moz-appearance: none;
+    -webkit-appearance: none;
     cursor: pointer;
+    position: relative;
+    overflow: visible;
+    padding: 2px 0 2px 4px;
 
     &__input {
-        position: absolute;
-        clip: rect(1px, 1px, 1px, 1px);
-        clip-path: inset(50%);
-        height: 1px;
-        width: 1px;
-        margin: -1px;
+        top: 0;
+        left: 0;
+        width: 100%;
+        cursor: inherit;
+        height: 100%;
+        margin: 0;
+        opacity: 0;
         padding: 0;
-        overflow: hidden;
+        z-index: 1;
+        position: absolute;
     }
 
     &__icon {
@@ -38,17 +45,19 @@
         margin-right: .5rem;
 
         :focus + &,
-        .has-focus + &{ 
+        .has-focus &{ 
             outline: 0;
             box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, $color_tertiary 0px 0px 0px 4px;
         }
+
         :focus:not(:focus-visible) + &{
             /* Undo all the above focused button styles
             if the button has focus but the browser wouldn't normally
             show default focus styles */
             box-shadow: none;
         }
-        :focus-visible + &{ 
+        :focus-visible + &,
+        .has-focus &{ 
             /* Some even *more* exciting button focus styles */ 
             outline: 0;
             box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, $color_tertiary 0px 0px 0px 4px !important;

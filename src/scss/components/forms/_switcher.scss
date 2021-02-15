@@ -95,7 +95,21 @@
 
 
         // Focus state
-        &__input:focus-visible + &__label::after {
+        .has-focus &__label:after,
+        &__input:focus + &__label:after {
+            content: "";
+            position: absolute;
+            top: -6px;
+            right: 0;
+            bottom: -6px;
+            left: 0;
+            border: 2px solid $color_default-text;
+            z-index:2;
+        }
+        &__input:not(:focus) + &__label:after {
+            content: unset;
+        }
+        &__input:focus-visible + &__label:after {
             content: "";
             position: absolute;
             top: -6px;
@@ -106,24 +120,71 @@
             z-index:2;
         }
 
-        &:first-child &__input:focus-visible + &__label::after {
+        &:first-child &__input:focus + &__label:after {
+            left: -6px;
+            border-radius: $border-radius*2 0 0 $border-radius*2;
+        }
+        &:first-child &__input:not(:focus) + &__label:after {
+            left: auto;
+        }
+        &:first-child &__input:focus-visible + &__label:after {
             left: -6px;
             border-radius: $border-radius*2 0 0 $border-radius*2;
         }
 
-        &:last-child &__input:focus-visible + &__label::after {
+        &:last-child &__input:focus + &__label:after {
+            right: -6px;
+            border-radius: 0 $border-radius*2 $border-radius*2 0;
+        }
+        &:last-child &__input:not(:focus) + &__label:after {
+            right: auto;
+        }
+        &:last-child &__input:focus-visible + &__label:after {
             right: -6px;
             border-radius: 0 $border-radius*2 $border-radius*2 0;
         }
 
-        &:first-child &__input:checked:focus-visible + &__label::after{
+        &:first-child &__input:checked:focus + &__label:after {
             left: -10px;
             right: -8px;
             top: -8px;
             bottom: -8px;
             border-radius: $border-radius * 3;
         }
-        &:last-child &__input:checked:focus-visible + &__label::after {
+
+        &:first-child &__input:checked:not(:focus) + &__label:after {
+            left: auto;
+            right: auto;
+            top: auto;
+            bottom: auto;
+            border: none;
+        }
+
+        &:first-child &__input:checked:focus-visible + &__label:after{
+            left: -10px;
+            right: -8px;
+            top: -8px;
+            bottom: -8px;
+            border-radius: $border-radius * 3;
+        }
+
+        &:last-child &__input:checked:focus + &__label:after {
+            left: -8px;
+            right: -10px;
+            top: -8px;
+            bottom: -8px;
+            border-radius: $border-radius * 3;
+        }
+
+        &:last-child &__input:checked:not(:focus) + &__label:after {
+            left: auto;
+            right: auto;
+            top: auto;
+            bottom: auto;
+            border: none;
+        }
+
+        &:last-child &__input:checked:focus-visible + &__label:after {
             left: -8px;
             right: -10px;
             top: -8px;

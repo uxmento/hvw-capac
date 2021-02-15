@@ -345,11 +345,21 @@
             <div class="component">
                 <div class="html">
                     <div class="row justify-center align-center" role="radiogroup">
-                        {{radio.render('gender', { label:'Radio button', value:'man' })}}
-                        {{radio.render('gender', { label:'Radio checked', value:'man', checked: true})}}
-                        {{radio.render('gender', { label:'Radio checked valid', value:'man', checked: true, class:'hc-valid'})}}
-                        {{radio.render('gender', { label:'Radio error', value:'man', class:'hc-error' })}}
-                        {{radio.render('gender', { label:'Radio disabled', value:'man', class:'hc-disabled', disabled: true})}}
+                        <div class="el">
+                            {{radio.render('gender', { label:'Radio button', value:'man' })}}
+                        </div>
+                        <div class="el">
+                            {{radio.render('gender', { label:'Radio checked', value:'man', checked: true})}}
+                        </div>
+                        <div class="el">
+                            {{radio.render('gender', { label:'Radio checked valid', value:'man', checked: true, class:'hc-valid'})}}
+                        </div>
+                        <div class="el">
+                            {{radio.render('gender', { label:'Radio error', value:'man', class:'hc-error' })}}
+                        </div>
+                        <div class="el">
+                            {{radio.render('gender', { label:'Radio disabled', value:'man', class:'hc-disabled', disabled: true})}}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -375,7 +385,6 @@
             <div class="component">
                 <div class="html">
                     <div class="row justify-center align-center">
-
                         <ul class="hc-input__list hc-input__list--vertical" role="radiogroup">
                             <li>{{radio.render('genderz', { label:'Radio button', value:'man' })}}</li>
                             <li>{{radio.render('genderz', { label:'Radio checked', value:'man', checked: true})}}</li>
@@ -395,11 +404,21 @@
             <div class="component">
                 <div class="html">
                     <div class="row justify-center align-center" role="group">
-                        {{checkbox.render('skillset', {label:'Checkbox', value:'checkbox' })}}
-                        {{checkbox.render('skillset', {label:'Checkbox checked', value:'checkbox', checked: true})}}
-                        {{checkbox.render('skillset', {label:'Checkbox checked valid', value:'checkbox', checked: true, class:'hc-valid'})}}
-                        {{checkbox.render('skillset', {label:'Checkbox error', value:'checkbox', class:'hc-error' })}}
-                        {{checkbox.render('skillset', {label:'Checkbox disabled', value:'checkbox', class:'hc-disabled', disabled: true })}}
+                        <div class="el">
+                            {{checkbox.render('skillset', {label:'Checkbox', value:'checkbox' })}}
+                        </div>
+                        <div class="el">
+                            {{checkbox.render('skillset', {label:'Checkbox checked', value:'checkbox', checked: true})}}
+                        </div>
+                        <div class="el">
+                            {{checkbox.render('skillset', {label:'Checkbox checked valid', value:'checkbox', checked: true, class:'hc-valid'})}}
+                        </div>
+                        <div class="el">
+                            {{checkbox.render('skillset', {label:'Checkbox error', value:'checkbox', class:'hc-error' })}}
+                        </div>
+                        <div class="el">
+                            {{checkbox.render('skillset', {label:'Checkbox disabled', value:'checkbox', class:'hc-disabled', disabled: true })}}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -613,4 +632,15 @@
    
 {% block javascript %}
      {% include 'layouts/highlight.twig' %}
+     <script>
+        document.querySelectorAll('input[type="checkbox"]').forEach((cb) => {
+            cb.addEventListener('click', e => {
+                if(e.target.parentNode.classList.contains('has-focus')){
+                    e.target.parentNode.classList.remove('has-focus');
+                }else{
+                    e.target.parentNode.classList.add('has-focus');
+                }
+            })
+        })
+     </script>
 {% endblock %}
