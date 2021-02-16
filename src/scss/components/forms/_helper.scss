@@ -9,19 +9,19 @@
     margin-top: rem(8px);
 
     .#{$ns}valid &{ 
-        color: $color_valid !important;
+        color: $color_valid-text !important;
     }
     
     .#{$ns}warning &{
-        color: $color_warning !important;
+        color: $color_warning-text !important;
     }
     
     .#{$ns}error &{
-        color: $color_error !important;
+        color: $color_error-text !important;
     }
     
     .#{$ns}info &{
-        color: $color_tertiary !important;
+        color: $color_info-text !important;
     }
     
     .#{$ns}disabled &{

@@ -75,19 +75,19 @@
             }
 
             .#{$ns}valid &{
-                color: $color_valid;
+                color: $color_valid-text;
             }
 
             .#{$ns}error &{
-                color: $color_error;
+                color: $color_error-text;
             }
 
             .#{$ns}warning &{
-                color: $color_error;
+                color: $color_error-text;
             }
 
             .#{$ns}info &{
-                color: $color_info;
+                color: $color_info-text;
             }
 
 
@@ -198,19 +198,19 @@
             background: $color_secondary;
 
             .#{$ns}valid &{
-                background: $color_valid;
+                background: $color_valid-text;
             }
 
             .#{$ns}error &{
-                background: $color_error;
+                background: $color_error-text;
             }
 
             .#{$ns}warning &{
-                background: $color_warning;
+                background: $color_warning-text;
             }
 
             .#{$ns}info &{
-                background: $color_info;
+                background: $color_info-text;
             }
 
            

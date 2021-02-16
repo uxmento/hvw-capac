@@ -17,6 +17,13 @@ $color_error: #DA1E27;
 $color_info: $color_tertiary;
 $color_disabled: #646464;
 
+$text-darken: 5%;
+
+$color_valid-text: darken($color_valid, $text-darken);
+$color_error-text: darken($color_error, $text-darken);
+$color_warning-text: darken($color_warning, $text-darken);
+$color_info-text: darken($color_info, $text-darken);
+
 $color_grey-dark: #333333;
 $color_grey-medium: #989898;
 $color_grey-light: #ccc;

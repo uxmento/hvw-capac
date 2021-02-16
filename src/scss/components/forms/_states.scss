@@ -1,6 +1,6 @@
 .#{$ns}valid {
 
-    color: $color_valid !important;
+    color: $color_valid-text !important;
 
     .#{$ns}icon {
         fill: $color_valid !important;
@@ -9,7 +9,7 @@
 
 .#{$ns}warning {
 
-    color: $color_warning !important;
+    color: $color_warning-text !important;
 
     .#{$ns}icon {
         fill: $color_primary !important;
@@ -18,7 +18,7 @@
 
 .#{$ns}error {
 
-    color: $color_error !important;
+    color: $color_error-text !important;
 
     .#{$ns}icon {
         fill: $color_error !important;
@@ -27,7 +27,7 @@
 
 .#{$ns}info {
 
-    color: $color_tertiary !important;
+    color: $color_info-text !important;
 
     .#{$ns}icon {
         fill: $color_info !important;
