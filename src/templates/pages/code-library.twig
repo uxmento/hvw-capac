@@ -633,7 +633,7 @@
 {% block javascript %}
      {% include 'layouts/highlight.twig' %}
      <script>
-        document.querySelectorAll('input[type="checkbox"]').forEach((cb) => {
+        /*document.querySelectorAll('input[type="checkbox"]').forEach((cb) => {
             cb.addEventListener('click', e => {
                 if(e.target.parentNode.classList.contains('has-focus')){
                     e.target.parentNode.classList.remove('has-focus');
@@ -641,6 +641,6 @@
                     e.target.parentNode.classList.add('has-focus');
                 }
             })
-        })
+        })*/
      </script>
 {% endblock %}
