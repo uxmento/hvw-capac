@@ -1,6 +1,6 @@
 module.exports = {
   browser_sync: {
-    url: 'http://localhost:8888/hvw/dist/'
+    url: 'hvw.test'
   },
 
   twig: {
