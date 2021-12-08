@@ -21,7 +21,7 @@
         transition: $transition;
 
         &::placeholder {
-            color: #999;
+            color: $color_placeholder;
         }
 
         &::-ms-expand {

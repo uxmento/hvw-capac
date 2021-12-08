@@ -18,15 +18,15 @@
     min-height: 3rem;
     padding: rem(14px) rem(16px);
     margin: 0;
-    border: 1px solid #ccc;
+    border: 1px solid $color_input-border;
     border-radius: $border-radius;
     font-size: $font-size;
-    background-color: #fff;
+    background-color: $color_white;
     transition: $transition;
     font-family: $font-family;
 
     &::placeholder {
-      color: rgba($color_default-text, .4);
+      color: $color_placeholder;
     }
 
     &:hover{    

@@ -85,13 +85,13 @@
         color: $color_white;
 
         &:hover {
-            background-color: darken($color_primary, 5%);   
+            background-color: $color_primary_hover;   
         }
 
         @include focus($color_default-text);
 
         &:active { 
-            background-color: darken($color_primary, 10%);   
+            background-color: $color_primary_active;   
         }
 
         .#{$ns}icon{
@@ -100,20 +100,20 @@
     }
 
     &__primary {
-        color: $color_black;
+        color: $color_primary_text;
 
         .#{$ns}icon{
-            fill: $color_black;
+            fill: $color_primary_text;
         }
 
         &:hover {
-            background-color: lighten($color_primary, 10%);   
+            background-color: $color_primary_hover;   
         }
 
         @include focus($color_default-text);
 
         &:active {
-            background-color: lighten($color_primary, 20%);   
+            background-color: $color_primary_active;
         }
     }
 
@@ -121,13 +121,13 @@
         background-color: $color_secondary;
 
         &:hover {
-            background-color: darken($color_secondary, 10%);   
+            background-color: $color_secondary_hover; 
         }
 
         @include focus($color_default-text);
 
         &:active {
-            background-color: darken($color_secondary, 20%);   
+            background-color: $color_secondary_active;
         }
     }
 
@@ -135,14 +135,14 @@
         background-color: $color_tertiary;
 
         &:hover {
-            background-color: darken($color_tertiary, 10%);   
+            background-color: $color_tertiary_hover;
         }
 
 
         @include focus($color_default-text); 
 
         &:active {
-            background-color: darken($color_tertiary, 20%);   
+            background-color: $color_tertiary_active; 
         }
     }
 
@@ -186,21 +186,21 @@
         }
 
         &:hover {
-            background-color: rgba($color_primary, .1);
-            color: darken($color_primary, 5%);
+            background-color: $color_primary_outline_hover;
+            color: $color_primary_outline_text_hover;
 
             .#{$ns}icon{
-                fill: darken($color_primary, 5%);
+                fill: $color_primary_outline_text_hover;
             }
         }
 
         &:active { 
-            border-color:darken($color_primary, 5%); 
-            background-color: rgba($color_primary, .2);
-            color: darken($color_primary, 10%);
+            border-color: $color_primary_outline_border_active;
+            background-color: $color_primary_outline_active;
+            color: $color_primary_outline_text_active;
 
             .#{$ns}icon{
-                fill: darken($color_primary, 10%);
+                fill: $color_primary_outline_text_active;
             }
         }
 
@@ -208,19 +208,19 @@
 
     &__outline-primary, 
     &__ghost-primary {
-        border-color: $color_primary;
-        color: darken($color_primary, 7%);
+        border-color: $color_primary_outline_border;
+        color: $color_primary_outline_text;
 
         .#{$ns}icon{
-            fill: darken($color_primary, 7%);
+            fill: $color_primary_outline_text;
         }
 
         &:hover {
-            background-color: rgba($color_primary, .1);
-            color: darken($color_primary, 10%);
+            background-color: $color_primary_outline_hover;
+            color: $color_primary_outline_text_hover;
 
             .#{$ns}icon{
-                fill: darken($color_primary, 7%);
+                fill: $color_primary_outline_text_hover;
             }
         }
 
@@ -228,12 +228,12 @@
         @include focus($color_default-text);
        
         &:active {
-            border-color:darken($color_primary, 5%); 
-            background-color: rgba($color_primary, .2);
-            color: darken($color_primary, 13%);
+            border-color: $color_primary_outline_border_active;
+            background-color: $color_primary_outline_active;
+            color: $color_primary_outline_text_active;
 
             .#{$ns}icon{
-                fill: darken($color_primary, 13%);
+                fill: $color_primary_outline_text_active;
             }
         }
 
@@ -250,11 +250,11 @@
         }
 
         &:hover {
-            background-color: rgba($color_secondary, .1);
-            color: darken($color_secondary, 5%);
+            background-color: $color_secondary_outline_hover;
+            color: $color_secondary_outline_text_hover;
 
             .#{$ns}icon{
-                fill: darken($color_secondary, 5%);
+                fill: $color_secondary_outline_text_hover;
             }
         }
 
@@ -262,12 +262,12 @@
         @include focus($color_default-text);
        
         &:active {
-            border-color:darken($color_secondary, 5%); 
-            background-color: rgba($color_secondary, .2);
-            color: darken($color_secondary, 10%);
+            border-color: $color_secondary_outline_border_active;
+            background-color: $color_secondary_outline_active;
+            color: $color_secondary_outline_text_active;
 
             .#{$ns}icon{
-                fill: darken($color_secondary, 10%);
+                fill: $color_secondary_outline_text_active;
             }
         }
 
@@ -276,31 +276,31 @@
 
     &__outline-tertiary, 
     &__ghost-tertiary {
-        border-color: $color_tertiary;
-        color: $color_tertiary;
+        border-color: $color_tertiary_outline_border;
+        color: $color_tertiary_outline_text;
 
         .#{$ns}icon{
-            fill: $color_tertiary;
+            fill: $color_tertiary_outline_text;
         }
 
         &:hover { 
-            background-color: rgba($color_tertiary, .1);
-            color: darken($color_tertiary, 5%);
+            background-color: $color_tertiary_outline_hover;
+            color: $color_tertiary_outline_text_hover;
 
             .#{$ns}icon{
-                fill: darken($color_tertiary, 5%);
+                fill: $color_tertiary_outline_text_hover;
             }
         }
-
+       
         @include focus($color_default-text);
-
+       
         &:active {
-            border-color:darken($color_tertiary, 5%); 
-            background-color: rgba($color_tertiary, .2);
-            color: darken($color_tertiary, 10%);
+            border-color: $color_tertiary_outline_border_active;
+            background-color: $color_tertiary_outline_active;
+            color: $color_tertiary_outline_text_active;
 
             .#{$ns}icon{
-                fill: darken($color_tertiary, 10%);
+                fill: $color_tertiary_outline_text_active;
             }
         }
 

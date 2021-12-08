@@ -1,34 +1,86 @@
 // COLORS
+// General
 $color_white: #fff;
 $color_black: #000;
+$color_dark-blue: #161532;
 
+// Primary (Orange)
+// Button
+$color_primary_text: $color_black;
 $color_primary: #ec5c0e;
+$color_primary_hover: #F37B3A;
+$color_primary_active: #F69B6A;
+
+$color_primary_outline_text: #CA4F0C;
+$color_primary_outline_text_hover: #BC490B;
+$color_primary_outline_text_active: #AD440A;
+$color_primary_outline_border: #ec5c0e;
+$color_primary_outline_border_hover: #ec5c0e;
+$color_primary_outline_border_active: #CA4F0C; 
+$color_primary_outline_hover: #FDEEE9;
+$color_primary_outline_active: #FDDFD3;
+
+
+// Secundary (Brown)
+// Button
+$color_secondary_text: $color_white;
 $color_secondary: #87715E;
+$color_secondary_hover: #695849;
+$color_secondary_active: #4B3F34;
+
+$color_secondary_outline_text: #87715E;
+$color_secondary_outline_text_hover: #786454;
+$color_secondary_outline_text_active: #695849;
+$color_secondary_outline_border: #87715E;
+$color_secondary_outline_border_hover: #87715E;
+$color_secondary_outline_border_active: #786454; 
+$color_secondary_outline_hover: #F2F1EF;
+$color_secondary_outline_active: #E6E3DE;
+
+// Tertiary (Blue)
+// Button
+$color_tertiary_text: $color_white;
 $color_tertiary: #2650C1;
+$color_tertiary_hover: #1E3E96;
+$color_tertiary_active: #152D6C;
+
+$color_tertiary_outline_text: #2650C1;
+$color_tertiary_outline_text_hover: #2247AC;
+$color_tertiary_outline_text_active: #1E3E96;
+$color_tertiary_outline_border: #2650C1;
+$color_tertiary_outline_border_hover: #2650C1;
+$color_tertiary_outline_border_active: #2247AC; 
+$color_tertiary_outline_hover: #EBEFF9;
+$color_tertiary_outline_active: #D4DDF3;
+
 $color_link: $color_tertiary;
 $color_link-hover: darken($color_link, 20%);
 
-$color_default-text: #161532;
+$color_default-text: $color_dark-blue;
 $color_icons: #666666;
 $color_tiny-text: #666666;
 $color_valid: #008A00;
 $color_warning: #937100;
 $color_error: #DA1E27;
-$color_info: $color_tertiary;
-$color_disabled: #646464;
+$color_info: #2650c1;
+$color_disabled: #747373;
+
 
 $text-darken: 5%;
 
-$color_valid-text: darken($color_valid, $text-darken);
-$color_error-text: darken($color_error, $text-darken);
+$color_valid-text: #007100;
+$color_error-text: #C41B23;
 $color_warning-text: darken($color_warning, $text-darken);
-$color_info-text: darken($color_info, $text-darken);
+$color_info-text: #2247ac;
+
+$color_placeholder: #737384;
+$color_input-border: #91909F; 
+
+$color_brown-dark: #4E3F32;
 
 $color_grey-dark: #333333;
 $color_grey-medium: #989898;
 $color_grey-light: #ccc;
-
-$color_brown-dark: #4E3F32;
 
 $color_border-highlight: #FCBC00;
 $color_border-table: #DEDEDE;
@@ -37,11 +89,11 @@ $color_border: rgba($color_default-text, .4);
 $color_background-page: #F4F4F4;
 $color_background-disabled: rgba($color_grey-medium, .2);
 $color_background-default: #d5dcee;
-$color_background-table-header: rgba(#A18B79, .1);
+$color_background-table-header: #F4F1F0;
 
 $color_background-message--valid: #F0F8F0;
 $color_background-message--warning:#FDF0E2;
-$color_background-message--info: #EDF0F7;
+$color_background-message--info: #EBEFF9;
 $color_background-message--error: #FFF7F7;
 
 //////////////////////////////////////////////
