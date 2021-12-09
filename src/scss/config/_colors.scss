@@ -4,6 +4,8 @@ $color_white: #fff;
 $color_black: #000;
 $color_dark-blue: #161532;
 
+$color_button-border-disabled: #949494;
+
 // Primary (Orange)
 // Button
 $color_primary_text: $color_black;
@@ -82,9 +84,9 @@ $color_info-text: #2247ac;
 
 $color_icon-disabled: #666666;
 $color_text-disabled: #747373;
-$color_input-disabled: #666666;
 $color_label-disabled: #747373;
 $color_radio-check-disabled: #949494;
+$color_input-disabled: #666666;
 $color_background-disabled: #EBEBEB;
 $color_border-disabled: #EBEBEB;
 

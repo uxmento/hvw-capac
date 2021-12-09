@@ -141,7 +141,6 @@
         fill: $color_white !important;
         background-color:  $color_radio-check-disabled;
         border-color:  $color_radio-check-disabled;
-        opacity: $opacity;
     }
     :hover + .#{$ns}checkbox__icon,
     :active + .#{$ns}checkbox__icon {

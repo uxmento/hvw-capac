@@ -309,7 +309,7 @@
 
     &__outline-disabled,
     &__ghost-disabled {
-        border-color: $color_border-disabled;
+        border-color: $color_button-border-disabled;
         color: $color_text-disabled;
         pointer-events: none;
 
@@ -346,7 +346,7 @@
         &__ghost-secondary,
         &__ghost-tertiary,
         &__ghost-disabled {
-            border-color: $color_border-disabled;
+            border-color: $color_button-border-disabled;
             color: $color_text-disabled;
             pointer-events: none;
         }

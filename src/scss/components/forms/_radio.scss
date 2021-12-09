@@ -126,7 +126,6 @@
     }
     :checked + .#{$ns}radio__icon.#{$ns}icon {
         border-color: $color_radio-check-disabled !important;
-        opacity: $opacity !important;
     }
     :hover + .#{$ns}radio__icon.#{$ns}icon,
     :active + .#{$ns}radio__icon.#{$ns}icon {
