@@ -361,6 +361,9 @@
                         <div class="el">
                             {{radio.render('gender', { label:'Radio disabled', value:'man', class:'hc-disabled', disabled: true})}}
                         </div>
+                         <div class="el">
+                            {{radio.render('gender', { label:'Radio disabled checked', value:'man', class:'hc-disabled', checked: true, disabled: true})}}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -435,6 +438,7 @@
                             <li>{{checkbox.render('skillset', {label:'Checkbox checked valid', value:'checkbox', checked: true, class:'hc-valid'})}}</li>
                             <li>{{checkbox.render('skillset', {label:'Checkbox error', value:'checkbox', class:'hc-error' })}}</li>
                             <li>{{checkbox.render('skillset', {label:'Checkbox disabled', value:'checkbox', class:'hc-disabled', disabled: true })}}</li>
+                            <li>{{checkbox.render('skillset', {label:'Checkbox disabled checked', value:'checkbox', class:'hc-disabled', checked: true, disabled: true })}}</li>
                         </ul>
 
                     </div>

@@ -12,6 +12,7 @@
     position: relative;
     overflow: visible;
     padding: 2px 0 2px 4px;
+    align-items: center;
 
     &__input {
         top: 0;
@@ -28,7 +29,6 @@
 
     &__icon {
         position: relative;
-        top: .125rem;
         left: 0;
         display: inline-flex;
         vertical-align: baseline;
@@ -37,7 +37,7 @@
         flex-basis: rem(15px);
         flex-shrink: 0;
         margin: 0;
-        border: 1px solid $color-border;
+        border: 1px solid $color_input-icon-border;
         border-radius: rem(2px);
         fill: transparent;
         background-color: $color_white;
@@ -85,6 +85,7 @@
 .#{$ns}valid {
     .#{$ns}checkbox__icon.#{$ns}icon {
         fill: transparent !important;
+        border-color: $color_valid;
     }
     :checked + .#{$ns}checkbox__icon {
         fill: $color_white !important;
@@ -96,6 +97,7 @@
 .#{$ns}warning {
     .#{$ns}checkbox__icon.#{$ns}icon {
         fill: transparent !important;
+        border-color: $color_warning;
     }
     :checked + .#{$ns}checkbox__icon {
         fill: $color_white !important;
@@ -107,6 +109,7 @@
 .#{$ns}info {
     .#{$ns}checkbox__icon.#{$ns}icon {
         fill: transparent !important;
+        border-color: $color_info;
     }
     :checked + .#{$ns}checkbox__icon {
         fill: $color_white !important;
@@ -118,6 +121,7 @@
 .#{$ns}error {
     .#{$ns}checkbox__icon.#{$ns}icon {
         fill: transparent !important;
+        border-color: $color_error;
     }
     :checked + .#{$ns}checkbox__icon {
         fill: $color_white !important;
@@ -131,15 +135,16 @@
 
     .#{$ns}checkbox__icon.#{$ns}icon {
         fill: transparent !important;
+        border-color: $color_radio-check-disabled;
     }
     :checked + .#{$ns}checkbox__icon {
         fill: $color_white !important;
-        background-color: $color_background-disabled;
-        border-color: $color_border-disabled;
+        background-color:  $color_radio-check-disabled;
+        border-color:  $color_radio-check-disabled;
         opacity: $opacity;
     }
     :hover + .#{$ns}checkbox__icon,
     :active + .#{$ns}checkbox__icon {
-        border-color: $color-border !important;
+        border-color:  $color_radio-check-disabled !important;
     }
 }

@@ -36,7 +36,7 @@
         height: 1rem;
         padding: 4px;
         margin: 0;
-        border: 1px solid $color-border;
+        border: 1px solid $color_input-icon-border;
         border-radius: 50%;
         fill: transparent;
         background-color: $color_white;
@@ -81,6 +81,7 @@
 .#{$ns}valid {
     :not(:checked) + .#{$ns}radio__icon.#{$ns}icon {
         fill: transparent !important;
+        border-color: $color_valid;
     }
     :checked + .#{$ns}radio__icon.#{$ns}icon {
         border-color: $color_valid;
@@ -90,6 +91,7 @@
 .#{$ns}warning {
     :not(:checked) + .#{$ns}radio__icon.#{$ns}icon {
         fill: transparent !important;
+        border-color: $color_warning;
     }
     :checked + .#{$ns}radio__icon.#{$ns}icon {
         border-color: $color_warning;
@@ -99,6 +101,7 @@
 .#{$ns}info {
     :not(:checked) + .#{$ns}radio__icon.#{$ns}icon {
         fill: transparent !important;
+        border-color: $color_info;
     }
     :checked + .#{$ns}radio__icon.#{$ns}icon {
         border-color: $color_info;
@@ -108,6 +111,7 @@
 .#{$ns}error {
     :not(:checked) + .#{$ns}radio__icon.#{$ns}icon {
         fill: transparent !important;
+        border-color: $color_error;
     }
     :checked + .#{$ns}radio__icon.#{$ns}icon {
         border-color: $color_error;
@@ -118,13 +122,14 @@
 .#{$ns}disabled {
     :not(:checked) + .#{$ns}radio__icon.#{$ns}icon {
         fill: transparent !important;
+        border-color: $color_radio-check-disabled;
     }
     :checked + .#{$ns}radio__icon.#{$ns}icon {
-        border-color: $color_border-disabled !important;
+        border-color: $color_radio-check-disabled !important;
         opacity: $opacity !important;
     }
     :hover + .#{$ns}radio__icon.#{$ns}icon,
     :active + .#{$ns}radio__icon.#{$ns}icon {
-        border-color: $color-border !important;
+        border-color: $color_radio-check-disabled !important;
     }
 }

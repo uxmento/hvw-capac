@@ -59,7 +59,7 @@ $color_switcher-background-hover: #E9E5E3;
 $color_switcher-background-active: #87715E;
 $color_switcher-text: #4B3F34;
 $color_switcher-text-active: #FFFFFF;
-$color_switcher-border: #87715E;
+$color_switcher-border: #87715E; 
 
 
 $color_link: $color_tertiary;
@@ -83,11 +83,14 @@ $color_info-text: #2247ac;
 $color_icon-disabled: #666666;
 $color_text-disabled: #747373;
 $color_input-disabled: #666666;
+$color_label-disabled: #747373;
+$color_radio-check-disabled: #949494;
 $color_background-disabled: #EBEBEB;
 $color_border-disabled: #EBEBEB;
 
 $color_placeholder: #737384;
-$color_input-border: #91909F; 
+$color_input-icon-border: #737384;
+$color_input-border: #91909F;
 
 $color_grey-dark: #333333;
 $color_grey-medium: #989898;
