@@ -13,10 +13,10 @@
         height: $input-height;
         padding: .5rem 2rem .5rem 1rem;
         margin: 0;
-        border: 1px solid #ccc;
+        border: 1px solid $color_input-border;
         border-radius: .25rem;
         font-size: .875rem;
-        background-color: #fff;
+        background-color: $color_white;
         appearance: none;
         transition: $transition;
 
@@ -78,13 +78,13 @@
 
         
         .#{$ns}disabled &{
-            border-color: rgba($color-disabled, .25);
+            border-color: $color_background-disabled;
             background-color: $color_background-disabled;
             pointer-events: none;
             opacity: $opacity;
 
             &,&::placeholder {
-                color: $color_disabled;
+                color: $color_input-disabled;
             }
         }
 

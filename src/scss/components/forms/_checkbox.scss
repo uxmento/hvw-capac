@@ -134,8 +134,8 @@
     }
     :checked + .#{$ns}checkbox__icon {
         fill: $color_white !important;
-        background-color: $color_disabled;
-        border-color: $color_border;
+        background-color: $color_background-disabled;
+        border-color: $color_border-disabled;
         opacity: $opacity;
     }
     :hover + .#{$ns}checkbox__icon,

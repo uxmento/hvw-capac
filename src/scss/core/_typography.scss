@@ -162,7 +162,7 @@ a[href] {
   @include focus($color_link-hover);
 
   .#{$ns}disabled &{
-    color: $color_disabled;
+    color: $color_text-disabled;
   }
 
 }

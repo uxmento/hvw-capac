@@ -193,13 +193,12 @@
 .#{$ns}disabled {
 
   .#{$ns}input__input {
-    border-color: rgba($color-disabled, .25);
+    border-color: $color_background-disabled;
     background-color: $color_background-disabled;
     pointer-events: none;
-    opacity: $opacity;
 
     &,&::placeholder {
-      color: $color_disabled;
+      color: $color_input-disabled;
     }
   }
 }

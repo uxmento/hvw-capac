@@ -3,9 +3,9 @@
     $root: &;
 
     display: flex;
-    background-color: rgba($color_secondary, .1);
+    background-color: $color_switcher-background;
     border-radius: $border-radius;
-    border: 1px solid $color_secondary;
+    border: 1px solid $color_switcher-border;
     justify-content: stretch;
     height: $input-height;
 
@@ -37,14 +37,14 @@
         &:not(:last-child):after {
             content: "";
             display: block;
-            width: 1px;
+            width: 2px;
             height: rem(16px);
-            background: $color_secondary;
+            background: $color_switcher-border;
             position: absolute; 
-            right: 0;
+            right: -1px;
             top: 50%;
             transform: translateY(-50%);
-            z-index: 0;
+            z-index: 1;
         }
 
         &__input {
@@ -68,11 +68,13 @@
             height: 100%;
             align-items: center;
             justify-content: center;
-            color: $color_brown-dark;
-            font-weight: 600;
+            color: $color_switcher-text;
+            font-weight: 600;       
+            
 
             &:hover {
-                background-color: rgba($color_secondary, .1);
+                background-color: $color_switcher-background-hover;
+                z-index: 0;
             }
 
             .#{$ns}valid &{
@@ -94,6 +96,15 @@
 
         }
 
+        &:first-child &__input + &__label{
+            border-top-left-radius: $border-radius;
+            border-bottom-left-radius: $border-radius;
+        }
+
+        &:last-child &__input + &__label{
+            border-top-right-radius: $border-radius;
+            border-bottom-right-radius: $border-radius;
+        }
 
         // Focus state
         .has-focus &__label:after,
@@ -195,8 +206,8 @@
 
         // Selected state
         &__input:checked + &__label {
-            color: $color_white;
-            background: $color_secondary;
+            color: $color_switcher-text-active;
+            background: $color_switcher-background-active;
 
             .#{$ns}valid &{
                 background: $color_valid-text;
@@ -222,7 +233,7 @@
                 right: -4px;
                 bottom: -4px;
                 left: -4px;
-                background: $color_secondary;
+                background: $color_switcher-background-active;
                 border-radius: $border-radius*2;
                 z-index: -1;
 
@@ -243,9 +254,14 @@
                 }
             }
 
+            &:hover {
+                z-index: 2;
+            }
+
             &:hover,
             &:hover::before {
-                background: darken($color_secondary, 10%);
+                /*
+                background: $color_switcher-background-hover;
 
                 .#{$ns}valid &{
                     background: darken($color_valid, 5%);
@@ -260,12 +276,14 @@
                 .#{$ns}info &{
                     background: darken($color_info, 5%);
                 }
+                */
 
             }
             
             &:active, 
             &:active::before {
-                background: darken($color_secondary, 20%);
+                /*
+                background: $color_switcher-background-active;
 
                 .#{$ns}valid &{
                     background: darken($color_valid, 10%);
@@ -282,8 +300,10 @@
                 .#{$ns}info &{
                     background: darken($color_info, 10%);
                 }
+                */
 
             }
+            
         }
 
         &:first-child &__input:checked + &__label::before {
@@ -297,10 +317,10 @@
 
     &.#{$ns}disabled {
         background-color: $color_background-disabled;
-        border-color: rgba($color-disabled, .25);
+        border-color: $color_border-disabled;
 
         #{$root}-item__label {
-            color: $color_disabled;
+            color: $color_text-disabled;
             cursor:initial;
             pointer-events: none;
         }
@@ -311,10 +331,10 @@
     .#{$ns}switcher,
     &.#{$ns}switcher {
         background-color: $color_background-disabled;
-        border-color: rgba($color-disabled, .25);
+        border-color: $color_border-disabled;
 
         &-item__label {
-            color: $color_disabled;
+            color: $color_text-disabled;
             cursor:initial;
             pointer-events: none;
         }

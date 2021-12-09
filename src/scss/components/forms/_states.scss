@@ -36,9 +36,9 @@
 
 .#{$ns}disabled {
 
-    color: $color_disabled !important;
+    color: $color_text-disabled !important;
 
     .#{$ns}icon {
-        fill: $color_disabled !important;
+        fill: $color_icon-disabled !important;
     }
 }

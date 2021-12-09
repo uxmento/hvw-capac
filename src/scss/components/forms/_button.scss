@@ -148,7 +148,7 @@
 
     &__disabled {
         background-color: $color_background-disabled;
-        color: $color_disabled;
+        color: $color_text-disabled;
         pointer-events: none;
     }
 
@@ -309,12 +309,12 @@
 
     &__outline-disabled,
     &__ghost-disabled {
-        border-color: $color_background-disabled;
-        color: $color_disabled;
+        border-color: $color_border-disabled;
+        color: $color_text-disabled;
         pointer-events: none;
 
         .#{$ns}icon{
-            fill: $color_disabled;
+            fill: $color_icon-disabled;
         }
     }
 
@@ -334,7 +334,7 @@
         &__secondary,
         &__tertiary {
             background-color: $color_background-disabled;
-            color: $color_disabled;
+            color: $color_text-disabled;
             pointer-events: none;
         }
 
@@ -346,8 +346,8 @@
         &__ghost-secondary,
         &__ghost-tertiary,
         &__ghost-disabled {
-            border-color: $color_background-disabled;
-            color: $color_disabled;
+            border-color: $color_border-disabled;
+            color: $color_text-disabled;
             pointer-events: none;
         }
 

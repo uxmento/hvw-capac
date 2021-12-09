@@ -120,7 +120,7 @@
         fill: transparent !important;
     }
     :checked + .#{$ns}radio__icon.#{$ns}icon {
-        border-color: $color_disabled !important;
+        border-color: $color_border-disabled !important;
         opacity: $opacity !important;
     }
     :hover + .#{$ns}radio__icon.#{$ns}icon,
